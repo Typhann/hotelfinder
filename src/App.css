@@ -3,6 +3,7 @@
 font-family: 'Inter', sans-serif;
 font-family: 'Open Sans', sans-serif; */
 
+/* reset */
 h1,
 h2,
 h3,
@@ -24,11 +25,16 @@ p {
 
 /* card-container */
 .card-container {
-  display: flex;
-  width: 100vw;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* width: 100vw; */
+  /* border: 2px solid red; */
 }
 .card {
-  min-width: 450px;
+  min-width: 350px;
+  max-width: 98vw;
+  max-width: 98dvw;
   text-wrap: wrap;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin: 2rem;
@@ -37,16 +43,16 @@ p {
 }
 /* card 1 */
 .h1-c1 {
-  font-size: 38.4px;
+  font-size: 2.4rem;
 }
 .h2-c1 {
-  font-size: 28.8px;
+  font-size: 1.8rem;
 }
 .h3-c1 {
-  font-size: 22.4px;
+  font-size: 1.4rem;
 }
 .p-c1 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 /* card 2 */
@@ -92,3 +98,5 @@ p {
 .p-c4 {
   font-size: 18px;
 }
+
+/* reset */
