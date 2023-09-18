@@ -7,7 +7,7 @@ function App() {
       <h2 className="slogan">Book hotels with ease</h2>
       <div className="card-container">
         <div className="card">
-          <h1 className="h1-c4">Grand Hyatt Resort</h1>
+          <h1 className="h1-c4">Grand Hyatt Resort 1</h1>
           <h2 className="h2-c4">Playa del Carmen, Mexico</h2>
           <h3 className="h3-c4">
             Experience World-class Service at Grand Hyatt Playa del Carmen
@@ -24,7 +24,7 @@ function App() {
           </p>
         </div>
         <div className="card">
-          <h1 className="h1-c1">Grand Hyatt Resort</h1>
+          <h1 className="h1-c1">Grand Hyatt Resort 2</h1>
           <h2 className="h2-c1">Playa del Carmen, Mexico</h2>
           <h3 className="h3-c1">
             Experience World-class Service at Grand Hyatt Playa del Carmen
@@ -41,7 +41,7 @@ function App() {
           </p>
         </div>
         <div className="card">
-          <h1 className="h1-c2">Grand Hyatt Resort</h1>
+          <h1 className="h1-c2">Grand Hyatt Resort 3</h1>
           <h2 className="h2-c2">Playa del Carmen, Mexico</h2>
           <h3 className="h3-c2">
             Experience World-class Service at Grand Hyatt Playa del Carmen
@@ -58,7 +58,7 @@ function App() {
           </p>
         </div>
         <div className="card">
-          <h1 className="h1-c3">Grand Hyatt Resort</h1>
+          <h1 className="h1-c3">Grand Hyatt Resort 4</h1>
           <h2 className="h2-c3">Playa del Carmen, Mexico</h2>
           <h3 className="h3-c3">
             Experience World-class Service at Grand Hyatt Playa del Carmen
