@@ -4,6 +4,11 @@ font-family: 'Inter', sans-serif;
 font-family: 'Open Sans', sans-serif; */
 
 /* reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 h1,
 h2,
 h3,
@@ -25,9 +30,10 @@ p {
 
 /* card-container */
 .card-container {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   /* width: 100vw; */
   /* border: 2px solid red; */
 }
