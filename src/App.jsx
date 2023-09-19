@@ -1,10 +1,12 @@
 import "./App.css";
+import WorldMap from "./components/WorldMap";
 
 function App() {
   return (
     <>
       <h1 className="logo">Hotelfinder</h1>
       <h2 className="slogan">Book hotels with ease</h2>
+      <WorldMap />
       <div className="card-container">
         <div className="card">
           <h1 className="h1-c4">Grand Hyatt Resort 1</h1>

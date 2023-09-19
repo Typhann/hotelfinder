@@ -28,6 +28,16 @@ p {
   color: #a41752;
 }
 
+/* Worldmap */
+.worldmap path:hover {
+  fill: gray;
+  cursor: pointer;
+}
+
+.worldmap path.active {
+  fill: gray;
+}
+
 /* card-container */
 .card-container {
   display: flex;
