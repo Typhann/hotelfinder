@@ -23,16 +23,23 @@ header {
 }
 
 .search-container {
-  box-shadow: $boxShadow;
-  border-radius: $borderRadius;
-  min-width: 400px;
-  svg {
-    margin-right: $marginSmall;
-    > path {
-      fill: $colorBlack;
+  .search-options {
+    @include flex(row, center, center);
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    min-width: 400px;
+    svg {
+      margin-right: $marginSmall;
+      > path {
+        fill: $colorBlack;
+      }
+    }
+    > p {
+      padding: $paddingContainerMedium;
     }
   }
-  > p {
-    padding: $paddingContainerMedium;
+  > button {
+    background-color: $colorPrimary;
+    margin-left: $marginLarge;
   }
 }
