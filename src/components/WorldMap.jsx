@@ -10,12 +10,12 @@ export default function WorldMap() {
 
       if (event.type === "mouseenter") {
         setCountry(countryName);
-        target.classList.add("hovered");
+        // target.classList.add("hovered");
       }
 
       if (event.type === "mouseleave") {
         setCountry("");
-        target.classList.remove("hovered");
+        // target.classList.remove("hovered");
       }
 
       if (event.type === "click") {

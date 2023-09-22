@@ -1,0 +1,40 @@
+// Fonts
+$fontLogo: "Inter", sans-serif;
+$fontSlogan: "Bad Script", sans-serif;
+$fontText: "Open Sans", sans-serif;
+
+$fontSizeH1: 2.4rem;
+$fontSizeH2: 1.8rem;
+$fontSizeH3: 1.4rem;
+$fontSizeP: 1rem;
+$fontSizeSmall: 0.75rem;
+
+// Colors
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+$colorGray: #c5c5c5;
+$colorPrimary: #4a376d;
+$colorAction: #a41752;
+$colorLink: #0177e7;
+$colorStar: #feb600;
+$colorSuccess: #b2ff83;
+$colorError: #ff8383;
+
+// Spacing
+$paddingContainerLarge: 2rem;
+$paddingContainerMedium: 1rem;
+$paddingContainerSmall: 0.5rem;
+$marginSmall: 1rem;
+$marginLarge: 2rem;
+
+// Borders and shadows
+$borderRadius: 6px;
+$boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+// Functions
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}

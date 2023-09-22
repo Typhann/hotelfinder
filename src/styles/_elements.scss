@@ -1,0 +1,52 @@
+// Typography
+
+h1,
+h2,
+h3,
+p,
+button,
+a {
+  font-family: $fontText;
+}
+h1 {
+  font-size: $fontSizeH1;
+}
+h2 {
+  font-size: $fontSizeH2;
+}
+h3 {
+  font-size: $fontSizeH3;
+}
+p {
+  font-size: $fontSizeP;
+}
+small {
+  font-size: $fontSizeSmall;
+}
+strong {
+  font-weight: 700;
+}
+a {
+  color: $colorLink;
+}
+
+// Buttons
+
+button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $borderRadius;
+  color: $colorWhite;
+  font-weight: 700;
+  background-color: $colorAction;
+  padding: $paddingContainerSmall;
+  font-size: $fontSizeH3;
+  font-family: $fontText;
+  min-width: 5rem;
+  cursor: pointer;
+  &:hover {
+    opacity: 75%;
+  }
+}

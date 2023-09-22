@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./reset";
+@import "./elements";
+
+/* Worldmap */
+.worldmap path:hover {
+  fill: #a41752;
+  opacity: 75%;
+  cursor: pointer;
+}
+
+.worldmap path.active {
+  fill: #a41752;
+}
+path {
+  fill: #c5c5c5;
+}
