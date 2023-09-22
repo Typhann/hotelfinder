@@ -17,6 +17,21 @@ textarea {
   box-shadow: none;
 }
 
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+}
+body > #root > .site-wrapper > main {
+  padding: 2rem;
+}
+
 h1,
 h2,
 h3,
@@ -71,6 +86,56 @@ button {
 }
 button:hover {
   opacity: 75%;
+}
+
+header {
+  z-index: 1;
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+header > .logo > a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+header > .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+header > .login-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+header > .login-register button:first-child {
+  margin-right: 1rem;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.search-container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
+  min-width: 400px;
+}
+.search-container svg {
+  margin-right: 1rem;
+}
+.search-container svg > path {
+  fill: #000000;
+}
+.search-container > p {
+  padding: 1rem;
 }
 
 /* Worldmap */

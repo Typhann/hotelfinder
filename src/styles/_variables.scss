@@ -32,9 +32,9 @@ $borderRadius: 6px;
 $boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 // Functions
-@mixin flexCenter($direction) {
+@mixin flex($direction, $justify, $align) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $justify;
+  align-items: $align;
   flex-direction: $direction;
 }

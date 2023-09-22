@@ -1,0 +1,38 @@
+header {
+  z-index: 1;
+  position: relative;
+  // border: 2px solid red;
+  box-shadow: $boxShadow;
+  @include flex(row, space-between, center);
+  padding: $paddingContainerLarge;
+  background-color: $colorWhite;
+  > .logo > a {
+    @include flex(column, center, flex-start);
+  }
+  > .search-container {
+    @include flex(row, center, center);
+  }
+  > .login-register {
+    @include flex(row, center, center);
+    button:first-child {
+      margin-right: $marginSmall;
+      color: $colorBlack;
+      background-color: $colorWhite;
+    }
+  }
+}
+
+.search-container {
+  box-shadow: $boxShadow;
+  border-radius: $borderRadius;
+  min-width: 400px;
+  svg {
+    margin-right: $marginSmall;
+    > path {
+      fill: $colorBlack;
+    }
+  }
+  > p {
+    padding: $paddingContainerMedium;
+  }
+}

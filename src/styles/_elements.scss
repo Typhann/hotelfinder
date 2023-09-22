@@ -1,3 +1,17 @@
+// Body
+
+html {
+  @include flex(column, center, center);
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  > #root > .site-wrapper > main {
+    padding: $paddingContainerLarge;
+  }
+}
+
 // Typography
 
 h1,
