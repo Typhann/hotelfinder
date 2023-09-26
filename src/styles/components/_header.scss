@@ -15,7 +15,7 @@ header {
   > .login-register {
     @include flex(row, center, center);
     button:first-child {
-      margin-right: $marginSmall;
+      margin-right: $marginMedium;
       color: $colorBlack;
       background-color: $colorWhite;
     }
@@ -29,17 +29,80 @@ header {
     border-radius: $borderRadius;
     min-width: 400px;
     svg {
-      margin-right: $marginSmall;
+      margin-right: $marginMedium;
       > path {
         fill: $colorBlack;
       }
     }
-    > p {
+    > div {
       padding: $paddingContainerMedium;
+      cursor: pointer;
     }
   }
   > button {
     background-color: $colorPrimary;
     margin-left: $marginLarge;
+  }
+}
+
+.modal-container {
+  width: 75%;
+  border: $borderRadius;
+  box-shadow: $boxShadow;
+  background-color: $colorWhite;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 999;
+  > .search-options-popup {
+    padding: $paddingContainerLarge $paddingContainerLarge
+      $paddingContainerLarge 0;
+    @include flex(column, center, center);
+    > * {
+      margin-bottom: $marginSmall;
+      max-width: 85%;
+    }
+    > button {
+      align-self: flex-end;
+      background-color: $colorPrimary;
+    }
+    > label,
+    strong,
+    ul {
+      align-self: flex-start;
+      margin: 0 0 $marginSmall 9.5%;
+    }
+    input,
+    ul {
+      margin-bottom: $marginLarge;
+    }
+    > input {
+      width: 80%;
+    }
+    > ul {
+      @include flex(row, flex-start, center);
+      flex-wrap: wrap;
+      > li {
+        margin: 0 $marginLarge $marginMedium 0;
+      }
+    }
+    .worldmap {
+      width: 100%;
+      > svg {
+        max-height: 50vh;
+        > path.active {
+          fill: $colorAction;
+        }
+        > path {
+          fill: $colorGray;
+          &:hover {
+            fill: $colorAction;
+            opacity: 75%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }

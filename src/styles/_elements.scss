@@ -19,7 +19,12 @@ h2,
 h3,
 p,
 button,
-a {
+a,
+strong,
+label,
+input,
+textarea,
+li {
   font-family: $fontText;
 }
 h1 {
@@ -37,11 +42,13 @@ p {
 small {
   font-size: $fontSizeSmall;
 }
-strong {
+strong,
+label {
   font-weight: 700;
 }
 a {
   color: $colorLink;
+  cursor: pointer;
 }
 
 // Buttons
@@ -63,4 +70,12 @@ button {
   &:hover {
     opacity: 75%;
   }
+}
+
+// Forms
+
+input {
+  padding: $paddingContainerSmall;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
 }

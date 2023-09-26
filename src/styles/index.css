@@ -37,7 +37,12 @@ h2,
 h3,
 p,
 button,
-a {
+a,
+strong,
+label,
+input,
+textarea,
+li {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -61,12 +66,14 @@ small {
   font-size: 0.75rem;
 }
 
-strong {
+strong,
+label {
   font-weight: 700;
 }
 
 a {
   color: #0177e7;
+  cursor: pointer;
 }
 
 button {
@@ -86,6 +93,12 @@ button {
 }
 button:hover {
   opacity: 75%;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 header {
@@ -138,25 +151,78 @@ header > .login-register button:first-child {
 .search-container .search-options svg > path {
   fill: #000000;
 }
-.search-container .search-options > p {
+.search-container .search-options > div {
   padding: 1rem;
+  cursor: pointer;
 }
 .search-container > button {
   background-color: #4a376d;
   margin-left: 2rem;
 }
 
-/* Worldmap */
-.worldmap path:hover {
+.modal-container {
+  width: 75%;
+  border: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 999;
+}
+.modal-container > .search-options-popup {
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal-container > .search-options-popup > * {
+  margin-bottom: 0.5rem;
+  max-width: 85%;
+}
+.modal-container > .search-options-popup > button {
+  align-self: flex-end;
+  background-color: #4a376d;
+}
+.modal-container > .search-options-popup > label,
+.modal-container > .search-options-popup strong,
+.modal-container > .search-options-popup ul {
+  align-self: flex-start;
+  margin: 0 0 0.5rem 9.5%;
+}
+.modal-container > .search-options-popup input,
+.modal-container > .search-options-popup ul {
+  margin-bottom: 2rem;
+}
+.modal-container > .search-options-popup > input {
+  width: 80%;
+}
+.modal-container > .search-options-popup > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modal-container > .search-options-popup > ul > li {
+  margin: 0 2rem 1rem 0;
+}
+.modal-container > .search-options-popup .worldmap {
+  width: 100%;
+}
+.modal-container > .search-options-popup .worldmap > svg {
+  max-height: 50vh;
+}
+.modal-container > .search-options-popup .worldmap > svg > path.active {
+  fill: #a41752;
+}
+.modal-container > .search-options-popup .worldmap > svg > path {
+  fill: #c5c5c5;
+}
+.modal-container > .search-options-popup .worldmap > svg > path:hover {
   fill: #a41752;
   opacity: 75%;
   cursor: pointer;
-}
-
-.worldmap path.active {
-  fill: #a41752;
-}
-
-path {
-  fill: #c5c5c5;
 }/*# sourceMappingURL=index.css.map */
