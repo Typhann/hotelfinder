@@ -1,6 +1,23 @@
-import { useState } from "react";
-export default function WorldMap() {
+import { useState, useContext, useEffect } from "react";
+import SearchContext from "../context/SearchContext";
+
+export default function WorldMap({
+  setInput,
+  setActiveDestination,
+  resetMapSelection,
+  setResetMapSelection,
+}) {
   const [country, setCountry] = useState("");
+  const { search, setSearch } = useContext(SearchContext);
+
+  function removeActiveClass() {
+    const paths = document.querySelectorAll(".worldmap path");
+    paths.forEach((path) => {
+      path.classList.remove("active");
+    });
+  }
+
+  resetMapSelection && removeActiveClass();
 
   const handleEvent = (event) => {
     const target = event.target;
@@ -10,22 +27,19 @@ export default function WorldMap() {
 
       if (event.type === "mouseenter") {
         setCountry(countryName);
-        // target.classList.add("hovered");
       }
 
       if (event.type === "mouseleave") {
         setCountry("");
-        // target.classList.remove("hovered");
       }
 
       if (event.type === "click") {
         setCountry(countryName);
-
-        const paths = document.querySelectorAll(".worldmap path");
-        paths.forEach((path) => {
-          path.classList.remove("active");
-        });
-
+        setSearch({ ...search, where: countryName });
+        setInput(countryName);
+        setActiveDestination(false);
+        removeActiveClass();
+        setResetMapSelection(false);
         target.classList.add("active");
       }
     }
@@ -33,7 +47,7 @@ export default function WorldMap() {
 
   return (
     <>
-      <strong>Choose on map: {country}</strong>
+      <strong>Choose on map: {!resetMapSelection && country}</strong>
       <div
         className="worldmap"
         onMouseEnter={handleEvent}

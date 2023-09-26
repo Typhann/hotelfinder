@@ -208,12 +208,19 @@ header > .login-register button:first-child {
 }
 .modal-container > .search-options-popup > ul > li {
   margin: 0 2rem 1rem 0;
+  color: #0177e7;
+  cursor: pointer;
+}
+.modal-container > .search-options-popup .active {
+  color: #a41752;
+  font-weight: 700;
 }
 .modal-container > .search-options-popup .worldmap {
   width: 100%;
 }
 .modal-container > .search-options-popup .worldmap > svg {
   max-height: 50vh;
+  margin-top: 0.5rem;
 }
 .modal-container > .search-options-popup .worldmap > svg > path.active {
   fill: #a41752;

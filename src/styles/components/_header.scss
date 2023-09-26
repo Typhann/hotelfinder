@@ -83,14 +83,23 @@ header {
     > ul {
       @include flex(row, flex-start, center);
       flex-wrap: wrap;
+
       > li {
         margin: 0 $marginLarge $marginMedium 0;
+        color: $colorLink;
+        cursor: pointer;
       }
+    }
+
+    .active {
+      color: $colorAction;
+      font-weight: 700;
     }
     .worldmap {
       width: 100%;
       > svg {
         max-height: 50vh;
+        margin-top: $marginSmall;
         > path.active {
           fill: $colorAction;
         }

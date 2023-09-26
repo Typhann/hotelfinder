@@ -1,12 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { FaLocationArrow, FaCalendarAlt, FaUser } from "react-icons/fa";
 import When from "./When";
 import Where from "./Where";
 import Who from "./Who";
+import SearchContext from "../../context/SearchContext";
 
 export default function Search() {
   const [modal, setModal] = useState(null);
   const modalRef = useRef(null);
+  const { search } = useContext(SearchContext);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -41,15 +43,21 @@ export default function Search() {
       <div className="search-options">
         <div>
           <FaLocationArrow />{" "}
-          <strong onClick={() => handleClick("where")}>Where</strong>
+          <strong onClick={() => handleClick("where")}>
+            {search.where.length ? search.where : "Where"}
+          </strong>
         </div>
         <div>
           <FaCalendarAlt />{" "}
-          <strong onClick={() => handleClick("when")}>When</strong>
+          <strong onClick={() => handleClick("when")}>
+            {search.when ? search.when : "When"}
+          </strong>
         </div>
         <div>
           <FaUser />
-          <strong onClick={() => handleClick("who")}>Who</strong>
+          <strong onClick={() => handleClick("who")}>
+            {search.who ? search.who : "Who"}
+          </strong>
         </div>
       </div>
       <button>Search</button>
