@@ -148,12 +148,10 @@ header > .login-register button:first-child {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
   min-width: 400px;
+  margin-right: 1rem;
 }
 .search-container .search-options svg {
   margin-right: 1rem;
-}
-.search-container .search-options svg > path {
-  fill: #000000;
 }
 .search-container .search-options > div {
   padding: 1rem;

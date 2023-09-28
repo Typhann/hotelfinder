@@ -28,11 +28,9 @@ header {
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
     min-width: 400px;
+    margin-right: $marginMedium;
     svg {
       margin-right: $marginMedium;
-      > path {
-        fill: $colorBlack;
-      }
     }
     > div {
       padding: $paddingContainerMedium;

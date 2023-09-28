@@ -4,12 +4,14 @@ import When from "./When";
 import Where from "./Where";
 import Who from "./Who";
 import SearchContext from "../../context/SearchContext";
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function Search() {
   const [modal, setModal] = useState(null);
   const modalRef = useRef(null);
   const { search } = useContext(SearchContext);
-  const { totalAdults, totalChildren, totalPets } = getTotalPeople();
+  const { totalAdults, totalChildren, totalPets } = getTotalGuests();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -41,7 +43,7 @@ export default function Search() {
     }
   }
 
-  function getTotalPeople() {
+  function getTotalGuests() {
     let totalAdults = 0;
     let totalChildren = 0;
     let totalPets = 0;
@@ -52,8 +54,6 @@ export default function Search() {
       totalPets += parseInt(room.pets) || 0;
     });
 
-    console.log(totalAdults, totalChildren, totalPets);
-
     return {
       totalAdults,
       totalChildren,
@@ -61,31 +61,47 @@ export default function Search() {
     };
   }
 
-  return (
-    <div className="search-container">
-      <div className="search-options">
-        <div onClick={() => handleClick("where")}>
-          <FaLocationArrow />
-          <strong>{search.where.length ? search.where : "Where"}</strong>
-        </div>
-        <div onClick={() => handleClick("when")}>
-          <FaCalendarAlt />
-          <strong>{search.when ? search.when : "When"}</strong>
-        </div>
-        <div onClick={() => handleClick("who")}>
-          <FaUser />
-          <strong>
-            {totalAdults || totalChildren || totalPets >= 1
-              ? `${totalAdults + totalChildren + totalPets}`
-              : "Who"}
-          </strong>
-        </div>
-      </div>
-      <button className="button">Search</button>
+  function handleSearchClick() {
+    if (search.where < 1) {
+      alert("you have to enter a search first");
+      handleClick("where");
+    }
+  }
 
-      <div className="modal-container" ref={modalRef}>
-        {modal}
+  return (
+    <>
+      <ToastContainer />
+      <div className="search-container">
+        <div className="search-options">
+          <div onClick={() => handleClick("where")}>
+            <FaLocationArrow />
+            <strong>{search.where.length ? search.where : "Where"}</strong>
+          </div>
+          <div onClick={() => handleClick("when")}>
+            <FaCalendarAlt />
+            <strong>{search.when ? search.when : "When"}</strong>
+          </div>
+          <div onClick={() => handleClick("who")}>
+            <FaUser />
+            <strong>
+              {totalAdults || totalChildren || totalPets >= 1
+                ? `${totalAdults + totalChildren + totalPets}`
+                : "Who"}
+            </strong>
+          </div>
+        </div>
+        <Link
+          to={search.where ? `search/?q=${search.where}` : "#"}
+          className="button"
+          onClick={handleSearchClick}
+        >
+          Search
+        </Link>
+
+        <div className="modal-container" ref={modalRef}>
+          {modal}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
