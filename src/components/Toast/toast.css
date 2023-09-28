@@ -1,0 +1,70 @@
+.feedback-container {
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  animation: pop 4s infinite linear;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+.feedback-container > h3 {
+  padding: 0.25rem;
+}
+
+.feedback-timer {
+  height: 2.5px;
+  /* width: 95%; */
+  margin-left: 5px;
+  margin-top: 5px;
+  animation: timer 4s infinite linear;
+  background-color: #7c7c7c;
+}
+
+#error {
+  background-color: red;
+}
+#warning {
+  background-color: rgb(255, 166, 31);
+}
+#success {
+  background-color: rgb(20, 255, 98);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    display: none;
+  }
+  5% {
+    transform: scale(1.1);
+    display: block;
+  }
+  10% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+    display: none;
+  }
+}
+
+@keyframes timer {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 0%;
+  }
+}

@@ -5,13 +5,18 @@ import Where from "./Where";
 import Who from "./Who";
 import SearchContext from "../../context/SearchContext";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import Toast from "../Toast/Toast";
 
 export default function Search() {
   const [modal, setModal] = useState(null);
+  const [error, setError] = useState(false);
   const modalRef = useRef(null);
   const { search } = useContext(SearchContext);
   const { totalAdults, totalChildren, totalPets } = getTotalGuests();
+
+  useEffect(() => {
+    setTimeout(() => setError(false), 5000);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -63,14 +68,13 @@ export default function Search() {
 
   function handleSearchClick() {
     if (search.where < 1) {
-      alert("you have to enter a search first");
+      setError(true);
       handleClick("where");
     }
   }
 
   return (
     <>
-      <ToastContainer />
       <div className="search-container">
         <div className="search-options">
           <div onClick={() => handleClick("where")}>
@@ -97,10 +101,12 @@ export default function Search() {
         >
           Search
         </Link>
-
         <div className="modal-container" ref={modalRef}>
           {modal}
         </div>
+        {error && (
+          <Toast message="You must enter where first!" type="warning" />
+        )}
       </div>
     </>
   );
