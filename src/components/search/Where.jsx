@@ -66,7 +66,9 @@ export default function Where({ handleClick }) {
         resetMapSelection={resetMapSelection}
         setResetMapSelection={setResetMapSelection}
       />
-      <button onClick={handleClick}>Done</button>
+      <button className="button" onClick={handleClick}>
+        Done
+      </button>
     </div>
   );
 }

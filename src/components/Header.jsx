@@ -12,8 +12,8 @@ export default function Header() {
         </div>
         <Search />
         <div className="login-register">
-          <button>Log in</button>
-          <button>Register</button>
+          <button className="button">Log in</button>
+          <button className="button">Register</button>
         </div>
       </header>
     </>

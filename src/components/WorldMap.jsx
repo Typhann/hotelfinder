@@ -25,14 +25,6 @@ export default function WorldMap({
     if (target.tagName === "path") {
       const countryName = target.getAttribute("title");
 
-      if (event.type === "mouseenter") {
-        setCountry(countryName);
-      }
-
-      if (event.type === "mouseleave") {
-        setCountry("");
-      }
-
       if (event.type === "click") {
         setCountry(countryName);
         setSearch({ ...search, where: countryName });
@@ -47,7 +39,10 @@ export default function WorldMap({
 
   return (
     <>
-      <strong>Choose on map: {!resetMapSelection && country}</strong>
+      <strong>
+        Choose on map:
+        <span> {!resetMapSelection && country}</span>
+      </strong>
       <div
         className="worldmap"
         onMouseEnter={handleEvent}

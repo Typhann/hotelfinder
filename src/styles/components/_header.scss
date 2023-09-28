@@ -95,6 +95,8 @@ header {
       color: $colorAction;
       font-weight: 700;
     }
+
+    // Where
     .worldmap {
       width: 100%;
       > svg {
@@ -113,5 +115,21 @@ header {
         }
       }
     }
+    // When
+    > .calendar-container {
+      @include flex(row, center, center);
+      // border: 2px solid red;
+      > .calendar {
+        padding: $paddingContainerSmall;
+        > strong {
+          margin-left: 25px;
+        }
+      }
+    }
   }
+}
+
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected:hover {
+  background-color: $colorAction !important;
 }

@@ -50,10 +50,12 @@ a {
   color: $colorLink;
   cursor: pointer;
 }
-
+span {
+  color: $colorAction;
+}
 // Buttons
 
-button {
+.button {
   all: unset;
   display: flex;
   justify-content: center;

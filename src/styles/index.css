@@ -76,7 +76,11 @@ a {
   cursor: pointer;
 }
 
-button {
+span {
+  color: #a41752;
+}
+
+.button {
   all: unset;
   display: flex;
   justify-content: center;
@@ -91,7 +95,7 @@ button {
   min-width: 5rem;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   opacity: 75%;
 }
 
@@ -232,4 +236,21 @@ header > .login-register button:first-child {
   fill: #a41752;
   opacity: 75%;
   cursor: pointer;
+}
+.modal-container > .search-options-popup > .calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-container > .search-options-popup > .calendar-container > .calendar {
+  padding: 0.5rem;
+}
+.modal-container > .search-options-popup > .calendar-container > .calendar > strong {
+  margin-left: 25px;
+}
+
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected:hover {
+  background-color: #a41752 !important;
 }/*# sourceMappingURL=index.css.map */
