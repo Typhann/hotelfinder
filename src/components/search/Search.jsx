@@ -9,6 +9,7 @@ export default function Search() {
   const [modal, setModal] = useState(null);
   const modalRef = useRef(null);
   const { search } = useContext(SearchContext);
+  const { totalAdults, totalChildren, totalPets } = getTotalPeople();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -40,6 +41,26 @@ export default function Search() {
     }
   }
 
+  function getTotalPeople() {
+    let totalAdults = 0;
+    let totalChildren = 0;
+    let totalPets = 0;
+
+    search.rooms.forEach((room) => {
+      totalAdults += parseInt(room.adults) || 0;
+      totalChildren += parseInt(room.children) || 0;
+      totalPets += parseInt(room.pets) || 0;
+    });
+
+    console.log(totalAdults, totalChildren, totalPets);
+
+    return {
+      totalAdults,
+      totalChildren,
+      totalPets,
+    };
+  }
+
   return (
     <div className="search-container">
       <div className="search-options">
@@ -53,7 +74,11 @@ export default function Search() {
         </div>
         <div onClick={() => handleClick("who")}>
           <FaUser />
-          <strong>{search.who ? search.who : "Who"}</strong>
+          <strong>
+            {totalAdults || totalChildren || totalPets >= 1
+              ? `${totalAdults + totalChildren + totalPets}`
+              : "Who"}
+          </strong>
         </div>
       </div>
       <button className="button">Search</button>

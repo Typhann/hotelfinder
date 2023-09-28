@@ -16,7 +16,6 @@ export default function When({ handleClick }) {
         }`,
       });
     }
-    console.log(search);
   }, [checkIn, checkOut, search, setSearch]);
   return (
     <div className="search-options-popup">

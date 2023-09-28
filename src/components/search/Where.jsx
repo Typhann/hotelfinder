@@ -52,7 +52,7 @@ export default function Where({ handleClick }) {
       <ul>
         {popularDestinations.map((destination) => (
           <li
-            key="destination"
+            key={destination}
             onClick={handleDestinationClick}
             className={activeDestination === destination ? "active" : ""}
           >

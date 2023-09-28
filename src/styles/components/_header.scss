@@ -126,6 +126,33 @@ header {
         }
       }
     }
+    .room-options-container {
+      width: 100%;
+      @include flex(row, flex-start, center);
+      > .counter-container {
+        > strong {
+          margin-right: $marginMedium;
+        }
+        @include flex(row, flex-start, center);
+        > .counter {
+          @include flex(row, center, center);
+          box-shadow: $boxShadow;
+          border-radius: 20px;
+          width: 100px;
+          height: 24px;
+          padding: $paddingContainerMedium;
+          margin: -10px $marginLarge 0 0;
+          > * {
+            margin: 0.5rem;
+            font-family: $fontText;
+            font-weight: bold;
+          }
+          > div {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
   }
 }
 
