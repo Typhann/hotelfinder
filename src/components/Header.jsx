@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Search from "./search/Search";
 
 export default function Header() {
@@ -5,10 +6,10 @@ export default function Header() {
     <>
       <header>
         <div className="logo">
-          <a href="/">
+          <Link to="/">
             <span>Hotelfinder</span>
             <strong>Book Hotels with ease</strong>
-          </a>
+          </Link>
         </div>
         <Search />
         <div className="login-register">
