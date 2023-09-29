@@ -1,0 +1,65 @@
+section {
+  > h2 {
+    margin-bottom: $marginMedium;
+  }
+  > .grid {
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+    > .card-container {
+      margin-bottom: $marginLarge;
+    }
+  }
+  > .carousel {
+    @include flex(row, flex-start, flex-start);
+  }
+  > .hotels-container {
+    max-width: 100vw;
+    overflow-x: scroll;
+    > .card-container {
+      width: 275px;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      margin-right: $marginLarge;
+      cursor: pointer;
+      > img {
+        border-radius: $borderRadius $borderRadius 0 0;
+        margin-bottom: $marginSmall;
+      }
+      > .star-container,
+      h2,
+      .card-info,
+      .tags-container,
+      .card-bottom {
+        padding: 0 $paddingContainerSmall 0px $paddingContainerSmall;
+      }
+      > .star-container {
+        > svg {
+          fill: $colorStar;
+        }
+      }
+      > .card-info,
+      .card-bottom {
+        @include flex(row, space-between, center);
+        padding-bottom: $paddingContainerSmall;
+      }
+      .tags-container {
+        @include flex(row, flex-start, center);
+        > div > svg {
+          margin-right: $marginSmall;
+        }
+        > div > small {
+          margin-right: $marginMedium;
+        }
+      }
+      .card-bottom {
+        margin-top: $marginMedium;
+        > .share-heart {
+          font-size: $fontSizeH3;
+          svg:first-child {
+            margin-right: $marginSmall;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,6 @@
 header {
   z-index: 1;
   position: relative;
-  // border: 2px solid red;
-  box-shadow: $boxShadow;
   @include flex(row, space-between, center);
   padding: $paddingContainerLarge;
   background-color: $colorWhite;
@@ -22,6 +20,17 @@ header {
   }
 }
 
+// makes header box shadow extend beyond max with of website
+header:before {
+  content: "";
+  box-shadow: $boxShadow;
+  position: absolute;
+  height: 100%;
+  width: 500vw;
+  left: -250vw;
+  z-index: -1;
+}
+
 .search-container {
   .search-options {
     @include flex(row, center, center);
@@ -37,9 +46,8 @@ header {
       cursor: pointer;
     }
   }
-  > button {
+  > .button {
     background-color: $colorPrimary;
-    margin-left: $marginLarge;
   }
 }
 
@@ -116,7 +124,6 @@ header {
     // When
     > .calendar-container {
       @include flex(row, center, center);
-      // border: 2px solid red;
       > .calendar {
         padding: $paddingContainerSmall;
         > strong {
@@ -124,6 +131,8 @@ header {
         }
       }
     }
+
+    // Who
     .room-options-container {
       width: 100%;
       @include flex(row, flex-start, center);
@@ -148,12 +157,17 @@ header {
           > div {
             font-size: 1.5rem;
           }
+          > div::selection {
+            color: none;
+            background: none;
+          }
         }
       }
     }
   }
 }
 
+// Calendar picker color
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
 .css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected:hover {
   background-color: $colorAction !important;

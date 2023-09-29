@@ -19,7 +19,6 @@
 
 .feedback-timer {
   height: 2.5px;
-  /* width: 95%; */
   margin-left: 5px;
   margin-top: 5px;
   animation: timer 4s infinite linear;

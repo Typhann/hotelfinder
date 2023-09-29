@@ -1,0 +1,118 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Luxury Hotel",
+      "rating": 5,
+      "address": "123 Main Street, Cityville",
+      "price_per_night": 300,
+      "amenities": ["Swimming Pool", "Spa", "Fine Dining"],
+      "google_maps_link": "https://www.google.com/maps?q=123+Main+Street%2C+Cityville",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 2,
+      "name": "Comfort Inn",
+      "rating": 3,
+      "address": "456 Elm Avenue, Townsville",
+      "price_per_night": 100,
+      "amenities": ["Free Wi-Fi", "Breakfast Included"],
+      "google_maps_link": "https://www.google.com/maps?q=456+Elm+Avenue%2C+Townsville",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 3,
+      "name": "Budget Lodge",
+      "rating": 2,
+      "address": "789 Oak Road, Villagetown",
+      "price_per_night": 50,
+      "amenities": ["Basic Room", "Parking"],
+      "google_maps_link": "https://www.google.com/maps?q=789+Oak+Road%2C+Villagetown",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 4,
+      "name": "Seaside Resort",
+      "rating": 4,
+      "address": "10 Oceanfront Drive, Beachtown",
+      "price_per_night": 200,
+      "amenities": ["Beach Access", "Poolside Bar"],
+      "google_maps_link": "https://www.google.com/maps?q=10+Oceanfront+Drive%2C+Beachtown",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 5,
+      "name": "Mountain Lodge",
+      "rating": 3,
+      "address": "45 Pinecone Lane, Mountainville",
+      "price_per_night": 120,
+      "amenities": ["Scenic Views", "Hiking Trails"],
+      "google_maps_link": "https://www.google.com/maps?q=45+Pinecone+Lane%2C+Mountainville",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 6,
+      "name": "Urban Suites",
+      "rating": 4,
+      "address": "789 Downtown Avenue, Metropolis",
+      "price_per_night": 180,
+      "amenities": ["City Views", "Fitness Center"],
+      "google_maps_link": "https://www.google.com/maps?q=789+Downtown+Avenue%2C+Metropolis",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 7,
+      "name": "Historic Inn",
+      "rating": 3,
+      "address": "15 Heritage Street, Oldtown",
+      "price_per_night": 90,
+      "amenities": ["Antique Decor", "Courtyard"],
+      "google_maps_link": "https://www.google.com/maps?q=15+Heritage+Street%2C+Oldtown",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 8,
+      "name": "Riverside Retreat",
+      "rating": 4,
+      "address": "30 Riverfront Road, Riverside",
+      "price_per_night": 150,
+      "amenities": ["River Views", "Canoe Rentals"],
+      "google_maps_link": "https://www.google.com/maps?q=30+Riverfront+Road%2C+Riverside",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 9,
+      "name": "Ski Lodge",
+      "rating": 3,
+      "address": "55 Snowy Slopes Lane, Winterville",
+      "price_per_night": 160,
+      "amenities": ["Ski-In/Ski-Out", "Hot Tub"],
+      "google_maps_link": "https://www.google.com/maps?q=55+Snowy+Slopes+Lane%2C+Winterville",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    },
+    {
+      "id": 10,
+      "name": "Desert Oasis",
+      "rating": 4,
+      "address": "75 Dunes Drive, Desertville",
+      "price_per_night": 220,
+      "amenities": ["Desert Views", "Pool"],
+      "google_maps_link": "https://www.google.com/maps?q=75+Dunes+Drive%2C+Desertville",
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+    }
+  ],
+  "popularDestinations": [
+    "Berlin",
+    "Paris",
+    "Brazil",
+    "Stockholm",
+    "Tokyo",
+    "New York",
+    "Thailand",
+    "Mexico",
+    "Australia",
+    "London",
+    "Copenhagen",
+    "Singapore"
+  ]
+}

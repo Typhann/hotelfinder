@@ -1,7 +1,10 @@
+import { useLocation } from "react-router-dom";
+import { renderHotels } from "../../utils";
+
 export default function SearchResult() {
-  return (
-    <>
-      <h1>Search result page</h1>
-    </>
-  );
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const search = queryParams.get("q");
+
+  return <>{renderHotels(search, "grid")}</>;
 }

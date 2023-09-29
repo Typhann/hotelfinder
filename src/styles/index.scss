@@ -2,3 +2,20 @@
 @import "./reset";
 @import "./elements";
 @import "./components/header";
+@import "./components/hotelCard";
+
+main {
+  > h2 {
+    margin-bottom: $marginMedium;
+  }
+  > ul {
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+    margin-bottom: $marginLarge;
+    > li {
+      margin: 0 $marginLarge $marginMedium 0;
+      color: $colorLink;
+      cursor: pointer;
+    }
+  }
+}

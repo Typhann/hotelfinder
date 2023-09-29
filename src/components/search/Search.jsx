@@ -15,7 +15,7 @@ export default function Search() {
   const { totalAdults, totalChildren, totalPets } = getTotalGuests();
 
   useEffect(() => {
-    setTimeout(() => setError(false), 5000);
+    setTimeout(() => setError(false), 10500);
   }, []);
 
   useEffect(() => {

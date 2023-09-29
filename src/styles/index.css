@@ -42,7 +42,8 @@ strong,
 label,
 input,
 textarea,
-li {
+li,
+small {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -108,7 +109,6 @@ input {
 header {
   z-index: 1;
   position: relative;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,6 +140,16 @@ header > .login-register button:first-child {
   background-color: #ffffff;
 }
 
+header:before {
+  content: "";
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  height: 100%;
+  width: 500vw;
+  left: -250vw;
+  z-index: -1;
+}
+
 .search-container .search-options {
   display: flex;
   justify-content: center;
@@ -157,9 +167,8 @@ header > .login-register button:first-child {
   padding: 1rem;
   cursor: pointer;
 }
-.search-container > button {
+.search-container > .button {
   background-color: #4a376d;
-  margin-left: 2rem;
 }
 
 .modal-container {
@@ -283,8 +292,107 @@ header > .login-register button:first-child {
 .modal-container > .search-options-popup .room-options-container > .counter-container > .counter > div {
   font-size: 1.5rem;
 }
+.modal-container > .search-options-popup .room-options-container > .counter-container > .counter > div::-moz-selection {
+  color: none;
+  background: none;
+}
+.modal-container > .search-options-popup .room-options-container > .counter-container > .counter > div::selection {
+  color: none;
+  background: none;
+}
 
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
 .css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected:hover {
   background-color: #a41752 !important;
+}
+
+section > h2 {
+  margin-bottom: 1rem;
+}
+section > .grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section > .grid > .card-container {
+  margin-bottom: 2rem;
+}
+section > .carousel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+section > .hotels-container {
+  max-width: 100vw;
+  overflow-x: scroll;
+}
+section > .hotels-container > .card-container {
+  width: 275px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+section > .hotels-container > .card-container > img {
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 0.5rem;
+}
+section > .hotels-container > .card-container > .star-container,
+section > .hotels-container > .card-container h2,
+section > .hotels-container > .card-container .card-info,
+section > .hotels-container > .card-container .tags-container,
+section > .hotels-container > .card-container .card-bottom {
+  padding: 0 0.5rem 0px 0.5rem;
+}
+section > .hotels-container > .card-container > .star-container > svg {
+  fill: #feb600;
+}
+section > .hotels-container > .card-container > .card-info,
+section > .hotels-container > .card-container .card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 0.5rem;
+}
+section > .hotels-container > .card-container .tags-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+section > .hotels-container > .card-container .tags-container > div > svg {
+  margin-right: 0.5rem;
+}
+section > .hotels-container > .card-container .tags-container > div > small {
+  margin-right: 1rem;
+}
+section > .hotels-container > .card-container .card-bottom {
+  margin-top: 1rem;
+}
+section > .hotels-container > .card-container .card-bottom > .share-heart {
+  font-size: 1.4rem;
+}
+section > .hotels-container > .card-container .card-bottom > .share-heart svg:first-child {
+  margin-right: 0.5rem;
+}
+
+main > h2 {
+  margin-bottom: 1rem;
+}
+main > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+main > ul > li {
+  margin: 0 2rem 1rem 0;
+  color: #0177e7;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

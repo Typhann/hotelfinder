@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import WorldMap from "../WorldMap";
 import SearchContext from "../../context/SearchContext";
+import database from "../../../database.json";
 
 export default function Where({ handleClick }) {
   const { search, setSearch } = useContext(SearchContext);
@@ -23,21 +24,6 @@ export default function Where({ handleClick }) {
     setResetMapSelection(true);
   }
 
-  const popularDestinations = [
-    "Berlin",
-    "Paris",
-    "Brazil",
-    "Stockholm",
-    "Tokyo",
-    "New York",
-    "Thailand",
-    "Mexico",
-    "Australia",
-    "London",
-    "Copenhagen",
-    "Singapore",
-  ];
-
   return (
     <div className="search-options-popup">
       <label htmlFor="search">Search</label>
@@ -50,7 +36,7 @@ export default function Where({ handleClick }) {
       ></input>
       <strong>Popular destinations</strong>
       <ul>
-        {popularDestinations.map((destination) => (
+        {database.popularDestinations.map((destination) => (
           <li
             key={destination}
             onClick={handleDestinationClick}
