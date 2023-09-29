@@ -172,7 +172,7 @@ header:before {
 }
 
 .modal-container {
-  width: 75%;
+  width: auto;
   border: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: #ffffff;
@@ -190,8 +190,7 @@ header:before {
   flex-direction: column;
 }
 .modal-container > .search-options-popup > * {
-  margin-bottom: 0.5rem;
-  max-width: 85%;
+  margin-bottom: 2rem;
 }
 .modal-container > .search-options-popup > button {
   align-self: flex-end;
@@ -199,7 +198,8 @@ header:before {
 }
 .modal-container > .search-options-popup > label,
 .modal-container > .search-options-popup strong,
-.modal-container > .search-options-popup ul {
+.modal-container > .search-options-popup ul,
+.modal-container > .search-options-popup small {
   align-self: flex-start;
   margin: 0 0 0.5rem 9.5%;
 }
@@ -227,7 +227,7 @@ header:before {
   font-weight: 700;
 }
 .modal-container > .search-options-popup .worldmap {
-  width: 100%;
+  width: 80%;
 }
 .modal-container > .search-options-popup .worldmap > svg {
   max-height: 50vh;
@@ -258,6 +258,7 @@ header:before {
 }
 .modal-container > .search-options-popup .room-options-container {
   width: 100%;
+  margin-left: 7.6rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -265,12 +266,12 @@ header:before {
 }
 .modal-container > .search-options-popup .room-options-container > .counter-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-.modal-container > .search-options-popup .room-options-container > .counter-container > strong {
-  margin-right: 1rem;
+.modal-container > .search-options-popup .room-options-container > .counter-container > p {
+  margin: 0.5rem;
 }
 .modal-container > .search-options-popup .room-options-container > .counter-container > .counter {
   display: flex;
@@ -282,7 +283,7 @@ header:before {
   width: 100px;
   height: 24px;
   padding: 1rem;
-  margin: -10px 2rem 0 0;
+  margin: 0px 2rem 0 0;
 }
 .modal-container > .search-options-popup .room-options-container > .counter-container > .counter > * {
   margin: 0.5rem;

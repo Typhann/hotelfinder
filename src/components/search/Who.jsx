@@ -2,7 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import SearchContext from "../../context/SearchContext";
 
 const Room = ({ number }) => {
-  const { search, setSearch } = useContext(SearchContext);
+  const { search } = useContext(SearchContext);
   const room = search.rooms[number - 1] || {};
 
   return (
@@ -48,7 +48,7 @@ const Counter = ({ label, room, roomIndex }) => {
 
   return (
     <div className="counter-container">
-      <strong>{label}</strong>
+      <p>{label}</p>
       <div className="counter">
         <div style={{ cursor: "pointer" }} onClick={decrease}>
           -
@@ -61,7 +61,7 @@ const Counter = ({ label, room, roomIndex }) => {
     </div>
   );
 };
-export default function Who() {
+export default function Who({ handleClick }) {
   const { search, setSearch } = useContext(SearchContext);
   const { rooms } = search;
 
@@ -100,6 +100,9 @@ export default function Who() {
           <a onClick={() => removeRoom()}>Remove room</a>
         </strong>
       )}
+      <button onClick={handleClick} className="button">
+        Done
+      </button>
     </div>
   );
 }

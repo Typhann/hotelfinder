@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   FaStar,
   FaRegStar,
@@ -20,6 +21,7 @@ import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 
 export default function HotelCard(props) {
+  const navigate = useNavigate();
   const hotelImages = [
     hotelImage1,
     hotelImage2,
@@ -33,9 +35,13 @@ export default function HotelCard(props) {
     hotelImage10,
   ];
 
+  function handleClick() {
+    navigate(`/hotel/${props.id}`);
+  }
+
   const hotelImage = hotelImages[props.id - 1];
   return (
-    <div className="card-container">
+    <div onClick={handleClick} className="card-container">
       <img src={hotelImage} width="275px" height="175px" />
       <div className="star-container">
         <FaStar />

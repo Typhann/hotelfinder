@@ -52,7 +52,7 @@ header:before {
 }
 
 .modal-container {
-  width: 75%;
+  width: auto;
   border: $borderRadius;
   box-shadow: $boxShadow;
   background-color: $colorWhite;
@@ -64,10 +64,12 @@ header:before {
   > .search-options-popup {
     padding: $paddingContainerLarge $paddingContainerLarge
       $paddingContainerLarge 0;
+    // border: 2px solid red;
+    // width: 80vw;
     @include flex(column, center, center);
     > * {
-      margin-bottom: $marginSmall;
-      max-width: 85%;
+      margin-bottom: $marginLarge;
+      // max-width: 85%;
     }
     > button {
       align-self: flex-end;
@@ -75,7 +77,8 @@ header:before {
     }
     > label,
     strong,
-    ul {
+    ul,
+    small {
       align-self: flex-start;
       margin: 0 0 $marginSmall 9.5%;
     }
@@ -104,7 +107,7 @@ header:before {
 
     // Where
     .worldmap {
-      width: 100%;
+      width: 80%;
       > svg {
         max-height: 50vh;
         margin-top: $marginSmall;
@@ -135,12 +138,13 @@ header:before {
     // Who
     .room-options-container {
       width: 100%;
+      margin-left: 7.6rem;
       @include flex(row, flex-start, center);
       > .counter-container {
-        > strong {
-          margin-right: $marginMedium;
+        > p {
+          margin: $marginSmall;
         }
-        @include flex(row, flex-start, center);
+        @include flex(row, center, center);
         > .counter {
           @include flex(row, center, center);
           box-shadow: $boxShadow;
@@ -148,11 +152,12 @@ header:before {
           width: 100px;
           height: 24px;
           padding: $paddingContainerMedium;
-          margin: -10px $marginLarge 0 0;
+          margin: 0px $marginLarge 0 0;
           > * {
             margin: 0.5rem;
             font-family: $fontText;
             font-weight: bold;
+            // border: 2px solid gray;
           }
           > div {
             font-size: 1.5rem;
