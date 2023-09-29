@@ -108,7 +108,8 @@ input {
 
 header {
   z-index: 1;
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
