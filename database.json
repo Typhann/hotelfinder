@@ -8,7 +8,9 @@
       "price_per_night": 300,
       "amenities": ["Swimming Pool", "Spa", "Fine Dining"],
       "google_maps_link": "https://www.google.com/maps?q=123+Main+Street%2C+Cityville",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Indulge in the epitome of opulence at the Luxury Hotel on Main Street, Cityville. With a prestigious 5-star rating, this hotel promises an exquisite and memorable experience. Immerse yourself in ultimate relaxation with a pristine swimming pool and rejuvenating spa treatments. The fine dining options will tantalize your taste buds with gourmet delights. Located in the heart of the city, this hotel caters to both leisure and business travelers, offering a perfect blend of luxury and convenience. Discover an exceptional stay where sophistication meets comfort.",
+      "title": "Exquisite 5-Star Luxury Hotel in City Center"
     },
     {
       "id": 2,
@@ -18,7 +20,9 @@
       "price_per_night": 100,
       "amenities": ["Free Wi-Fi", "Breakfast Included"],
       "google_maps_link": "https://www.google.com/maps?q=456+Elm+Avenue%2C+Townsville",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Welcome to Comfort Inn, where affordability meets comfort. Situated at 456 Elm Avenue, Townsville, this budget-friendly 3-star hotel offers free Wi-Fi and a complimentary breakfast. Whether you're here for business or leisure, it's the perfect choice for a cozy and wallet-friendly stay.",
+      "title": "Affordable Comfort with Free Wi-Fi and Breakfast"
     },
     {
       "id": 3,
@@ -28,7 +32,9 @@
       "price_per_night": 50,
       "amenities": ["Basic Room", "Parking"],
       "google_maps_link": "https://www.google.com/maps?q=789+Oak+Road%2C+Villagetown",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "For the savvy traveler, Budget Lodge at 789 Oak Road, Villagetown, offers simplicity and affordability. With basic rooms and convenient parking, it's the ideal choice for those seeking practical accommodations without sacrificing comfort.",
+      "title": "Savvy Traveler's Choice for Simplicity and Affordability"
     },
     {
       "id": 4,
@@ -38,7 +44,9 @@
       "price_per_night": 200,
       "amenities": ["Beach Access", "Poolside Bar"],
       "google_maps_link": "https://www.google.com/maps?q=10+Oceanfront+Drive%2C+Beachtown",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Escape to the tranquil paradise of Seaside Resort at 10 Oceanfront Drive, Beachtown. This 4-star haven offers direct beach access and a vibrant poolside bar, making it the perfect destination for a coastal retreat.",
+      "title": "Tranquil 4-Star Beachfront Paradise"
     },
     {
       "id": 5,
@@ -48,7 +56,9 @@
       "price_per_night": 120,
       "amenities": ["Scenic Views", "Hiking Trails"],
       "google_maps_link": "https://www.google.com/maps?q=45+Pinecone+Lane%2C+Mountainville",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Embrace the beauty of nature at Mountain Lodge, located at 45 Pinecone Lane, Mountainville. This 3-star retreat offers breathtaking scenic views and easy access to hiking trails, making it an ideal choice for nature enthusiasts.",
+      "title": "Nature Lover's Retreat with Breathtaking Scenic Views"
     },
     {
       "id": 6,
@@ -58,7 +68,9 @@
       "price_per_night": 180,
       "amenities": ["City Views", "Fitness Center"],
       "google_maps_link": "https://www.google.com/maps?q=789+Downtown+Avenue%2C+Metropolis",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Elevate your urban experience at Urban Suites, located at 789 Downtown Avenue, Metropolis. Offering stunning city views and a state-of-the-art fitness center, it's the perfect choice for travelers seeking sophistication in the heart of the city.",
+      "title": "Sophisticated Urban Retreat with Stunning City Views"
     },
     {
       "id": 7,
@@ -68,7 +80,9 @@
       "price_per_night": 90,
       "amenities": ["Antique Decor", "Courtyard"],
       "google_maps_link": "https://www.google.com/maps?q=15+Heritage+Street%2C+Oldtown",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Step into the charm of yesteryears at the Historic Inn on 15 Heritage Street, Oldtown. This 3-star gem features antique decor and a serene courtyard, offering a unique and nostalgic stay.",
+      "title": "Charming 3-Star Historic Gem with Antique Decor"
     },
     {
       "id": 8,
@@ -78,7 +92,9 @@
       "price_per_night": 150,
       "amenities": ["River Views", "Canoe Rentals"],
       "google_maps_link": "https://www.google.com/maps?q=30+Riverfront+Road%2C+Riverside",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Discover serenity by the river at Riverside Retreat, situated at 30 Riverfront Road, Riverside. Enjoy breathtaking river views and the opportunity to rent canoes for outdoor adventures, creating the perfect escape for nature enthusiasts.",
+      "title": "Serenity by the River with Breathtaking Views"
     },
     {
       "id": 9,
@@ -88,7 +104,9 @@
       "price_per_night": 160,
       "amenities": ["Ski-In/Ski-Out", "Hot Tub"],
       "google_maps_link": "https://www.google.com/maps?q=55+Snowy+Slopes+Lane%2C+Winterville",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Ski Lodge at 55 Snowy Slopes Lane, Winterville, is a haven for winter sports enthusiasts. Offering ski-in/ski-out access and a relaxing hot tub, it's the perfect retreat after a day on the slopes.",
+      "title": "Winter Sports Haven with Ski-In/Ski-Out Access"
     },
     {
       "id": 10,
@@ -98,7 +116,9 @@
       "price_per_night": 220,
       "amenities": ["Desert Views", "Pool"],
       "google_maps_link": "https://www.google.com/maps?q=75+Dunes+Drive%2C+Desertville",
-      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp"
+      "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
+      "description": "Experience the serenity of the Desert Oasis at 75 Dunes Drive, Desertville. This 4-star desert retreat offers captivating desert views and a refreshing pool for a tranquil and rejuvenating stay.",
+      "title": "Tranquil 4-Star Desert Retreat with Captivating Views"
     }
   ],
   "popularDestinations": [

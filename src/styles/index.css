@@ -382,6 +382,64 @@ section > .hotels-container > .card-container .card-bottom > .share-heart svg:fi
   margin-right: 0.5rem;
 }
 
+main > .hotel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+main > .hotel-header > .name-rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+main > .hotel-header > .name-rating > h1 {
+  margin: 2rem 1rem 0.5rem 0;
+}
+main > .hotel-header > .name-rating > svg {
+  fill: #feb600;
+  font-size: 1.5rem;
+}
+main > .hotel-header > .share-heart {
+  font-size: 1.5rem;
+}
+main > .hotel-header > .share-heart svg:first-child {
+  margin-right: 1rem;
+}
+main > .image-container {
+  max-width: 100vw;
+  overflow-x: scroll;
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+main > .image-container > img {
+  width: 25%;
+  height: 250px;
+}
+main > .hotel-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: row;
+}
+main > .hotel-section-container > .hotel-section {
+  width: 45%;
+}
+main > .hotel-section-container > .hotel-section > h2 {
+  margin-bottom: 1rem;
+}
+main > .hotel-section-container > .hotel-section p {
+  margin-bottom: 2rem;
+}
+main > .hotel-section-container > .hotel-section > iframe {
+  width: 100%;
+  height: 125%;
+}
+
 main > h2 {
   margin-bottom: 1rem;
 }

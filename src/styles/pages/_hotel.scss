@@ -1,0 +1,47 @@
+main {
+  > .hotel-header {
+    @include flex(row, space-between, center);
+    > .name-rating {
+      @include flex(row, flex-start, center);
+      > h1 {
+        margin: $marginLarge $marginMedium $marginSmall 0;
+      }
+      > svg {
+        fill: $colorStar;
+        font-size: 1.5rem;
+      }
+    }
+    > .share-heart {
+      font-size: 1.5rem;
+      svg:first-child {
+        margin-right: $marginMedium;
+      }
+    }
+  }
+  > .image-container {
+    max-width: 100vw;
+    overflow-x: scroll;
+    margin: $marginLarge 0 $marginLarge 0;
+    @include flex(row, flex-start, flex-start);
+    > img {
+      width: 25%;
+      height: 250px;
+    }
+  }
+  > .hotel-section-container {
+    @include flex(row, space-between, space-between);
+    > .hotel-section {
+      width: 45%;
+      > h2 {
+        margin-bottom: $marginMedium;
+      }
+      p {
+        margin-bottom: $marginLarge;
+      }
+      > iframe {
+        width: 100%;
+        height: 125%;
+      }
+    }
+  }
+}
