@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import Search from "./search/Search";
 
-
-// To do: Make logo a picture and add it here
 export default function Header() {
   return (
     <>

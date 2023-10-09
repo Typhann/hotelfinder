@@ -6,6 +6,15 @@
 @import "./components/footer";
 @import "./pages/hotel";
 
+
+.logo  {
+  width: 15%;
+}
+
+.logo img{
+  width: 100%;
+}
+
 main {
   > h2 {
     margin-bottom: $marginMedium;

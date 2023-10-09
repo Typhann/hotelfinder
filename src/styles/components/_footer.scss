@@ -1,7 +1,10 @@
 footer {
-  background-color: $colorPrimary;
   box-shadow: $boxShadow;
-  > p {
-    color: $colorSuccess;
-  }
+  padding: 2rem;
+  @include flex(row, space-between, center);
+}
+
+.footerList li {
+  display: inline;
+  padding: 2rem;
 }
