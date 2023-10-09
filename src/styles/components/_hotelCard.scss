@@ -19,10 +19,12 @@ section {
     padding-left: 2px;
     > .card-container {
       width: 275px;
+      // min-height: 375px;
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
       margin-right: $marginLarge;
       margin-bottom: $marginMedium;
+      // @include flex(column, space-between, flex-start);
       cursor: pointer;
       > img {
         border-radius: $borderRadius $borderRadius 0 0;

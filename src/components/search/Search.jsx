@@ -51,7 +51,7 @@ export default function Search() {
     }
   }
 
-  // calculates total guests from all added rooms
+  // calculates total guests from all added rooms in search context
   function getTotalGuests() {
     let totalAdults = 0;
     let totalChildren = 0;
@@ -70,7 +70,7 @@ export default function Search() {
     };
   }
 
-  // If user clicks search without a where input
+  // Opens Where component in modal and shows toast error message if users clicks search without entering where
   function handleSearchClick() {
     if (search.where < 1) {
       setError(true);

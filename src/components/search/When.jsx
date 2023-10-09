@@ -7,6 +7,7 @@ export default function When({ handleClick }) {
   const [checkOut, setCheckOut] = useState(null);
   const { search, setSearch } = useContext(SearchContext);
 
+  // Sets search context to input from calendar
   useEffect(() => {
     if (checkIn && checkOut) {
       setSearch({
