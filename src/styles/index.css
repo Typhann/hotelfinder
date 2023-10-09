@@ -106,10 +106,20 @@ input {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+::-webkit-scrollbar {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 10px;
+}
+
 header {
   z-index: 1;
   position: sticky;
   top: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -141,16 +151,6 @@ header > .login-register button:first-child {
   background-color: #ffffff;
 }
 
-header:before {
-  content: "";
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  position: absolute;
-  height: 100%;
-  width: 500vw;
-  left: -250vw;
-  z-index: -1;
-}
-
 .search-container .search-options {
   display: flex;
   flex-direction: row;
@@ -174,9 +174,11 @@ header:before {
 
 .modal-container {
   width: auto;
+  overflow-y: scroll;
   border: 6px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: #ffffff;
+  max-height: 85vh;
   position: absolute;
   top: 125px;
   left: 50%;
@@ -258,8 +260,8 @@ header:before {
   margin-left: 25px;
 }
 .modal-container > .search-options-popup .room-options-container {
-  width: 100%;
-  margin-left: 7.6rem;
+  width: 90%;
+  margin-left: 2.6rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -308,6 +310,11 @@ header:before {
   background-color: #a41752 !important;
 }
 
+@media (min-width: 1750px) {
+  .modal-container {
+    overflow: hidden;
+  }
+}
 section > h2 {
   margin-bottom: 1rem;
 }
@@ -338,6 +345,7 @@ section > .hotels-container > .card-container {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
   margin-right: 2rem;
+  margin-bottom: 1rem;
   cursor: pointer;
 }
 section > .hotels-container > .card-container > img {
