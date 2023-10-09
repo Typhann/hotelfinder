@@ -44,4 +44,52 @@ main {
       }
     }
   }
+  .reservation-form-container {
+    box-shadow: $boxShadow;
+    width: 45%;
+    @include flex(column, center, center);
+    padding: $paddingContainerMedium;
+    > table {
+      width: 100%;
+      // @include flex(column, center, center);
+      border-collapse: collapse;
+      // border: 2px solid red;
+    }
+    > table > tr {
+      // @include flex(row, flex-start, center);
+    }
+    > table > tr > th,
+    td {
+      padding: $paddingContainerSmall $paddingContainerLarge
+        $paddingContainerSmall $paddingContainerLarge;
+      // border: 2px solid red;
+      text-align: left;
+    }
+    > table > tr {
+      padding-bottom: 100px;
+      height: 55px;
+      // border: 2px solid red;
+    }
+    > table > hr {
+      width: 300%;
+      border: 1px solid $colorGray;
+      margin: $marginSmall;
+    }
+    > .checkbox-price,
+    .make-reservation {
+      @include flex(row, space-between, flex-end);
+      padding: $paddingContainerSmall;
+      // border: 2px solid red;
+      width: 100%;
+      > label {
+        font-weight: 400;
+        > input {
+          margin-left: $marginSmall;
+          width: 1rem;
+          height: 1rem;
+          accent-color: $colorPrimary;
+        }
+      }
+    }
+  }
 }

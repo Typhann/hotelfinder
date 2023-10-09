@@ -25,7 +25,9 @@ label,
 input,
 textarea,
 li,
-small {
+small,
+th,
+td {
   font-family: $fontText;
 }
 h1 {

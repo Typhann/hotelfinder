@@ -19,7 +19,7 @@ const Room = ({ number }) => {
 };
 
 // maximum allowed guests per room is 10, roomIndex keeps track of which room
-const Counter = ({ label, room, roomIndex }) => {
+export const Counter = ({ label, room, roomIndex }) => {
   const { search, setSearch } = useContext(SearchContext);
   // Keeps track of counters value, uses value from search context if it exists
   const [value, setValue] = useState(room[label.toLowerCase()] || 0);
