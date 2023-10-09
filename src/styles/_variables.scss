@@ -35,7 +35,7 @@ $boxShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 // Functions
 @mixin flex($direction, $justify, $align) {
   display: flex;
+  flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
-  flex-direction: $direction;
 }

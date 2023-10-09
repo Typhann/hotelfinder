@@ -19,9 +19,9 @@ textarea {
 
 html {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 body {
@@ -111,29 +111,29 @@ header {
   position: sticky;
   top: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   padding: 2rem;
   background-color: #ffffff;
 }
 header > .logo > a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
 }
 header > .search-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 header > .login-register {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 header > .login-register button:first-child {
   margin-right: 1rem;
@@ -153,9 +153,9 @@ header:before {
 
 .search-container .search-options {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
   min-width: 400px;
@@ -186,9 +186,9 @@ header:before {
 .modal-container > .search-options-popup {
   padding: 2rem 2rem 2rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .modal-container > .search-options-popup > * {
   margin-bottom: 2rem;
@@ -213,9 +213,9 @@ header:before {
 }
 .modal-container > .search-options-popup > ul {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 .modal-container > .search-options-popup > ul > li {
@@ -247,9 +247,9 @@ header:before {
 }
 .modal-container > .search-options-popup > .calendar-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 .modal-container > .search-options-popup > .calendar-container > .calendar {
   padding: 0.5rem;
@@ -261,24 +261,24 @@ header:before {
   width: 100%;
   margin-left: 7.6rem;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
 }
 .modal-container > .search-options-popup .room-options-container > .counter-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 .modal-container > .search-options-popup .room-options-container > .counter-container > p {
   margin: 0.5rem;
 }
 .modal-container > .search-options-popup .room-options-container > .counter-container > .counter {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 20px;
   width: 100px;
@@ -313,9 +313,9 @@ section > h2 {
 }
 section > .grid {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 section > .grid > .card-container {
@@ -323,13 +323,15 @@ section > .grid > .card-container {
 }
 section > .carousel {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row;
 }
 section > .hotels-container {
   max-width: 100vw;
   overflow-x: scroll;
+  margin-bottom: 2rem;
+  padding-left: 2px;
 }
 section > .hotels-container > .card-container {
   width: 275px;
@@ -343,7 +345,7 @@ section > .hotels-container > .card-container > img {
   margin-bottom: 0.5rem;
 }
 section > .hotels-container > .card-container > .star-container,
-section > .hotels-container > .card-container h2,
+section > .hotels-container > .card-container h3,
 section > .hotels-container > .card-container .card-info,
 section > .hotels-container > .card-container .tags-container,
 section > .hotels-container > .card-container .card-bottom {
@@ -355,16 +357,16 @@ section > .hotels-container > .card-container > .star-container > svg {
 section > .hotels-container > .card-container > .card-info,
 section > .hotels-container > .card-container .card-bottom {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   padding-bottom: 0.5rem;
 }
 section > .hotels-container > .card-container .tags-container {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
 }
 section > .hotels-container > .card-container .tags-container > div > svg {
   margin-right: 0.5rem;
@@ -384,15 +386,15 @@ section > .hotels-container > .card-container .card-bottom > .share-heart svg:fi
 
 main > .hotel-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
 main > .hotel-header > .name-rating {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
 }
 main > .hotel-header > .name-rating > h1 {
   margin: 2rem 1rem 0.5rem 0;
@@ -412,9 +414,9 @@ main > .image-container {
   overflow-x: scroll;
   margin: 2rem 0 2rem 0;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row;
 }
 main > .image-container > img {
   width: 25%;
@@ -422,9 +424,9 @@ main > .image-container > img {
 }
 main > .hotel-section-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: space-between;
-  flex-direction: row;
 }
 main > .hotel-section-container > .hotel-section {
   width: 45%;
@@ -437,7 +439,7 @@ main > .hotel-section-container > .hotel-section p {
 }
 main > .hotel-section-container > .hotel-section > iframe {
   width: 100%;
-  height: 125%;
+  height: 100%;
 }
 
 main > h2 {
@@ -445,9 +447,9 @@ main > h2 {
 }
 main > ul {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
