@@ -1,5 +1,5 @@
-import { useState, useContext, useEffect } from "react";
-import SearchContext from "../context/SearchContext";
+import { useState, useContext } from "react";
+import SearchContext from "../../context/SearchContext";
 
 export default function WorldMap({
   setInput,
@@ -10,6 +10,7 @@ export default function WorldMap({
   const [country, setCountry] = useState("");
   const { search, setSearch } = useContext(SearchContext);
 
+  // Removes active class for all paths
   function removeActiveClass() {
     const paths = document.querySelectorAll(".worldmap path");
     paths.forEach((path) => {
@@ -25,6 +26,7 @@ export default function WorldMap({
     if (target.tagName === "path") {
       const countryName = target.getAttribute("title");
 
+      // sets clicked country on map to search context and input field, removes active class from popular destination and gives clicked country an active class
       if (event.type === "click") {
         setCountry(countryName);
         setSearch({ ...search, where: countryName });
@@ -50,17 +52,10 @@ export default function WorldMap({
         onClick={handleEvent}
       >
         <svg
-          // xmlns:mapsvg="http://mapsvg.com"
-          // xmlns:dc="http://purl.org/dc/elements/1.1/"
-          // xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-          // xmlns:svg="http://www.w3.org/2000/svg"
-          // xmlns="http://www.w3.org/2000/svg"
-          // mapsvg:geoviewbox="-169.110266 83.600842 190.486279 -58.508473"
-          // width="100%"
-          // height="650px"
-          // viewBox="-169.110266 83.600842 190.486279 -58.508473"
+          // These two attributes are necessary for responsive map sizing
           viewBox="0 0 1009.6727 665.96301"
           preserveAspectRatio="xMidYMid meet"
+          //
         >
           <path
             d="m 479.68275,331.6274 -0.077,0.025 -0.258,0.155 -0.147,0.054 -0.134,0.027 -0.105,-0.011 -0.058,-0.091 0.006,-0.139 -0.024,-0.124 -0.02,-0.067 0.038,-0.181 0.086,-0.097 0.119,-0.08 0.188,0.029 0.398,0.116 0.083,0.109 10e-4,0.072 -0.073,0.119 z"

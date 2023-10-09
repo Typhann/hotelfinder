@@ -35,6 +35,7 @@ export default function HotelCard(props) {
     hotelImage10,
   ];
 
+  // When card is clicked the user is navigated to the hotel page with the id of the clicked card
   function handleClick() {
     navigate(`/hotel/${props.id}`);
   }
