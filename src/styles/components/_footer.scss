@@ -1,6 +1,6 @@
 footer {
-    background-color: $colorPrimary;
     box-shadow: $boxShadow;
+    @include flex(row, space-between, center);
     > p {
         color: $colorSuccess;
     }

@@ -394,8 +394,11 @@ section > .hotels-container > .card-container .card-bottom > .share-heart svg:fi
 }
 
 footer {
-  background-color: #4a376d;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 footer > p {
   color: #b2ff83;
