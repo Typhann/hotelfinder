@@ -2,6 +2,7 @@ header {
   z-index: 1;
   position: sticky;
   top: 0;
+  box-shadow: $boxShadow;
   @include flex(row, space-between, center);
   padding: $paddingContainerLarge;
   background-color: $colorWhite;
@@ -22,15 +23,18 @@ header {
 }
 
 // makes header box shadow extend beyond max with of website
-header:before {
-  content: "";
-  box-shadow: $boxShadow;
-  position: absolute;
-  height: 100%;
-  width: 500vw;
-  left: -250vw;
-  z-index: -1;
-}
+// Commented out as it gives a horizontal scroll on the entire website, overflow hidden does not work as a solution
+// Needs a new solution
+
+// header:before {
+//   content: "";
+//   box-shadow: $boxShadow;
+//   position: absolute;
+//   height: 100%;
+//   width: 500vw;
+//   left: -250vw;
+//   z-index: -1;
+// }
 
 .search-container {
   .search-options {
@@ -54,9 +58,11 @@ header:before {
 
 .modal-container {
   width: auto;
+  overflow-y: scroll;
   border: $borderRadius;
   box-shadow: $boxShadow;
   background-color: $colorWhite;
+  max-height: 85vh;
   position: absolute;
   top: 125px;
   left: 50%;
@@ -65,12 +71,9 @@ header:before {
   > .search-options-popup {
     padding: $paddingContainerLarge $paddingContainerLarge
       $paddingContainerLarge 0;
-    // border: 2px solid red;
-    // width: 80vw;
     @include flex(column, center, center);
     > * {
       margin-bottom: $marginLarge;
-      // max-width: 85%;
     }
     > button {
       align-self: flex-end;
@@ -138,8 +141,8 @@ header:before {
 
     // Who
     .room-options-container {
-      width: 100%;
-      margin-left: 7.6rem;
+      width: 90%;
+      margin-left: 2.6rem;
       @include flex(row, flex-start, center);
       > .counter-container {
         > p {
@@ -176,4 +179,10 @@ header:before {
 .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
 .css-jgls56-MuiButtonBase-root-MuiPickersDay-root.Mui-selected:hover {
   background-color: $colorAction !important;
+}
+
+@media (min-width: 1750px) {
+  .modal-container {
+    overflow: hidden;
+  }
 }

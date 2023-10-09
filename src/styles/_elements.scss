@@ -83,3 +83,13 @@ input {
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
 }
+
+// Scrollbar
+::-webkit-scrollbar {
+  box-shadow: $boxShadow;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: $colorGray;
+  border-radius: 10px;
+}
