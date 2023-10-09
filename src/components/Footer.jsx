@@ -7,7 +7,7 @@ export default function Footer() {
             
             <div className="logo">
             <Link to="/">
-            <   img src={logo} alt="Logo" />;
+                <img src={logo} alt="Logo" />;
             </Link>
             </div>
 
