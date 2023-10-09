@@ -87,6 +87,7 @@ input {
 // Scrollbar
 ::-webkit-scrollbar {
   box-shadow: $boxShadow;
+  border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background: $colorGray;
