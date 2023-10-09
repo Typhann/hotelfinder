@@ -17,6 +17,7 @@ export default function When({ handleClick }) {
       });
     }
   }, [checkIn, checkOut, search, setSearch]);
+
   return (
     <div className="search-options-popup">
       <div className="calendar-container">

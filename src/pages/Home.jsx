@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { renderHotels } from "../../utils";
 import database from "../../database.json";
+
 export default function Home() {
   return (
     <>

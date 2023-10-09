@@ -14,10 +14,12 @@ export default function Search() {
   const { search } = useContext(SearchContext);
   const { totalAdults, totalChildren, totalPets } = getTotalGuests();
 
+  // Timeout for Toast Error message
   useEffect(() => {
     setTimeout(() => setError(false), 10500);
   }, []);
 
+  // Closes modal on click outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -32,6 +34,7 @@ export default function Search() {
     };
   }, []);
 
+  // Sets modal to clicked component
   function handleClick(button) {
     switch (button) {
       case "where":
@@ -48,6 +51,7 @@ export default function Search() {
     }
   }
 
+  // calculates total guests from all added rooms
   function getTotalGuests() {
     let totalAdults = 0;
     let totalChildren = 0;
@@ -66,6 +70,7 @@ export default function Search() {
     };
   }
 
+  // If user clicks search without a where input
   function handleSearchClick() {
     if (search.where < 1) {
       setError(true);
