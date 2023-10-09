@@ -395,10 +395,16 @@ section > .hotels-container > .card-container .card-bottom > .share-heart svg:fi
 
 footer {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.footerList li {
+  display: inline;
+  padding: 2rem;
 }
 
 main > .hotel-header {
@@ -457,6 +463,14 @@ main > .hotel-section-container > .hotel-section p {
 main > .hotel-section-container > .hotel-section > iframe {
   width: 100%;
   height: 100%;
+}
+
+.logo {
+  width: 15%;
+}
+
+.logo img {
+  width: 100%;
 }
 
 main > h2 {

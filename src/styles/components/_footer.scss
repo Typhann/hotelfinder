@@ -1,4 +1,10 @@
 footer {
     box-shadow: $boxShadow;
+    padding: 2rem;
     @include flex(row, space-between, center);
 };
+
+.footerList li {
+    display: inline;
+    padding: 2rem;
+}
