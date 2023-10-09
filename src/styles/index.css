@@ -400,9 +400,6 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-footer > p {
-  color: #b2ff83;
-}
 
 main > .hotel-header {
   display: flex;
