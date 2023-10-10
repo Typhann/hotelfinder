@@ -31,29 +31,27 @@ import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 import ReservationForm from "../components/ReservationForm";
 
-
 export default function Hotel() {
   const { id } = useParams();
   const hotel = database.hotels[id - 1];
   console.log(id);
   console.log(hotel);
+  window.scrollTo(0, 0);
 
   // Loop for the hotels reviews
   const reviews = hotel.reviews;
   const reviewsList = reviews.map((review, index) => (
-  <div key={index}> 
-    <p className="review-text">"{review}"</p>
-    <p className="review-rates">
-      <FaStar />
-      <FaStar />
-      <FaStar />
-      <FaStar />
-      <FaRegStar />
-    </p> 
-  </div>
-  
- 
-));
+    <div key={index}>
+      <p className="review-text">"{review}"</p>
+      <p className="review-rates">
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaStar />
+        <FaRegStar />
+      </p>
+    </div>
+  ));
 
   return (
     <>
@@ -101,12 +99,15 @@ export default function Hotel() {
               loading="lazy"
             ></iframe>
           </div>
-          
+
           <div className="review_ratings">
-          <h3>Our reviews</h3>
-            <p style={{fontWeight: 'bold'}}>{hotel.review_ratings}/10 (based on {hotel.review_amounts} reviews)</p>
-            <div className="review-list">{reviewsList}</div> 
-        </div>
+            <h3>Our reviews</h3>
+            <p style={{ fontWeight: "bold" }}>
+              {hotel.review_ratings}/10 (based on {hotel.review_amounts}{" "}
+              reviews)
+            </p>
+            <div className="review-list">{reviewsList}</div>
+          </div>
         </div>
         <ReservationForm className="hotel-section" />
       </section>

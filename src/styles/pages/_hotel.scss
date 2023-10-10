@@ -50,7 +50,7 @@ main {
     width: 50%;
     @include flex(column, space-between, center);
     padding: $paddingContainerMedium;
-    height: 450px;
+    max-height: 475px;
     > table {
       border-collapse: collapse;
       width: 100%;
@@ -114,9 +114,16 @@ main {
           accent-color: $colorPrimary;
         }
       }
+      > h3 {
+        color: $colorError;
+      }
     }
     > .checkbox-price {
-      margin-bottom: $marginLarge;
+      // margin-bottom: $marginLarge;
+    }
+    > strong {
+      color: $colorError;
+      margin-top: $marginSmall;
     }
   }
 }
