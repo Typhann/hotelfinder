@@ -17,11 +17,11 @@ export default function Footer() {
         </ul>
       </div>
 
-      <div>
-        <p>My stree 123</p>
+      <address>
+        <p>My street 123</p>
         <p>345 Thisstate</p>
         <p>London, United Kingdom</p>
-      </div>
+      </address>
     </footer>
   );
 }
