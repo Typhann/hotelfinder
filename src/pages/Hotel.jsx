@@ -51,9 +51,9 @@ export default function Hotel() {
       <FaRegStar />
     </p> 
   </div>
-  
- 
+
 ));
+
 
   return (
     <>
@@ -90,8 +90,11 @@ export default function Hotel() {
           <h2>{hotel.title}</h2>
           <p>{hotel.description}</p>
 
-          <h3>We offer</h3>
-          <p>{hotel.amenities}</p>
+          <div className="our-offer">
+            <h3>We offer</h3>
+            <p>{hotel.amenities}</p> 
+            <div>{database.icons.icon}</div> 
+          </div>
 
           <div>
             <iframe
