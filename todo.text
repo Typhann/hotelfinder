@@ -12,3 +12,8 @@ New pages or components
 * Filter (overlay)
 
 
+Fix this to use react router instead of native javascript in hotel page
+
+<a href="javascript:history.back()">&lt;&lt; Go back</a>
+
+# an idea is to create a reusable component for it to be used on other pages as well
