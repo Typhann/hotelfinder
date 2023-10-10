@@ -1,0 +1,19 @@
+.review_ratings {
+    margin: $marginLarge 0 $marginLarge 0;
+}
+
+.review-list {
+    font-style: italic;
+    @include flex(row, space-between, top);
+}
+
+.review-text{
+    margin-bottom: 0.5rem !important;
+    padding-right: $paddingContainerSmall;
+}
+
+.review-rates svg {
+    fill: #feb600;
+    font-size: 1.2rem;
+}
+
