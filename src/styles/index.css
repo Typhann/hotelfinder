@@ -406,6 +406,14 @@ footer {
   padding: 2rem;
 }
 
+.review-section {
+  margin: 2rem 0 2rem 0;
+}
+
+.review_ratings {
+  margin-top: 0.5rem;
+}
+
 main > .hotel-header {
   display: flex;
   flex-direction: row;

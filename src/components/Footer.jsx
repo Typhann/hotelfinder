@@ -9,6 +9,13 @@ export default function Footer() {
           <img src={logo} alt="Logo" />
         </Link>
       </div>
+      <div>
+        <ul className="footerList">
+          <li><Link to="/">Policy</Link></li>
+          <li><Link to="/">Contact</Link></li>
+          <li><Link to="/">About us</Link></li>
+        </ul>
+      </div>
 
       <div>
         <p>My stree 123</p>
