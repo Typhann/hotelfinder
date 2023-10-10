@@ -79,11 +79,10 @@ export default function Hotel() {
           <p>{hotel.description}</p>
 
           <h3>We offer</h3>
-          <p>{hotel.icon}</p>
           <p>{hotel.amenities}</p>
 
           <h3>Our reviews</h3>
-            <div>{reviewsList}</div>
+            <div className="review-section">{reviewsList}</div>
 
           <div>
             <iframe
