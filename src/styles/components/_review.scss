@@ -4,4 +4,15 @@
 
 .review_ratings {
     margin-top: $marginSmall;
+    font-weight: bold;
 }
+
+.review-list {
+    font-style: italic;
+}
+
+.review-list p::before, 
+.review-list p::after {
+    content: '"';
+}
+

@@ -93,7 +93,7 @@ export default function Hotel() {
           <section className="review-section">
             <h3>Our reviews</h3>
             <div className="review_ratings">
-            <p>{hotel.review_ratings} of 10</p>
+            <p>{hotel.review_ratings}/10 (based on {hotel.review_amounts} reviews)</p>
           </div>
             <div className="review-list">{reviewsList}</div>
           </section>  
