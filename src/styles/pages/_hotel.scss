@@ -107,19 +107,10 @@ main {
       width: 95%;
       > label {
         font-weight: 400;
-        > input {
-          margin-left: $marginSmall;
-          width: 1rem;
-          height: 1rem;
-          accent-color: $colorPrimary;
-        }
       }
       > h3 {
         color: $colorError;
       }
-    }
-    > .checkbox-price {
-      // margin-bottom: $marginLarge;
     }
     > strong {
       color: $colorError;

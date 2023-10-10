@@ -1,0 +1,85 @@
+input[type="text"],
+input[type="checkbox"],
+input[type="time"],
+input[type="email"],
+input[type="tel"] {
+  margin-bottom: $marginLarge;
+}
+label {
+  margin-bottom: $marginSmall;
+}
+
+main {
+  > .breadcrumbs {
+    @include flex(row, space-between, center);
+    margin-bottom: $marginLarge;
+    > svg {
+      font-size: 1.5rem;
+      color: $colorGray;
+    }
+    > p {
+      color: $colorGray;
+    }
+    > .breadcrumb-line {
+      background-color: $colorGray;
+      width: 35%;
+      height: 2px;
+    }
+    .finished {
+      color: $colorBlack;
+    }
+    .finished-line {
+      background-color: $colorBlack;
+    }
+  }
+  .section-container {
+    width: 60%;
+    margin-left: 40%;
+    section {
+      padding: $paddingContainerLarge;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+      > small,
+      form > h3 {
+        margin-bottom: $marginMedium;
+        // border: 2px solid red;
+      }
+      small {
+        margin-bottom: 2rem;
+      }
+      > form {
+        @include flex(column, flex-start, flex-start);
+        margin-top: $marginMedium;
+      }
+    }
+    > .confirm-details {
+      // border: 2px solid red;
+      span {
+        font-weight: 700;
+        font-size: $fontSizeP;
+      }
+      > form {
+        // border: 2px solid yellow;
+        > .fullName-container {
+          // border: 2px solid green;
+          @include flex(row, center, center);
+          > div {
+            @include flex(column, center, flex-start);
+            margin-right: $marginLarge;
+          }
+        }
+        > input[type="email"] {
+          width: 50%;
+          min-width: 250px;
+        }
+        > p {
+          margin-bottom: $marginSmall;
+          max-width: 350px;
+        }
+        > textarea {
+          margin-bottom: $marginLarge;
+        }
+      }
+    }
+  }
+}
