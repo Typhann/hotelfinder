@@ -6,7 +6,7 @@
       "rating": 6,
       "address": "123 Main Street, Cityville",
       "price_per_night": 300,
-      "amenities": ["FaStar","Pool", "Spa","Food Included"],
+      "amenities": ["Pool", "Spa","Food Included"],
       "google_maps_link": "https://www.google.com/maps?q=123+Main+Street%2C+Cityville",
       "image": "/src/assets/hotel-images/hotel-placeholder-1-min.webp",
       "description": "Indulge in the epitome of opulence at the Luxury Hotel on Main Street, Cityville. With a prestigious 5-star rating, this hotel promises an exquisite and memorable experience. Immerse yourself in ultimate relaxation with a pristine swimming pool and rejuvenating spa treatments. The fine dining options will tantalize your taste buds with gourmet delights. Located in the heart of the city, this hotel caters to both leisure and business travelers, offering a perfect blend of luxury and convenience. Discover an exceptional stay where sophistication meets comfort.",
