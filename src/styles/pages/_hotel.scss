@@ -46,41 +46,65 @@ main {
   }
   .reservation-form-container {
     box-shadow: $boxShadow;
-    width: 45%;
-    @include flex(column, center, center);
+    border-radius: $borderRadius;
+    width: 50%;
+    @include flex(column, space-between, center);
     padding: $paddingContainerMedium;
+    height: 450px;
     > table {
-      width: 100%;
-      // @include flex(column, center, center);
       border-collapse: collapse;
-      // border: 2px solid red;
-    }
-    > table > tr {
-      // @include flex(row, flex-start, center);
-    }
-    > table > tr > th,
-    td {
-      padding: $paddingContainerSmall $paddingContainerLarge
-        $paddingContainerSmall $paddingContainerLarge;
-      // border: 2px solid red;
-      text-align: left;
-    }
-    > table > tr {
-      padding-bottom: 100px;
-      height: 55px;
-      // border: 2px solid red;
-    }
-    > table > hr {
-      width: 300%;
-      border: 1px solid $colorGray;
-      margin: $marginSmall;
+      width: 100%;
+      > thead {
+        > tr {
+          > th {
+            padding-bottom: $paddingContainerMedium;
+          }
+        }
+      }
+      > tbody {
+        > tr > th,
+        td {
+          padding: $paddingContainerSmall $paddingContainerLarge
+            $paddingContainerSmall $paddingContainerLarge;
+        }
+        > tr > td {
+          height: 65px;
+        }
+        > tr > td > .counter-container {
+          > .counter {
+            @include flex(row, center, center);
+            box-shadow: $boxShadow;
+            border-radius: 20px;
+            width: 100px;
+            height: 24px;
+            padding: $paddingContainerMedium;
+            margin: 0px 0 0 0;
+            > * {
+              margin: 0.5rem;
+              font-family: $fontText;
+              font-weight: bold;
+            }
+            > div {
+              font-size: 1.5rem;
+            }
+            > div::selection {
+              color: none;
+              background: none;
+            }
+          }
+        }
+      }
+      > thead,
+      tbody {
+        > .divider {
+          border-bottom: 1px solid $colorGray;
+        }
+      }
     }
     > .checkbox-price,
     .make-reservation {
       @include flex(row, space-between, flex-end);
-      padding: $paddingContainerSmall;
-      // border: 2px solid red;
-      width: 100%;
+      width: 95%;
       > label {
         font-weight: 400;
         > input {
@@ -90,6 +114,9 @@ main {
           accent-color: $colorPrimary;
         }
       }
+    }
+    > .checkbox-price {
+      margin-bottom: $marginLarge;
     }
   }
 }
