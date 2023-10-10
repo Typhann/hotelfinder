@@ -43,11 +43,11 @@ export default function Hotel() {
   const reviewsList = reviews.map((review, index) => (
   <div key={index}> 
     <p className="review-text">"{review}"</p>
-    <p className="review-rates name-rating">
+    <p className="review-rates">
       <FaStar />
       <FaStar />
       <FaStar />
-      <FaRegStar />
+      <FaStar />
       <FaRegStar />
     </p> 
   </div>
@@ -104,9 +104,9 @@ export default function Hotel() {
           
           <div className="review_ratings">
           <h3>Our reviews</h3>
-            <p>{hotel.review_ratings}/10 (based on {hotel.review_amounts} reviews)</p>
-          </div>
+            <p style={{fontWeight: 'bold'}}>{hotel.review_ratings}/10 (based on {hotel.review_amounts} reviews)</p>
             <div className="review-list">{reviewsList}</div> 
+        </div>
         </div>
         <ReservationForm className="hotel-section" />
       </section>
