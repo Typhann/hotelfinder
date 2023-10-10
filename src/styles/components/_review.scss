@@ -11,8 +11,12 @@
     font-style: italic;
 }
 
-.review-list p::before, 
-.review-list p::after {
-    content: '"';
+.review-text{
+    margin-bottom: 0.5rem !important;
+}
+
+svg {
+    fill: #feb600;
+    font-size: 1.2rem;
 }
 

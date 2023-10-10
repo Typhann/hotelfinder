@@ -31,6 +31,7 @@ import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 import ReservationForm from "../components/ReservationForm";
 
+
 export default function Hotel() {
   const { id } = useParams();
   const hotel = database.hotels[id - 1];
@@ -40,7 +41,18 @@ export default function Hotel() {
   // Loop for the hotels reviews
   const reviews = hotel.reviews;
   const reviewsList = reviews.map((review, index) => (
-  <p key={index}>{review}</p>
+  <div key={index}> 
+    <p className="review-text">"{review}"</p>
+    <p className="review-rates name-rating">
+      <FaStar />
+      <FaStar />
+      <FaStar />
+      <FaRegStar />
+      <FaRegStar />
+    </p> 
+  </div>
+  
+ 
 ));
 
   return (
@@ -89,15 +101,12 @@ export default function Hotel() {
               loading="lazy"
             ></iframe>
           </div>
-
-          <section className="review-section">
-            <h3>Our reviews</h3>
-            <div className="review_ratings">
+          
+          <div className="review_ratings">
+          <h3>Our reviews</h3>
             <p>{hotel.review_ratings}/10 (based on {hotel.review_amounts} reviews)</p>
           </div>
-            <div className="review-list">{reviewsList}</div>
-          </section>  
-          
+            <div className="review-list">{reviewsList}</div> 
         </div>
         <ReservationForm className="hotel-section" />
       </section>
