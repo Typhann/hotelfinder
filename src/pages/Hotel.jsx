@@ -34,8 +34,7 @@ import ReservationForm from "../components/ReservationForm";
 export default function Hotel() {
   const { id } = useParams();
   const hotel = database.hotels[id - 1];
-  console.log(id);
-  console.log(hotel);
+
   window.scrollTo(0, 0);
 
   // Loop for the hotels reviews

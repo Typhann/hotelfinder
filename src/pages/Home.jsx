@@ -3,6 +3,7 @@ import { renderHotels } from "../../utils";
 import database from "../../database.json";
 
 export default function Home() {
+  window.scrollTo(0, 0);
   return (
     <>
       <h2>Popular destinations</h2>

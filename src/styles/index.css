@@ -755,7 +755,10 @@ main .section-container > .payment-section > .payment-provider-container > .paym
 main .section-container > .payment-section > .payment-provider-container > .payment-provider:first-child {
   border: 2px solid #b2ff83;
 }
-main .section-container > .payment-section > .row {
+main .section-container > .payment-section > form {
+  width: 100%;
+}
+main .section-container > .payment-section > form > .row {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -763,41 +766,41 @@ main .section-container > .payment-section > .row {
   gap: 2rem;
   flex-wrap: wrap;
 }
-main .section-container > .payment-section > .row > .column {
+main .section-container > .payment-section > form > .row > .column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-main .section-container > .payment-section > .row > .column > input {
+main .section-container > .payment-section > form > .row > .column > input {
   margin-bottom: 2rem;
 }
-main .section-container > .payment-section > .row > .column > #name,
-main .section-container > .payment-section > .row > .column #cardNumber,
-main .section-container > .payment-section > .row > .column #address {
+main .section-container > .payment-section > form > .row > .column > #name,
+main .section-container > .payment-section > form > .row > .column #cardNumber,
+main .section-container > .payment-section > form > .row > .column #address {
   width: 250px;
 }
-main .section-container > .payment-section > .row > .column > #expiration {
+main .section-container > .payment-section > form > .row > .column > #expiration {
   width: 125px;
 }
-main .section-container > .payment-section > .row > .column > #cvc {
+main .section-container > .payment-section > form > .row > .column > #cvc {
   width: 50px;
 }
-main .section-container > .payment-section > .row > .column > #zip {
+main .section-container > .payment-section > form > .row > .column > #zip {
   width: 75px;
 }
-main .section-container > .payment-section > .end-of-card-details {
+main .section-container > .payment-section > form > .end-of-card-details {
   margin-bottom: 2rem;
 }
-main .section-container > .payment-section > .checkout-buttons {
-  align-self: flex-end;
+main .section-container > .payment-section > form > .checkout-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
   gap: 1rem;
 }
-main .section-container > .payment-section > .checkout-buttons > button:first-child {
+main .section-container > .payment-section > form > .checkout-buttons > button:first-child {
   color: #000000;
   background-color: #ffffff;
 }

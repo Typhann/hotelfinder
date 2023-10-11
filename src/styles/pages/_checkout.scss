@@ -147,41 +147,44 @@ main {
           height: 60px;
         }
       }
-      > .row {
-        @include flex(row, flex-start, flex-start);
-        gap: $marginLarge;
-        flex-wrap: wrap;
-        > .column {
-          @include flex(column, center, flex-start);
-          > input {
-            margin-bottom: $marginLarge;
-          }
-          > #name,
-          #cardNumber,
-          #address {
-            width: 250px;
-          }
-          > #expiration {
-            width: 125px;
-          }
-          > #cvc {
-            width: 50px;
-          }
-          > #zip {
-            width: 75px;
+      > form {
+        width: 100%;
+        > .row {
+          @include flex(row, flex-start, flex-start);
+          gap: $marginLarge;
+          flex-wrap: wrap;
+          > .column {
+            @include flex(column, center, flex-start);
+            > input {
+              margin-bottom: $marginLarge;
+            }
+            > #name,
+            #cardNumber,
+            #address {
+              width: 250px;
+            }
+            > #expiration {
+              width: 125px;
+            }
+            > #cvc {
+              width: 50px;
+            }
+            > #zip {
+              width: 75px;
+            }
           }
         }
-      }
-      > .end-of-card-details {
-        margin-bottom: $marginLarge;
-      }
-      > .checkout-buttons {
-        align-self: flex-end;
-        @include flex(row, center, center);
-        gap: $marginMedium;
-        > button:first-child {
-          color: $colorBlack;
-          background-color: $colorWhite;
+        > .end-of-card-details {
+          margin-bottom: $marginLarge;
+        }
+        > .checkout-buttons {
+          @include flex(row, flex-end, flex-end);
+          width: 100%;
+          gap: $marginMedium;
+          > button:first-child {
+            color: $colorBlack;
+            background-color: $colorWhite;
+          }
         }
       }
     }

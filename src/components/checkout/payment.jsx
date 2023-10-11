@@ -33,70 +33,96 @@ export default function Payment() {
       <small>
         Please fill out all required <span>*</span> fields.
       </small>
-      <div className="row">
-        <div className="column">
-          <label htmlFor="name">
-            Cardholders name<span>*</span>
-          </label>
-          <input type="text" id="name" />
+      <form>
+        <div className="row">
+          <div className="column">
+            <label htmlFor="name">
+              Cardholders name <span>*</span>
+            </label>
+            <input type="text" id="name" minLength="2" required />
+          </div>
+          <div className="column">
+            <label htmlFor="cardNumber">
+              Card number <span>*</span>
+            </label>
+            <input
+              type="text"
+              id="cardNumber"
+              minLength="8"
+              maxLength="19"
+              required
+            />
+          </div>
         </div>
-        <div className="column">
-          <label htmlFor="cardNumber">
-            Card number<span>*</span>
-          </label>
-          <input type="text" id="cardNumber" />
+        <div className="row end-of-card-details">
+          <div className="column">
+            <label htmlFor="expiration">
+              Expiration date <span>*</span>
+            </label>
+            <input type="month" id="expiration" required />
+          </div>
+          <div className="column">
+            <label htmlFor="cvc">
+              CVC <span>*</span>
+            </label>
+            <input
+              type="number"
+              id="cvc"
+              minLength="3"
+              maxLength="4"
+              required
+            />
+          </div>
         </div>
-      </div>
-      <div className="row end-of-card-details">
-        <div className="column">
-          <label htmlFor="expiration">
-            Expiration date<span>*</span>
-          </label>
-          <input type="month" id="expiration" />
+        <div className="row">
+          <div className="column">
+            <label htmlFor="country">
+              Country <span>*</span>
+            </label>
+            <input
+              type="text"
+              id="country"
+              minLength="4"
+              maxLength="56"
+              required
+            />
+          </div>
+          <div className="column">
+            <label htmlFor="city">
+              City <span>*</span>
+            </label>
+            <input
+              type="text"
+              id="city"
+              minLength="1"
+              maxLength="85"
+              required
+            />
+          </div>
         </div>
-        <div className="column">
-          <label htmlFor="cvc">
-            CVC<span>*</span>
-          </label>
-          <input type="number" id="cvc" minLength="8" maxLength="19" />
+        <div className="row">
+          <div className="column">
+            <label htmlFor="address">
+              Address <span>*</span>
+            </label>
+            <input type="text" id="address" minLength="4" required />
+          </div>
+          <div className="column">
+            <label htmlFor="zip">
+              Zip-code <span>*</span>
+            </label>
+            <input type="text" id="zip" minLength="1" maxLength="12" required />
+          </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="column">
-          <label htmlFor="country">
-            Country<span>*</span>
-          </label>
-          <input type="text" id="country" />
+        <div className="checkout-buttons">
+          <button onClick={() => console.log("clicked")} className="button">
+            Go back to details
+          </button>
+          <button type="submit" className="button">
+            Pay
+          </button>
         </div>
-        <div className="column">
-          <label htmlFor="city">
-            City<span>*</span>
-          </label>
-          <input type="text" id="city" minLength="2" />
-        </div>
-      </div>
-      <div className="row">
-        <div className="column">
-          <label htmlFor="address">
-            Address<span>*</span>
-          </label>
-          <input type="text" id="address" />
-        </div>
-        <div className="column">
-          <label htmlFor="zip">
-            Zip-code<span>*</span>
-          </label>
-          <input type="text" id="zip" minLength="8" maxLength="19" />
-        </div>
-      </div>
-      <div className="checkout-buttons">
-        <button onClick={() => navigate("/")} className="button">
-          Go back to details
-        </button>
-        <button type="submit" className="button">
-          Pay
-        </button>
-      </div>
+      </form>
     </section>
   );
 }
