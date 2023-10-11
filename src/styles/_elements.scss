@@ -1,5 +1,8 @@
 // Body
 
+*:focus {
+  border: 2px solid black !important;
+}
 html {
   @include flex(column, center, center);
 }
@@ -79,13 +82,13 @@ span {
 }
 
 // Forms
-
 input,
 textarea {
   padding: $paddingContainerSmall;
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
 }
+
 textarea {
   min-width: 350px;
   max-width: 600px;

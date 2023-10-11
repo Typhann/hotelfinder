@@ -9,6 +9,13 @@ label {
   margin-bottom: $marginSmall;
 }
 
+.success {
+  border: 2px solid $colorSuccess !important;
+}
+.error {
+  border: 2px solid $colorError !important;
+}
+
 main {
   > .breadcrumbs {
     @include flex(row, space-between, center);
@@ -35,13 +42,14 @@ main {
   .section-container {
     width: 60%;
     margin-left: 40%;
+    margin-bottom: $marginLarge;
     section {
       padding: $paddingContainerLarge;
       border-radius: $borderRadius;
       box-shadow: $boxShadow;
       > small,
       form > h3 {
-        margin-bottom: $marginMedium;
+        margin-bottom: $marginSmall;
         // border: 2px solid red;
       }
       small {
@@ -50,6 +58,14 @@ main {
       > form {
         @include flex(column, flex-start, flex-start);
         margin-top: $marginMedium;
+        > input[type="text"],
+        input[type="time"],
+        input[type="email"],
+        input[type="tel"] {
+          &:focus {
+            border: 2px solid black;
+          }
+        }
       }
     }
     > .confirm-details {
@@ -72,12 +88,38 @@ main {
           width: 50%;
           min-width: 250px;
         }
+        > input[type="text"] {
+          &:focus {
+            border: 2px solid black;
+          }
+        }
         > p {
           margin-bottom: $marginSmall;
           max-width: 350px;
         }
         > textarea {
           margin-bottom: $marginLarge;
+        }
+        > .checkbox {
+          > label {
+            font-weight: 400;
+          }
+        }
+        > strong {
+          margin-bottom: $marginSmall;
+        }
+        > #checkIn {
+          margin-top: $marginSmall;
+          // margin-bottom: 5rem;
+        }
+        > .checkout-buttons {
+          align-self: flex-end;
+          @include flex(row, center, center);
+          gap: $marginMedium;
+          > button:first-child {
+            color: $colorBlack;
+            background-color: $colorWhite;
+          }
         }
       }
     }
