@@ -119,7 +119,9 @@ textarea {
 input[type=text],
 input[type=time],
 input[type=email],
-input[type=tel] {
+input[type=tel],
+input[type=number],
+input[type=month] {
   all: unset;
   padding: 0.5rem;
   border-radius: 6px;
@@ -716,6 +718,86 @@ main .section-container > .confirm-details > form > .checkout-buttons {
   gap: 1rem;
 }
 main .section-container > .confirm-details > form > .checkout-buttons > button:first-child {
+  color: #000000;
+  background-color: #ffffff;
+}
+main .section-container > .payment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .section-container > .payment-section > h3 {
+  margin-bottom: 1rem;
+}
+main .section-container > .payment-section p {
+  margin-bottom: 0.5rem;
+}
+main .section-container > .payment-section > .payment-provider-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+main .section-container > .payment-section > .payment-provider-container > .payment-provider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 125px;
+  height: 60px;
+}
+main .section-container > .payment-section > .payment-provider-container > .payment-provider:first-child {
+  border: 2px solid #b2ff83;
+}
+main .section-container > .payment-section > .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+main .section-container > .payment-section > .row > .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .section-container > .payment-section > .row > .column > input {
+  margin-bottom: 2rem;
+}
+main .section-container > .payment-section > .row > .column > #name,
+main .section-container > .payment-section > .row > .column #cardNumber,
+main .section-container > .payment-section > .row > .column #address {
+  width: 250px;
+}
+main .section-container > .payment-section > .row > .column > #expiration {
+  width: 125px;
+}
+main .section-container > .payment-section > .row > .column > #cvc {
+  width: 50px;
+}
+main .section-container > .payment-section > .row > .column > #zip {
+  width: 75px;
+}
+main .section-container > .payment-section > .end-of-card-details {
+  margin-bottom: 2rem;
+}
+main .section-container > .payment-section > .checkout-buttons {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .section-container > .payment-section > .checkout-buttons > button:first-child {
   color: #000000;
   background-color: #ffffff;
 }

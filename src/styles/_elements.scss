@@ -98,7 +98,9 @@ textarea {
 input[type="text"],
 input[type="time"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="number"],
+input[type="month"] {
   all: unset;
   padding: $paddingContainerSmall;
   border-radius: $borderRadius;
