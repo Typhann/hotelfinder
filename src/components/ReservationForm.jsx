@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import SearchContext from "../context/SearchContext";
 
 export const Counter = ({ room, roomPrice, setError }) => {
@@ -62,6 +62,9 @@ export const Counter = ({ room, roomPrice, setError }) => {
 export default function ReservationForm() {
   const { search, setSearch } = useContext(SearchContext);
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  console.log(id);
   const [error, setError] = useState(false);
   const priceKingRoom = 429;
   const priceQueenRoom = 299;
@@ -159,7 +162,7 @@ export default function ReservationForm() {
             // navigates user to checkout only if user has selected a room
             onClick={() => {
               search.reservedRooms.length
-                ? navigate("/checkout")
+                ? navigate(`/checkout/hotel/${id}`)
                 : setError(true);
             }}
             className="button"

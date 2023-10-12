@@ -40,8 +40,12 @@ main {
     }
   }
   .section-container {
-    width: 60%;
-    margin-left: 40%;
+    // width: 60%;
+    // margin-left: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: calc(#{$marginLarge} * 2);
     margin-bottom: $marginLarge;
     section {
       padding: $paddingContainerLarge;
@@ -68,16 +72,49 @@ main {
         }
       }
     }
-    > .confirm-details {
+    > .selection-section {
+      grid-area: 1 / 1 / 2 / 2;
+      align-self: start;
       // border: 2px solid red;
+      > h3,
+      p,
+      .tags-container,
+      .dates-container,
+      .row {
+        margin-bottom: $marginMedium;
+      }
+      > .row {
+        @include flex(row, flex-start, center);
+        gap: $marginMedium;
+        > .star-container > svg {
+          fill: $colorStar;
+        }
+      }
+      > .tags-container,
+      .dates-container {
+        @include flex(row, flex-start, center);
+        gap: $marginMedium;
+        flex-wrap: wrap;
+      }
+      > .tags-container {
+        border-bottom: 1px solid $colorGray;
+      }
+      > .dates-container > .dates {
+        @include flex(column, center, center);
+        padding: $paddingContainerMedium;
+        box-shadow: $boxShadow;
+        border-radius: $borderRadius;
+      }
+    }
+    > .confirm-details-section {
+      grid-area: 1 / 2 / 3 / 4;
+      // height: auto;
       span {
         font-weight: 700;
         font-size: $fontSizeP;
       }
       > form {
-        // border: 2px solid yellow;
         > .fullName-container {
-          // border: 2px solid green;
           @include flex(row, center, center);
           > div {
             @include flex(column, center, flex-start);
@@ -94,11 +131,12 @@ main {
           }
         }
         > p {
-          margin-bottom: $marginSmall;
+          margin-bottom: $marginMedium;
           max-width: 350px;
         }
         > textarea {
           margin-bottom: $marginLarge;
+          margin-top: $marginSmall;
         }
         > .checkbox {
           > label {
@@ -110,7 +148,6 @@ main {
         }
         > #checkIn {
           margin-top: $marginSmall;
-          // margin-bottom: 5rem;
         }
         > .checkout-buttons {
           align-self: flex-end;
@@ -123,8 +160,26 @@ main {
         }
       }
     }
+    > .confirmed-details-section-small {
+      @include flex(column, flex-start, flex-start);
+      align-self: start;
+      grid-area: 2 / 1 / 2 / 2;
+      margin-top: -$marginSmall;
+      h3 {
+        margin-bottom: $marginMedium;
+      }
+      > strong:nth-of-type(3) {
+        margin-top: $marginMedium;
+        margin-bottom: $marginSmall;
+      }
+      > p:nth-of-type(3) {
+        margin-bottom: $marginMedium;
+      }
+    }
     > .payment-section {
       @include flex(column, center, flex-start);
+      grid-area: 1 / 2 / 3 / 4;
+      align-self: flex-start;
       > h3 {
         margin-bottom: $marginMedium;
       }
@@ -184,6 +239,48 @@ main {
           > button:first-child {
             color: $colorBlack;
             background-color: $colorWhite;
+          }
+          > .disabled {
+            background-color: $colorGray;
+          }
+        }
+      }
+    }
+    > .confirmation-section {
+      @include flex(column, center, center);
+      grid-area: 1 / 2 / 3 / 4;
+      align-self: flex-start;
+      text-align: center;
+      > h1,
+      h3,
+      .row,
+      svg,
+      button,
+      p {
+        margin-bottom: $marginLarge;
+      }
+      > strong {
+        margin-bottom: $marginSmall;
+      }
+      > svg {
+        font-size: 7.5rem;
+        fill: $colorSuccess;
+      }
+      > .row {
+        @include flex(row, center, flex-end);
+        gap: $marginLarge;
+        > .email-confirmation {
+          @include flex(column, center, center);
+          > label {
+            margin-left: 30%;
+            width: 100%;
+            font-weight: 400;
+          }
+          > input {
+            min-width: 95%;
+            align-items: flex-start;
+            text-align: left;
+            padding-left: $paddingContainerMedium;
           }
         }
       }

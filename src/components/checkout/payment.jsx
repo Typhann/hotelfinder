@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import mastercard from "../../assets/payment-logos/mastercard.png";
 import visa from "../../assets/payment-logos/visa.png";
 import americanExpress from "../../assets/payment-logos/american-express.png";
@@ -6,8 +6,30 @@ import klarna from "../../assets/payment-logos/klarna.png";
 import applePay from "../../assets/payment-logos/apple-pay.png";
 import googlePay from "../../assets/payment-logos/google-pay.png";
 
-export default function Payment() {
-  const navigate = useNavigate();
+export default function Payment({ setDisplayPayment, setDisplayConfirmation }) {
+  const [disableButton, setDisableButton] = useState(false);
+
+  // scrolls user to top on pageload
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Check the validity of form inputs
+    const form = event.target;
+    if (form.checkValidity()) {
+      setDisableButton(true);
+      // fakes a payment process
+      setTimeout(() => {
+        setDisableButton(false);
+        setDisplayPayment(false);
+        setDisplayConfirmation(true);
+      }, 3000);
+    }
+  }
+
   const paymentLogos = [
     mastercard,
     visa,
@@ -33,7 +55,7 @@ export default function Payment() {
       <small>
         Please fill out all required <span>*</span> fields.
       </small>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="column">
             <label htmlFor="name">
@@ -118,8 +140,11 @@ export default function Payment() {
           <button onClick={() => console.log("clicked")} className="button">
             Go back to details
           </button>
-          <button type="submit" className="button">
-            Pay
+          <button
+            type="submit"
+            className={`${disableButton ? "disabled" : ""} button`}
+          >
+            {disableButton ? "Paying..." : "Pay"}
           </button>
         </div>
       </form>

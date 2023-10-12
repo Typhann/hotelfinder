@@ -640,8 +640,10 @@ main > .breadcrumbs .finished-line {
   background-color: #000000;
 }
 main .section-container {
-  width: 60%;
-  margin-left: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: calc(2rem * 2);
   margin-bottom: 2rem;
 }
 main .section-container section {
@@ -669,47 +671,93 @@ main .section-container section > form input[type=email]:focus,
 main .section-container section > form input[type=tel]:focus {
   border: 2px solid black;
 }
-main .section-container > .confirm-details span {
+main .section-container > .selection-section {
+  grid-area: 1/1/2/2;
+  align-self: start;
+}
+main .section-container > .selection-section > h3,
+main .section-container > .selection-section p,
+main .section-container > .selection-section .tags-container,
+main .section-container > .selection-section .dates-container,
+main .section-container > .selection-section .row {
+  margin-bottom: 1rem;
+}
+main .section-container > .selection-section > .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main .section-container > .selection-section > .row > .star-container > svg {
+  fill: #feb600;
+}
+main .section-container > .selection-section > .tags-container,
+main .section-container > .selection-section .dates-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+main .section-container > .selection-section > .tags-container {
+  border-bottom: 1px solid #c5c5c5;
+}
+main .section-container > .selection-section > .dates-container > .dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
+}
+main .section-container > .confirm-details-section {
+  grid-area: 1/2/3/4;
+}
+main .section-container > .confirm-details-section span {
   font-weight: 700;
   font-size: 1rem;
 }
-main .section-container > .confirm-details > form > .fullName-container {
+main .section-container > .confirm-details-section > form > .fullName-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-main .section-container > .confirm-details > form > .fullName-container > div {
+main .section-container > .confirm-details-section > form > .fullName-container > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-right: 2rem;
 }
-main .section-container > .confirm-details > form > input[type=email] {
+main .section-container > .confirm-details-section > form > input[type=email] {
   width: 50%;
   min-width: 250px;
 }
-main .section-container > .confirm-details > form > input[type=text]:focus {
+main .section-container > .confirm-details-section > form > input[type=text]:focus {
   border: 2px solid black;
 }
-main .section-container > .confirm-details > form > p {
-  margin-bottom: 0.5rem;
+main .section-container > .confirm-details-section > form > p {
+  margin-bottom: 1rem;
   max-width: 350px;
 }
-main .section-container > .confirm-details > form > textarea {
+main .section-container > .confirm-details-section > form > textarea {
   margin-bottom: 2rem;
-}
-main .section-container > .confirm-details > form > .checkbox > label {
-  font-weight: 400;
-}
-main .section-container > .confirm-details > form > strong {
-  margin-bottom: 0.5rem;
-}
-main .section-container > .confirm-details > form > #checkIn {
   margin-top: 0.5rem;
 }
-main .section-container > .confirm-details > form > .checkout-buttons {
+main .section-container > .confirm-details-section > form > .checkbox > label {
+  font-weight: 400;
+}
+main .section-container > .confirm-details-section > form > strong {
+  margin-bottom: 0.5rem;
+}
+main .section-container > .confirm-details-section > form > #checkIn {
+  margin-top: 0.5rem;
+}
+main .section-container > .confirm-details-section > form > .checkout-buttons {
   align-self: flex-end;
   display: flex;
   flex-direction: row;
@@ -717,15 +765,36 @@ main .section-container > .confirm-details > form > .checkout-buttons {
   align-items: center;
   gap: 1rem;
 }
-main .section-container > .confirm-details > form > .checkout-buttons > button:first-child {
+main .section-container > .confirm-details-section > form > .checkout-buttons > button:first-child {
   color: #000000;
   background-color: #ffffff;
+}
+main .section-container > .confirmed-details-section-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: start;
+  grid-area: 2/1/2/2;
+  margin-top: -0.5rem;
+}
+main .section-container > .confirmed-details-section-small h3 {
+  margin-bottom: 1rem;
+}
+main .section-container > .confirmed-details-section-small > strong:nth-of-type(3) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+main .section-container > .confirmed-details-section-small > p:nth-of-type(3) {
+  margin-bottom: 1rem;
 }
 main .section-container > .payment-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  grid-area: 1/2/3/4;
+  align-self: flex-start;
 }
 main .section-container > .payment-section > h3 {
   margin-bottom: 1rem;
@@ -803,6 +872,57 @@ main .section-container > .payment-section > form > .checkout-buttons {
 main .section-container > .payment-section > form > .checkout-buttons > button:first-child {
   color: #000000;
   background-color: #ffffff;
+}
+main .section-container > .payment-section > form > .checkout-buttons > .disabled {
+  background-color: #c5c5c5;
+}
+main .section-container > .confirmation-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/2/3/4;
+  align-self: flex-start;
+  text-align: center;
+}
+main .section-container > .confirmation-section > h1,
+main .section-container > .confirmation-section h3,
+main .section-container > .confirmation-section .row,
+main .section-container > .confirmation-section svg,
+main .section-container > .confirmation-section button,
+main .section-container > .confirmation-section p {
+  margin-bottom: 2rem;
+}
+main .section-container > .confirmation-section > strong {
+  margin-bottom: 0.5rem;
+}
+main .section-container > .confirmation-section > svg {
+  font-size: 7.5rem;
+  fill: #b2ff83;
+}
+main .section-container > .confirmation-section > .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+}
+main .section-container > .confirmation-section > .row > .email-confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .section-container > .confirmation-section > .row > .email-confirmation > label {
+  margin-left: 30%;
+  width: 100%;
+  font-weight: 400;
+}
+main .section-container > .confirmation-section > .row > .email-confirmation > input {
+  min-width: 95%;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 1rem;
 }
 
 .logo {

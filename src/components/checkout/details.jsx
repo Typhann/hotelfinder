@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Details() {
+export default function Details({
+  setDisplayDetails,
+  setDisplayPayment,
+  setDisplayConfirmedDetails,
+}) {
   const navigate = useNavigate();
   const [focusedInput, setFocusedInput] = useState({
     firstName: false,
@@ -21,6 +25,19 @@ export default function Details() {
     insurance: false,
     message: "",
   });
+
+  //
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Check the validity of form inputs
+    const form = event.target;
+    if (form.checkValidity()) {
+      setDisplayDetails(false);
+      setDisplayConfirmedDetails(true);
+      setDisplayPayment(true);
+    }
+  }
 
   // controlled form
   // updates formData with the inputs value
@@ -76,12 +93,12 @@ export default function Details() {
   }
 
   return (
-    <section className="confirm-details">
+    <section className="confirm-details-section">
       <h3>Confirm details</h3>
       <small>
         Please fill out all required <span>*</span> fields.
       </small>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="fullName-container">
           <div className="firstName">
             <label htmlFor="firstName">

@@ -22,7 +22,7 @@ const router = createBrowserRouter(
       <Route element={<AuthRequired />}>
         <Route path="favorites" element={<Favorites />} />
       </Route>
-      <Route path="checkout" element={<Checkout />} />
+      <Route path="checkout/hotel/:id" element={<Checkout />} />
     </Route>
   )
 );
