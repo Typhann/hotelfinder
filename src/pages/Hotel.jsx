@@ -41,7 +41,7 @@ export default function Hotel() {
   const reviews = hotel.reviews;
   const reviewsList = reviews.map((review, index) => (
     <div key={index}>
-      <p className="review-text">"{review}"</p>
+      <p className="review-text">`&quot;`{review}`&quot;`</p>
       <p className="review-rates">
         <FaStar />
         <FaStar />

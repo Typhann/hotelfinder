@@ -194,9 +194,10 @@ header > .login-register button:first-child {
 .search-container .search-options svg {
   margin-right: 1rem;
 }
-.search-container .search-options > div {
+.search-container .search-options > button {
   padding: 1rem;
-  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
 }
 .search-container > .button {
   background-color: #4a376d;

@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 import Confetti from "react-confetti";
 export default function Confirmed() {
   const [displayConfetti, setDisplayConfetti] = useState(250);
 
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // stops confetti animation after 5 seconds
   setTimeout(() => {

@@ -1,6 +1,7 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import SearchContext from "../context/SearchContext";
+import When from "../components/search/When";
 
 export const Counter = ({ room, roomPrice, setError }) => {
   const { search, setSearch } = useContext(SearchContext);
@@ -63,6 +64,15 @@ export default function ReservationForm() {
   const { search, setSearch } = useContext(SearchContext);
   const navigate = useNavigate();
   const { id } = useParams();
+
+  // clears the context on mount
+  useEffect(() => {
+    setSearch({
+      ...search,
+      reservedRooms: [],
+      totalPrice: 0,
+    });
+  }, []);
 
   console.log(id);
   const [error, setError] = useState(false);

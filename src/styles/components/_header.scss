@@ -46,9 +46,10 @@ header {
     svg {
       margin-right: $marginMedium;
     }
-    > div {
+    > button {
       padding: $paddingContainerMedium;
-      cursor: pointer;
+      background-color: $colorWhite;
+      color: $colorBlack;
     }
   }
   > .button {

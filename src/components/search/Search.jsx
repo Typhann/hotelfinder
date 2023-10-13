@@ -82,22 +82,22 @@ export default function Search() {
     <>
       <div className="search-container">
         <div className="search-options">
-          <div onClick={() => handleClick("where")}>
+          <button className="button" onClick={() => handleClick("where")}>
             <FaLocationArrow />
             <strong>{search.where.length ? search.where : "Where"}</strong>
-          </div>
-          <div onClick={() => handleClick("when")}>
+          </button>
+          <button className="button" onClick={() => handleClick("when")}>
             <FaCalendarAlt />
             <strong>{search.when ? search.when : "When"}</strong>
-          </div>
-          <div onClick={() => handleClick("who")}>
+          </button>
+          <button className="button" onClick={() => handleClick("who")}>
             <FaUser />
             <strong>
               {totalAdults || totalChildren || totalPets >= 1
                 ? `${totalAdults + totalChildren + totalPets}`
                 : "Who"}
             </strong>
-          </div>
+          </button>
         </div>
         <Link
           to={search.where ? `search/?q=${search.where}` : "#"}
