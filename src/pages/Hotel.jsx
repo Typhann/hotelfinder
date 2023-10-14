@@ -41,8 +41,8 @@ export default function Hotel() {
   const reviews = hotel.reviews;
   const reviewsList = reviews.map((review, index) => (
     <div key={index}>
-      <p className="review-text">`&quot;`{review}`&quot;`</p>
-      <p className="review-rates">
+      <p className="review-text">&quot;{review}&quot;</p>
+      <p className="review-rates"> 
         <FaStar />
         <FaStar />
         <FaStar />
@@ -90,7 +90,6 @@ export default function Hotel() {
           <div className="our-offer">
             <h3>We offer</h3>
             <p>{hotel.amenities}</p>
-            <div>{database.icons.icon}</div>
           </div>
 
           <div>

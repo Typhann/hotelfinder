@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { renderHotels } from "../../utils";
 import database from "../../database.json";
+import FilterButtons from "../components/FilterButtons";
+{/*import FilterSection from "../components/FilterSection";*/}
+{/*import Profile from "../components/Profile";*/}
 
 export default function Home() {
   window.scrollTo(0, 0);
@@ -14,6 +17,9 @@ export default function Home() {
           </li>
         ))}
       </ul>
+        <FilterButtons />
+        {/*<FilterSection />*/}
+        {/*<Profile />*/}
       {renderHotels("Europe", "carousel")}
       {renderHotels("Africa", "carousel")}
       {renderHotels("USA", "carousel")}

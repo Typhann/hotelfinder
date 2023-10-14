@@ -49,7 +49,7 @@ export default function HotelCard(props) {
         <FaStar />
         <FaStar />
         <FaStar />
-        <FaStar />
+        <FaRegStar />
       </div>
       <h3>{props.name}</h3>
       <div className="card-info">
