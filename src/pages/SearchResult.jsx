@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { renderHotels } from "../../utils";
-import FilterSection from "../components/FilterButtons";
+import Filter from "../components/Filter";
 
 export default function SearchResult() {
   const location = useLocation();
@@ -9,7 +9,7 @@ export default function SearchResult() {
 
   return (
   <>  
-    <FilterSection />
+    <Filter />
     {renderHotels(search, "grid")}
   </>);
 }

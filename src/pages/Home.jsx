@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { renderHotels } from "../../utils";
 import database from "../../database.json";
-import FilterButtons from "../components/FilterButtons";
-import FilterSection from "../components/FilterSection";
+import Filter from "../components/Filter";
+{/*import FilterSection from "../components/FilterSection";*/}
 {/*import Profile from "../components/Profile";*/}
 
 export default function Home() {
@@ -17,8 +17,7 @@ export default function Home() {
           </li>
         ))}
       </ul>
-        <FilterButtons />
-        <FilterSection />
+        <Filter />
         {/*<Profile />*/}
       {renderHotels("Europe", "carousel")}
       {renderHotels("Africa", "carousel")}
