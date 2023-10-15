@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import { renderHotels } from "../../utils";
 import database from "../../database.json";
 import Filter from "../components/Filter";
-{/*import FilterSection from "../components/FilterSection";*/}
+import Login from "../components/Login";
 {/*import Profile from "../components/Profile";*/}
 
 export default function Home() {
   window.scrollTo(0, 0);
   return (
     <>
+    <Login />
       <h2>Popular destinations</h2>
       <ul>
         {database.popularDestinations.map((destination) => (

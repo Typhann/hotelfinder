@@ -397,6 +397,7 @@ header > .login-register button:first-child {
 .filter-section > .close-filter-overlay {
   float: right;
   color: #a41752;
+  cursor: pointer;
 }
 
 .overlay {
@@ -518,6 +519,66 @@ footer {
 .review-rates svg {
   fill: #feb600;
   font-size: 1.2rem;
+}
+
+.log-in-section {
+  z-index: 10000;
+  position: fixed;
+  width: 50%;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
+}
+.log-in-section > .close-overlay {
+  float: right;
+  border: none;
+  margin: 1rem;
+  color: #a41752;
+  border: none;
+  font-Size: 18px;
+  background: none;
+  cursor: pointer;
+}
+.log-in-section > .log-in-section-inner {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.log-in-section > .log-in-section-inner > h1 {
+  margin-bottom: 2rem;
+}
+.log-in-section > .log-in-section-inner > .log-in-BTN {
+  width: 30%;
+  margin: 1rem 0 1rem 0;
+}
+
+.divBTN {
+  background-color: rgb(233, 233, 233);
+  border-radius: 6px;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.divBTN:hover {
+  background-color: rgba(233, 233, 233, 0.418);
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+.email,
+.password {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.new-account p {
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem;
 }
 
 main > .hotel-header {
