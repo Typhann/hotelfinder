@@ -25,7 +25,6 @@
 
 .filter-section {
     background-color: white;
-    width: 20%;
     height: 100vh;
     z-index: 100;
     box-shadow: $boxShadow;
@@ -38,15 +37,17 @@
         color: $colorStar;
         margin-top: $marginSmall;
     }
-    > .close-filter-overlay {
-        float: right;
-        color: $colorAction;
-        cursor: pointer;
-    }
+}
+
+.close-filter-overlay {
+    float: right;
+    color: $colorAction;
+    cursor: pointer;
 }
 
 .overlay {
     position: fixed; 
     overflow: auto;
-    top: 0; right: 0; bottom: 0; 
+    top: 0; right: 0; bottom: 0;
+    width: 25%; 
 }

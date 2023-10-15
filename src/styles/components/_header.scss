@@ -20,6 +20,15 @@ header {
       background-color: $colorWhite;
     }
   }
+  > .profile-favorite {
+    font-size: 30px;
+    width: 7%;
+    @include flex(row, space-between, center);
+  }
+}
+
+.favorite-icon-header {
+  color: $colorAction;
 }
 
 // makes header box shadow extend beyond max with of website

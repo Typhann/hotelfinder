@@ -1,0 +1,28 @@
+.profile {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    z-index: 1000;
+    box-shadow: $boxShadow;
+    padding: $paddingContainerLarge;
+    > h2, h3 {
+        margin: $marginMedium 0 $marginSmall 0;
+    }
+}
+
+.profile-links {
+    @include flex(row, space-between);
+    margin: $marginMedium 0 $marginSmall 0;
+}
+
+.profile-link-list > li {
+    margin: $marginMedium 0 $marginSmall 0;
+}
+
+
+.log-out-button {
+    background-color: $colorPrimary;
+}
+
+.edit-profile-button {
+    padding: $paddingContainerLarge;
+}

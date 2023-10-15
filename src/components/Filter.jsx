@@ -2,7 +2,6 @@ import {useState} from 'react';
 import Slider from '@mui/material/Slider';
 import {
     FaSlidersH,
-    FaSortDown,
     FaWindowClose,
     FaStar,
     FaRegStar,
@@ -24,7 +23,7 @@ export default function FilterButtons () {
         {/*Buttons for trigger filter section*/}
         <div className="filter-buttons">
             <label for="sort-by"></label>
-            <select name="pets" id="sort-by">
+            <select name="sort" id="sort-by">
                 <option value="Default">Sort by - Recommended</option>
                 <option value="LowToHigh">Price - Low To High</option>
                 <option value="HighToLow">Price - High To Low</option>
