@@ -1,4 +1,5 @@
 import Slider from '@mui/material/Slider';
+import {useState} from 'react';
 
 import {
     FaWindowClose,
@@ -7,11 +8,16 @@ import {
   } from "react-icons/fa";
 
 export default function FilterSection () {
+    const [isClosed, setIsClosed] = useState('block');
+
+    const closeOverlay = () => {
+        setIsClosed('none');
+    }
 
     return (
         <>
-        <div className="overlay filter-section">
-            <div className='close-filter-overlay'><FaWindowClose/></div>
+        <div className="overlay filter-section" style={{display: isClosed}}>
+            <button onClick={closeOverlay} className='close-filter-overlay'><FaWindowClose/></button>
             <h2>Search</h2>
             <input placeholder='search hotel ....'/>
             <h2>Filter by</h2>
@@ -28,7 +34,7 @@ export default function FilterSection () {
             </div>
 
             <h3>Price per night</h3>
-            <Slider max={10} min={0} />
+            <Slider max={1000} min={50} />
             <h3>Guest rating</h3>
             <div className="quest-rating-filter">
                 <ul>
