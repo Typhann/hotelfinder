@@ -594,6 +594,59 @@ input {
   margin: 1rem;
 }
 
+.profile {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  z-index: 1000;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 2rem;
+}
+
+.profile-links,
+.my-profile-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.profile-adress,
+.profile-name,
+.profile-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.user-icon {
+  font-size: 45px;
+}
+
+.profile-link-list > li {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.log-out-button {
+  width: 100%;
+  background-color: #4a376d;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.edit-profile-button {
+  margin: 1rem 0 0.5rem 0;
+  background-color: white;
+  border: none;
+  color: blue;
+}
+
+.profile-information span {
+  font-weight: bold;
+  color: black;
+}
+
 main > .hotel-header {
   display: flex;
   flex-direction: row;

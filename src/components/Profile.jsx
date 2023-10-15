@@ -21,7 +21,7 @@ import {
             
             <div className="my-profile-header">
                 <h2>My profile</h2>
-                <h2><FaUserCircle /></h2>
+                <div className="user-icon"><FaUserCircle /></div>
             </div>
 
             <div className="profile-links">
@@ -36,15 +36,21 @@ import {
                 </ul>
             </div>
         
-            <div className="profile-information">
+            <div>
                 <h2>Profile information</h2>
-                <div>
-                    <p>First Name: </p>
-                    <p>Last Name: </p>
-                    <p>Adress: </p>
-                    <p>City: </p>
-                    <p>Phone number: </p>
-                    <p>Email address: </p>
+                <div className="profile-information">
+                    <div className="profile-name">
+                        <p><span>Name:</span> Maria Svensson</p>
+                    </div>
+                    <div className="profile-adress">
+                        <p><span>Adress:</span> Onmystreet 45B </p>
+                        <p><span>zip-code:</span> 123 45, UK </p>
+                    </div>
+                    <div className="profile-contact"> 
+                    <p><span>Phone number:</span> +427 4959 38 99 </p>
+                    <p><span>Email address:</span> maria.svensson@email.uk </p>
+                    </div>
+
                 </div>
                 <button className="edit-profile-button"><FaEdit /> Edit profile</button>
             </div>

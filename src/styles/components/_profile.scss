@@ -4,14 +4,23 @@
     z-index: 1000;
     box-shadow: $boxShadow;
     padding: $paddingContainerLarge;
-    > h2, h3 {
-        margin: $marginMedium 0 $marginSmall 0;
-    }
 }
 
-.profile-links {
-    @include flex(row, space-between);
+.profile-links,
+.my-profile-header {
+    @include flex(row, space-between, center);
     margin: $marginMedium 0 $marginSmall 0;
+}
+
+.profile-adress,
+.profile-name,
+.profile-contact {
+    @include flex(row, space-between, center);
+    margin: $marginMedium 0 $marginSmall 0;
+}
+
+.user-icon {
+    font-size: 45px;
 }
 
 .profile-link-list > li {
@@ -20,9 +29,19 @@
 
 
 .log-out-button {
+    width: 100%;
     background-color: $colorPrimary;
+    margin: $marginMedium 0 $marginSmall 0;
 }
 
 .edit-profile-button {
-    padding: $paddingContainerLarge;
+    margin: $marginMedium 0 $marginSmall 0;
+    background-color: white;
+    border: none;
+    color: blue;
+}
+
+.profile-information span {
+    font-weight: bold;
+    color: black;
 }
