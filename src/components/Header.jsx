@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Search from "./search/Search";
 import {useState} from 'react';
+import Profile from "./Profile";
 
 import { 
   FaApple,
@@ -8,7 +9,6 @@ import {
   FaFacebook,
   FaWindowClose,
   FaHeart,
-  FaUserCircle
 } from "react-icons/fa";
 
 export default function Header() {
@@ -33,7 +33,6 @@ export default function Header() {
     setRegisterClosed('none');
   }
 
-
   return (
     <>
       <header>
@@ -51,11 +50,12 @@ export default function Header() {
         </div>
          {/*Logged in*/}
          <div className="profile-favorite">
-          <div className="favorite-icon-header" onClick={openOverlay}><FaHeart/></div>
-          <div className="profile-icon-header" onClick={openRegister}><FaUserCircle/></div>
+         <Link to="/Favorites">
+         <div className="favorite-icon-header"><FaHeart/></div>
+          </Link>
+          <Profile/>
         </div>
       </header>
-
 
     {/*Login form, hidden on defeault*/}
     <div className="log-in-section" style={{display: isClosed}}>
@@ -65,12 +65,12 @@ export default function Header() {
 
                 <div className="email">
                     <label>Email</label><br />
-                    <input id="email" size="35" name="email" required />
+                    <input type="email" id="email" size="30" name="email" placeholder="Maria Svensson" required />
                 </div>
 
                 <div className="password">
                     <label>Password</label><br />
-                    <input type="password" id="pass" size="35" name="password" required />
+                    <input type="password" id="pass" size="35" name="password" placeholder="*********" required />
                 </div>
 
                 <input className="button log-in-BTN" type="submit" value="Log in" />
@@ -98,12 +98,12 @@ export default function Header() {
 
                 <div className="email">
                     <label>Email</label><br />
-                    <input id="email" size="35" name="email" required />
+                    <input type="email" id="email" size="30" name="email" placeholder="maria.svensson@email.uk" required />
                 </div>
 
                 <div className="password">
                     <label>Password</label><br />
-                    <input type="password" id="pass" size="35" name="password" required />
+                    <input type="password" id="pass" size="35" name="password" placeholder="*********" required />
                 </div>
 
                 <input className="button log-in-BTN" type="submit" value="Register" />

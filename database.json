@@ -191,6 +191,8 @@
       ]
     }
   ],
+
+
   "popularDestinations": [
     "Berlin",
     "Paris",
@@ -216,10 +218,11 @@
       "email": "maria.svensson@email.uk",
       "phone": "+427 4959 38 99",
       "upcoming_stay": "Luxury Hotel",
+      "recently": ["Ski Lodge","Riverside Retreat", "Budget lodge"],
       "favorites": ["Luxury Hotel","Urban Suites", "Desert Oasis"]
     }
-
   ],
+
 
   "icons": [
     {

@@ -24,6 +24,7 @@ header {
     font-size: 30px;
     width: 7%;
     @include flex(row, space-between, center);
+    cursor: pointer;
   }
 }
 

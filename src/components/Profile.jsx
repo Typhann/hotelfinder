@@ -1,4 +1,9 @@
 import {useState} from 'react';
+import database from "../../database.json";
+import { Link } from "react-router-dom";
+
+import HotelCard from "./HotelCard";
+
 
 import {
     FaEdit,
@@ -7,16 +12,24 @@ import {
     FaWindowClose,
   } from "react-icons/fa";
 
-  import { Link } from "react-router-dom";
-  export default function Profile () {
-    const [isClosed, setIsClosed] = useState('block');
 
-    const closeOverlay = () => {
-        setIsClosed('none');
-    }
+  export default function Profile () {
+    const user = database.users;
+    console.log(JSON.stringify(user[0].name)) 
+
+    {/*Function for trigger profile section*/}
+   const [isClosed, setIsClosed] = useState('none');
+
+   const openOverlay = () => {
+       setIsClosed('block');
+   }
+   const closeOverlay = () => {
+    setIsClosed('none');
+  }
 
     return (
         <>
+        <div className="profile-icon-header" onClick={openOverlay}><FaUserCircle/></div>
         <div className="overlay profile" style={{display: isClosed}}>
         <button onClick={closeOverlay} className='close-filter-overlay' style={{border: 'none', fontSize: '18px', background: 'none'}}><FaWindowClose/></button>
             
@@ -38,31 +51,34 @@ import {
             </div>
         
             <div>
-                <h2>Profile information</h2>
+                <h3>Profile information</h3>
                 <div className="profile-information">
                     <div className="profile-name">
-                        <p><span>Name:</span> Maria Svensson</p>
+                        <p><span>Name:</span> {user[0].name}</p>
                     </div>
                     <div className="profile-adress">
-                        <p><span>Adress:</span> Onmystreet 45B </p>
-                        <p><span>zip-code:</span> 123 45, UK </p>
+                        <p><span>Adress:</span> {user[0].address} </p>
+                        <p><span>zip-code:</span> {user[0].zip_code} </p>
                     </div>
                     <div className="profile-contact"> 
-                    <p><span>Phone number:</span> +427 4959 38 99 </p>
-                    <p><span>Email address:</span> maria.svensson@email.uk </p>
+                    <p><span>Phone number:</span> {user[0].phone} </p>
+                    <p><span>Email address:</span> {user[0].email} </p>
                     </div>
 
                 </div>
                 <button className="edit-profile-button"><FaEdit /> Edit profile</button>
             </div>
 
-            <div>
-                <h2>Your upcoming stay</h2>
+            <div className='upcoming_stay'>
+                <h3>Your upcoming stay</h3>
+                <HotelCard />
             </div>
 
-            <div>
-                <h2>Recently watch</h2>
+            <div className='recently_watched'>
+                <h3>Recently watched</h3>
+                <HotelCard />
             </div>
+
             <button className="button log-out-button">Log out</button>
         </div>
         </>

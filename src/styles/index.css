@@ -187,6 +187,7 @@ header > .profile-favorite {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .favorite-icon-header {
@@ -538,6 +539,8 @@ footer {
   z-index: 10000;
   position: fixed;
   width: 50%;
+  left: 25%;
+  top: 20%;
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
@@ -579,13 +582,9 @@ footer {
   cursor: pointer;
 }
 
-input {
+input[type=email],
+input[type=password] {
   border: none;
-}
-
-.email,
-.password {
-  margin: 0.5rem 0 0.5rem 0;
 }
 
 .new-account p {
@@ -622,11 +621,12 @@ input {
 }
 
 .user-icon {
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .profile-link-list > li {
   margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
 }
 
 .log-out-button {
