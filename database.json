@@ -206,6 +206,21 @@
     "Singapore"
   ],
 
+
+  "users": [
+    {
+      "id": 1,
+      "name": "Maria Svensson",
+      "address": "Onmystreet 45B",
+      "zip_code": "123 45, UK",
+      "email": "maria.svensson@email.uk",
+      "phone": "+427 4959 38 99",
+      "upcoming_stay": "Luxury Hotel",
+      "favorites": ["Luxury Hotel","Urban Suites", "Desert Oasis"]
+    }
+
+  ],
+
   "icons": [
     {
       "name": "Star",
