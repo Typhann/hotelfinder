@@ -69,7 +69,7 @@ export default function FilterButtons () {
                 <FaRegStar/>
                 <FaRegStar/>
             </div>
-            
+            <button onClick={closeOverlay} className="button purple-button">Apply filter</button>
         </div>
         </>
     );

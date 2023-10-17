@@ -12,14 +12,7 @@ header {
   > .search-container {
     @include flex(row, center, center);
   }
-  > .login-register {
-    @include flex(row, center, center);
-    button:first-child {
-      margin-right: $marginMedium;
-      color: $colorBlack;
-      background-color: $colorWhite;
-    }
-  }
+  
   > .profile-favorite {
     font-size: 30px;
     width: 7%;

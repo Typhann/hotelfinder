@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import database from "../../database.json";
 import { Link } from "react-router-dom";
-
 import HotelCard from "./HotelCard";
 
 
@@ -40,7 +39,7 @@ import {
 
             <div className="profile-links">
                 <ul className="profile-link-list">
-                    <li><Link to="/">Favorites <FaAngleDoubleRight /></Link></li>
+                    <li onClick={closeOverlay}><Link to="favorites">Favorites <FaAngleDoubleRight /></Link></li>
                     <li><Link to="/">Reviews <FaAngleDoubleRight /></Link></li>
                 </ul>
 
@@ -79,7 +78,7 @@ import {
                 <HotelCard />
             </div>
 
-            <button className="button log-out-button">Log out</button>
+            <button onClick={closeOverlay} className="button purple-button">Log out</button>
         </div>
         </>
     );
