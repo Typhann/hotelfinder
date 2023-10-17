@@ -14,11 +14,6 @@ export default function Search() {
   const { search } = useContext(SearchContext);
   const { totalAdults, totalChildren, totalPets } = getTotalGuests();
 
-  // Timeout for Toast Error message
-  useEffect(() => {
-    setTimeout(() => setError(false), 10500);
-  }, []);
-
   // Closes modal on click outside
   useEffect(() => {
     function handleClickOutside(event) {

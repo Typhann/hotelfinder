@@ -7,7 +7,7 @@ export default function Feedback(props) {
   // Displays feedback for 4 seconds
   setTimeout(() => {
     setIsVisible(false);
-  }, 4000);
+  }, 10000);
 
   let type = "";
   let icon = "";

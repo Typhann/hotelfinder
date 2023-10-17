@@ -1,54 +1,61 @@
 .log-in-section {
-    z-index: 10000;
-    position: fixed;
-    width: 50%;
-    left: 25%;
-    top: 20%;
-    background-color: white;
-    box-shadow: $boxShadow;
-    border-radius: $borderRadius;
-    > .close-overlay {
-        float: right;
-        border: none;
-        margin: $marginMedium;
-        color: $colorAction;
-        border: none;
-        font-Size: 18px; 
-        background: none;
-        cursor: pointer;
+  z-index: 10000;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: $colorWhite;
+  box-shadow: $boxShadow;
+  border-radius: $borderRadius;
+  &:focus {
+    border: none !important;
+  }
+  > .close-overlay {
+    float: right;
+    border: none;
+    margin: $marginMedium;
+    color: $colorAction;
+    border: none;
+    font-size: 18px;
+    background: none;
+    cursor: pointer;
+  }
+  > .log-in-section-inner {
+    padding: $paddingContainerMedium;
+    @include flex(column, center, center);
+    > h1 {
+      margin-bottom: $marginLarge;
     }
-    > .log-in-section-inner {
-        padding: $paddingContainerMedium;
-        @include flex(column, center, center);
-        > h1 {
-            margin-bottom: $marginLarge;
-        }
-        > .log-in-BTN {
-            width: 30%;
-            margin: $marginMedium 0 $marginMedium 0;
-        }
+    > .log-in-BTN {
+      width: 30%;
+      margin: $marginMedium 0 $marginMedium 0;
     }
+    > .disabled {
+      background-color: $colorGray;
+    }
+  }
 }
 
 .divBTN {
-    background-color: rgb(233, 233, 233);
-    border-radius: $borderRadius;
-    padding: $paddingContainerSmall $paddingContainerLarge;
-    margin: $marginMedium 0 $marginMedium 0;
+  background-color: rgb(233, 233, 233);
+  border-radius: $borderRadius;
+  padding: $paddingContainerSmall $paddingContainerLarge;
+  margin: $marginMedium 0 $marginMedium 0;
 }
 
 .divBTN:hover {
-    background-color: rgba(233, 233, 233, 0.418);
-    cursor: pointer;
+  background-color: rgba(233, 233, 233, 0.418);
+  cursor: pointer;
 }
 
-input[type=email],
-input[type=password] {
-    border: none;
+input[type="email"],
+input[type="password"] {
+  border: none;
 }
 
 .new-account p {
-    font-weight: bold;
-    text-align: center;
-    margin: $marginMedium;
+  font-weight: bold;
+  text-align: center;
+  margin: $marginMedium;
 }

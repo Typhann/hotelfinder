@@ -33,6 +33,7 @@ export default function Where({ handleClick }) {
       <input
         name="search"
         type="text"
+        autoFocus
         value={input}
         placeholder="Enter any country, hotel or destination..."
         onChange={(event) => handleChange(event)}

@@ -537,13 +537,17 @@ footer {
 
 .log-in-section {
   z-index: 10000;
-  position: fixed;
-  width: 50%;
-  left: 25%;
-  top: 20%;
-  background-color: white;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
+}
+.log-in-section:focus {
+  border: none !important;
 }
 .log-in-section > .close-overlay {
   float: right;
@@ -551,7 +555,7 @@ footer {
   margin: 1rem;
   color: #a41752;
   border: none;
-  font-Size: 18px;
+  font-size: 18px;
   background: none;
   cursor: pointer;
 }
@@ -568,6 +572,9 @@ footer {
 .log-in-section > .log-in-section-inner > .log-in-BTN {
   width: 30%;
   margin: 1rem 0 1rem 0;
+}
+.log-in-section > .log-in-section-inner > .disabled {
+  background-color: #c5c5c5;
 }
 
 .divBTN {
