@@ -45,7 +45,8 @@ textarea,
 li,
 small,
 th,
-td {
+td,
+select {
   font-family: "Open Sans", sans-serif !important;
 }
 
@@ -121,7 +122,9 @@ input[type=time],
 input[type=email],
 input[type=tel],
 input[type=number],
-input[type=month] {
+input[type=month],
+select,
+option {
   all: unset;
   padding: 0.5rem;
   border-radius: 6px;
@@ -356,21 +359,17 @@ header > .profile-favorite {
   align-items: center;
 }
 .filter-buttons > button {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
   margin-left: 0.5rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .filter-buttons > button:hover {
   text-decoration: underline;
-}
-
-.filter-button {
-  background-color: transparent;
 }
 
 .sort-button {
@@ -419,7 +418,9 @@ section > .space-between {
   justify-content: space-between;
   align-items: center;
 }
-section > .space-between > h2 {
+section > .space-between > h2,
+section > .space-between button,
+section > .space-between select {
   margin-bottom: 1rem;
 }
 section > .grid {

@@ -30,7 +30,8 @@ textarea,
 li,
 small,
 th,
-td {
+td,
+select {
   font-family: $fontText !important;
 }
 h1 {
@@ -100,7 +101,9 @@ input[type="time"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
-input[type="month"] {
+input[type="month"],
+select,
+option {
   all: unset;
   padding: $paddingContainerSmall;
   border-radius: $borderRadius;
@@ -112,6 +115,14 @@ input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
 }
+
+// option {
+//   padding: $paddingContainerSmall;
+//   all: unset;
+//   padding: $paddingContainerSmall;
+//   border-radius: $borderRadius;
+//   box-shadow: $boxShadow;
+// }
 
 // Scrollbar
 ::-webkit-scrollbar {

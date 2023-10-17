@@ -24,7 +24,7 @@ export default function FilterButtons() {
           <option value="LowToHigh">Price - Low To High</option>
           <option value="HighToLow">Price - High To Low</option>
         </select>
-        <button onClick={openOverlay} className="filter-button">
+        <button onClick={openOverlay} className="button">
           <FaSlidersH /> Filter
         </button>
       </div>

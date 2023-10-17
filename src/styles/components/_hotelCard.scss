@@ -1,7 +1,9 @@
 section {
   > .space-between {
     @include flex(row, space-between, center);
-    > h2 {
+    > h2,
+    button,
+    select {
       margin-bottom: $marginMedium;
     }
   }

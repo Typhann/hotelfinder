@@ -1,22 +1,15 @@
 .filter-buttons {
   @include flex(row, end, center);
   > button {
-    padding: $paddingContainerSmall $paddingContainerMedium;
-    cursor: pointer;
-    border: none;
-    border-radius: $borderRadius;
+    background-color: $colorWhite;
+    color: $colorBlack;
     margin-left: $marginSmall;
-    font-family: $fontText;
-    font-size: 1rem;
-    font-weight: bold;
+    box-shadow: $boxShadow;
+    @include flex(row, space-around, center);
   }
   > button:hover {
     text-decoration: underline;
   }
-}
-
-.filter-button {
-  background-color: transparent;
 }
 
 .sort-button {
