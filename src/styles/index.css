@@ -413,13 +413,13 @@ header > .profile-favorite {
   width: 25%;
 }
 
-section > div {
+section > .space-between {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-section > div > h2 {
+section > .space-between > h2 {
   margin-bottom: 1rem;
 }
 section > .grid {

@@ -42,7 +42,7 @@ export default function Hotel() {
   const reviewsList = reviews.map((review, index) => (
     <div key={index}>
       <p className="review-text">&quot;{review}&quot;</p>
-      <p className="review-rates"> 
+      <p className="review-rates">
         <FaStar />
         <FaStar />
         <FaStar />
@@ -96,7 +96,7 @@ export default function Hotel() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13826.255625836358!2d-87.0482837115719!3d20.657553864612346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5d1373869c1f%3A0x73c6152510886982!2sSandos%20Caracol%20Eco%20Resort!5e0!3m2!1ssv!2ses!4v1696259424496!5m2!1ssv!2ses"
               style={{ border: "none" }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
             ></iframe>
           </div>

@@ -16,7 +16,7 @@ export function renderHotels(category, display) {
 
   return (
     <section>
-      <div>
+      <div className="space-between">
         <h2>Explore {category}</h2>
         <Filter />
       </div>

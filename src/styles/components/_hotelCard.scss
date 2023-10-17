@@ -1,5 +1,5 @@
 section {
-  > div {
+  > .space-between {
     @include flex(row, space-between, center);
     > h2 {
       margin-bottom: $marginMedium;

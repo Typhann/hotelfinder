@@ -7,9 +7,5 @@ export default function SearchResult() {
   const queryParams = new URLSearchParams(location.search);
   const search = queryParams.get("q");
 
-  return (
-  <>  
-    <Filter />
-    {renderHotels(search, "grid")}
-  </>);
+  return <>{renderHotels(search, "grid")}</>;
 }
