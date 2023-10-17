@@ -11,7 +11,7 @@ export default function Register({ display, setDisplay }) {
         >
           <FaWindowClose />
         </button>
-        <section className="log-in-section-inner">
+        <form className="log-in-section-inner">
           <h1>Register</h1>
 
           <div className="email">
@@ -69,7 +69,7 @@ export default function Register({ display, setDisplay }) {
               <Link to="#"> Terms & Conditions</Link>
             </p>
           </div>
-        </section>
+        </form>
       </div>
     </Modal>
   );
