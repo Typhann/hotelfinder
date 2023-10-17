@@ -19,10 +19,10 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="hotel/:id" element={<Hotel />} />
       <Route path="search" element={<SearchResult />} />
-      <Route path="favorites" element={<Favorites />} />
-      <Route element={<AuthRequired />}>
-    </Route>
       <Route path="checkout/hotel/:id" element={<Checkout />} />
+      <Route element={<AuthRequired />}>
+        <Route path="favorites" element={<Favorites />} />
+      </Route>
     </Route>
   )
 );
