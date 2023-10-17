@@ -59,3 +59,12 @@ input[type="password"] {
   text-align: center;
   margin: $marginMedium;
 }
+
+.login-register {
+  @include flex(row, center, center);
+  button:first-child {
+    margin-right: $marginMedium;
+    color: $colorBlack;
+    background-color: $colorWhite;
+  }
+}

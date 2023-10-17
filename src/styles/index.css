@@ -169,17 +169,6 @@ header > .search-container {
   justify-content: center;
   align-items: center;
 }
-header > .login-register {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-header > .login-register button:first-child {
-  margin-right: 1rem;
-  color: #000000;
-  background-color: #ffffff;
-}
 header > .profile-favorite {
   font-size: 30px;
   width: 7%;
@@ -508,9 +497,9 @@ footer {
   align-items: center;
 }
 
-.footerList li {
-  display: inline;
-  padding: 2rem;
+.SingInRegister li {
+  display: inline-block;
+  padding: 1rem;
 }
 
 .review_ratings {
@@ -600,6 +589,18 @@ input[type=password] {
   margin: 1rem;
 }
 
+.login-register {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.login-register button:first-child {
+  margin-right: 1rem;
+  color: #000000;
+  background-color: #ffffff;
+}
+
 .profile {
   background-color: rgb(255, 255, 255);
   height: 100vh;
@@ -636,7 +637,7 @@ input[type=password] {
   font-size: 1rem;
 }
 
-.log-out-button {
+.purple-button {
   width: 100%;
   background-color: #4a376d;
   margin: 1rem 0 0.5rem 0;
