@@ -362,6 +362,7 @@ header > .profile-favorite {
   border-radius: 6px;
   margin-left: 0.5rem;
   font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
   font-weight: bold;
 }
 .filter-buttons > button:hover {
@@ -387,7 +388,8 @@ header > .profile-favorite {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 2rem;
 }
-.filter-section > h2, .filter-section h3 {
+.filter-section > h2,
+.filter-section h3 {
   margin: 1rem 0 0.5rem 0;
 }
 .filter-section > .star-rating-filter {
@@ -411,7 +413,13 @@ header > .profile-favorite {
   width: 25%;
 }
 
-section > h2 {
+section > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section > div > h2 {
   margin-bottom: 1rem;
 }
 section > .grid {

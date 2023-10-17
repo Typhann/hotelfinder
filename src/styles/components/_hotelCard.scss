@@ -1,6 +1,9 @@
 section {
-  > h2 {
-    margin-bottom: $marginMedium;
+  > div {
+    @include flex(row, space-between, center);
+    > h2 {
+      margin-bottom: $marginMedium;
+    }
   }
   > .grid {
     @include flex(row, flex-start, flex-start);

@@ -1,53 +1,57 @@
 .filter-buttons {
-    @include flex(row, end, center);
-    > button {
-        padding: $paddingContainerSmall $paddingContainerMedium;
-        cursor: pointer;
-        border: none;
-        border-radius: $borderRadius;
-        margin-left: $marginSmall;
-        font-family: $fontText;
-        font-weight: bold;
-    }
-    > button:hover {
-        text-decoration: underline;
-    }
+  @include flex(row, end, center);
+  > button {
+    padding: $paddingContainerSmall $paddingContainerMedium;
+    cursor: pointer;
+    border: none;
+    border-radius: $borderRadius;
+    margin-left: $marginSmall;
+    font-family: $fontText;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  > button:hover {
+    text-decoration: underline;
+  }
 }
 
 .filter-button {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .sort-button {
-    width: 10%;
-    @include flex(row, space-between, center);
+  width: 10%;
+  @include flex(row, space-between, center);
 }
 
 .filter-section {
-    background-color: white;
-    height: 100vh;
-    z-index: 100;
-    box-shadow: $boxShadow;
-    padding: $paddingContainerLarge;
-    > h2, h3 {
-        margin: $marginMedium 0 $marginSmall 0;
-    }
-    > .star-rating-filter {
-        font-size: $fontSizeH3;
-        color: $colorStar;
-        margin-top: $marginSmall;
-    }
+  background-color: white;
+  height: 100vh;
+  z-index: 100;
+  box-shadow: $boxShadow;
+  padding: $paddingContainerLarge;
+  > h2,
+  h3 {
+    margin: $marginMedium 0 $marginSmall 0;
+  }
+  > .star-rating-filter {
+    font-size: $fontSizeH3;
+    color: $colorStar;
+    margin-top: $marginSmall;
+  }
 }
 
 .close-filter-overlay {
-    float: right;
-    color: $colorAction;
-    cursor: pointer;
+  float: right;
+  color: $colorAction;
+  cursor: pointer;
 }
 
 .overlay {
-    position: fixed; 
-    overflow: auto;
-    top: 0; right: 0; bottom: 0;
-    width: 25%; 
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25%;
 }
