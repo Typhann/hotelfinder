@@ -12,7 +12,6 @@ import SearchResult from "./pages/SearchResult";
 import Favorites from "./pages/Favorites";
 import Checkout from "./pages/Checkout";
 import "./styles/index.css";
-import Register from "./components/Register";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +20,6 @@ const router = createBrowserRouter(
       <Route path="hotel/:id" element={<Hotel />} />
       <Route path="search" element={<SearchResult />} />
       <Route path="favorites" element={<Favorites />} />
-      <Route path="register" element={<Register />} />
       <Route element={<AuthRequired />}>
     </Route>
       <Route path="checkout/hotel/:id" element={<Checkout />} />
