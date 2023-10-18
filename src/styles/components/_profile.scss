@@ -6,6 +6,10 @@
     padding: $paddingContainerLarge;
 }
 
+h3 {
+    margin-top: $marginMedium;
+}
+
 .profile-links,
 .my-profile-header {
     @include flex(row, space-between, center);
@@ -19,6 +23,10 @@
     margin: $marginMedium 0 $marginSmall 0;
 }
 
+.inline {
+    @include flex(row, space-between, center);
+}
+
 .user-icon {
     font-size: 40px;
 }
@@ -28,11 +36,17 @@
     font-size: $fontSizeP;
 }
 
+.hotel_title {
+    margin-top: $marginMedium;
+    font-family: $fontText;
+    font-size: $fontSizeP;
+}
+
 
 .purple-button {
     width: 100%;
     background-color: $colorPrimary;
-    margin: $marginMedium 0 $marginSmall 0;
+    margin: $marginLarge 0 $marginSmall 0;
 }
 
 .edit-profile-button {
@@ -42,7 +56,17 @@
     color: blue;
 }
 
-.profile-information span {
+.bold span {
     font-weight: bold;
     color: black;
 }
+
+.rates svg {
+    fill: $colorStar;
+    font-size: 1rem;
+  }
+
+  .font-small {
+    font-size: $fontSizeSmall;
+    margin: $marginSmall 0;
+  }

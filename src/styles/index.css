@@ -619,6 +619,10 @@ input[type=password] {
   padding: 2rem;
 }
 
+h3 {
+  margin-top: 1rem;
+}
+
 .profile-links,
 .my-profile-header {
   display: flex;
@@ -638,6 +642,13 @@ input[type=password] {
   margin: 1rem 0 0.5rem 0;
 }
 
+.inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .user-icon {
   font-size: 40px;
 }
@@ -647,10 +658,16 @@ input[type=password] {
   font-size: 1rem;
 }
 
+.hotel_title {
+  margin-top: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
 .purple-button {
   width: 100%;
   background-color: #4a376d;
-  margin: 1rem 0 0.5rem 0;
+  margin: 2rem 0 0.5rem 0;
 }
 
 .edit-profile-button {
@@ -660,9 +677,19 @@ input[type=password] {
   color: blue;
 }
 
-.profile-information span {
+.bold span {
   font-weight: bold;
   color: black;
+}
+
+.rates svg {
+  fill: #feb600;
+  font-size: 1rem;
+}
+
+.font-small {
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
 }
 
 main > .hotel-header {

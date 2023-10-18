@@ -2,13 +2,14 @@ import { useState } from "react";
 import database from "../../../database.json";
 import { Link } from "react-router-dom";
 
-import HotelCard from "../HotelCard";
-
 import {
   FaEdit,
   FaUserCircle,
   FaAngleDoubleRight,
   FaWindowClose,
+  FaStar, 
+  FaRegStar,
+  FaCheck
 } from "react-icons/fa";
 
 export default function Profile() {
@@ -51,7 +52,7 @@ export default function Profile() {
         <div className="profile-links">
           <ul className="profile-link-list">
             <li>
-              <Link to="/">
+              <Link onClick={closeOverlay} to="Favorites">
                 Favorites <FaAngleDoubleRight />
               </Link>
             </li>
@@ -78,28 +79,36 @@ export default function Profile() {
 
         <div>
           <h3>Profile information</h3>
-          <div className="profile-information">
+          <div className="bold profile-information">
             <div className="profile-name">
               <p>
-                <span>Name:</span> {user[0].name}
+                <span>Name:</span><br /> 
+                {user[0].name}
               </p>
             </div>
+
             <div className="profile-adress">
               <p>
-                <span>Adress:</span> {user[0].address}{" "}
+                <span>Adress:</span><br /> 
+                {user[0].address}{" "}
               </p>
               <p>
-                <span>zip-code:</span> {user[0].zip_code}{" "}
+                <span>zip-code:</span><br /> 
+                {user[0].zip_code}{" "}
               </p>
             </div>
+
             <div className="profile-contact">
               <p>
-                <span>Phone number:</span> {user[0].phone}{" "}
+                <span>Phone number:</span><br /> 
+                {user[0].phone}{" "}
               </p>
               <p>
-                <span>Email address:</span> {user[0].email}{" "}
+                <span>Email address:</span><br /> 
+                {user[0].email}{" "}
               </p>
             </div>
+
           </div>
           <button className="edit-profile-button">
             <FaEdit /> Edit profile
@@ -108,15 +117,85 @@ export default function Profile() {
 
         <div className="upcoming_stay">
           <h3>Your upcoming stay</h3>
-          <HotelCard />
+
+          <div className="inline">
+            <h4 className="hotel_title">Grand Hyatt Resort</h4>
+            <div className="rates">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaRegStar />
+            <FaRegStar />
+            </div>
+          </div>
+
+          <div className="booking-info">
+            <p className="bold font-small"><span>Airport transfer <FaCheck/></span></p>
+            <p className="bold font-small"><span>Regusted time of check-in:</span></p>
+            <p>10:00 Wed, Now 8 2023</p>
+            <button className="edit-profile-button">
+              <FaEdit /> Manage booking
+            </button>
+          </div>
         </div>
 
         <div className="recently_watched">
           <h3>Recently watched</h3>
-          <HotelCard />
+   
+        <div className="recently_watched-hotel">
+          <div className="inline">
+            <h4 className="hotel_title">Ski Lodge</h4>
+            <div className="rates">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaRegStar />
+            </div>
+          </div>
+          <div className="inline">
+          <p>Winter Sports Haven</p>
+          <p className="bold"><span>$229</span></p>
+          </div>
         </div>
 
-        <button className="button log-out-button">Log out</button>
+        <div className="recently_watched-hotel">
+          <div className="inline">
+            <h4 className="hotel_title">Seaside Resort</h4>
+            <div className="rates">
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            </div>
+          </div>
+          <div className="inline">
+          <p>Beachfront Paradise</p>
+          <p className="bold"><span>$360</span></p>
+          </div>
+        </div>
+
+        <div className="recently_watched-hotel">
+          <div className="inline">
+            <h4 className="hotel_title">Mountain Lodge</h4>
+            <div className="rates">
+            <FaStar />
+            <FaStar />
+            <FaRegStar />
+            <FaRegStar />
+            <FaRegStar />
+            </div>
+          </div>
+          <div className="inline">
+          <p>Nature Lover's Retreat </p>
+          <p className="bold"><span>$145</span></p>
+          </div>
+        </div>
+          
+        </div>
+
+        <button className="button purple-button">Log out</button>
       </div>
     </>
   );
