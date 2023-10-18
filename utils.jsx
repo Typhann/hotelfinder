@@ -1,6 +1,5 @@
 import database from "./database.json";
 import HotelCard from "./src/components/HotelCard";
-import Filter from "./src/components/Filter";
 
 // Function to shuffle an array from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
@@ -18,7 +17,6 @@ export function renderHotels(category, display) {
     <section>
       <div className="space-between">
         <h2>Explore {category}</h2>
-        <Filter />
       </div>
       <div className={`hotels-container ${display}`}>
         {shuffledHotels.map((hotel) => (

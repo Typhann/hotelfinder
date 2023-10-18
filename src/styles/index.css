@@ -412,6 +412,10 @@ header > .profile-favorite {
   width: 25%;
 }
 
+.filter-buttons {
+  margin-bottom: 0.5rem;
+}
+
 section > .space-between {
   display: flex;
   flex-direction: row;
@@ -1156,6 +1160,31 @@ main .section-container > .confirmation-section > .row > .email-confirmation > i
   align-items: flex-start;
   text-align: left;
   padding-left: 1rem;
+}
+
+.favorit-section > .hotels-container {
+  overflow-x: auto;
+}
+
+.share-list,
+.share-favorites {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.share-list p {
+  margin-left: 0.5rem;
+  color: blue;
+}
+
+.share-favorites {
+  width: 30%;
+}
+
+.share-favorites svg {
+  font-size: 30px;
 }
 
 .logo {

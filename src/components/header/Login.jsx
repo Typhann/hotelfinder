@@ -16,7 +16,7 @@ export default function Login({ display, setDisplay }) {
       setCheckUser(false);
       setDisplay(false);
       setAuthenticated(true);
-    }, 3000);
+    }, 2000);
   }
 
   return (

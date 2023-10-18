@@ -14,7 +14,6 @@ import {
 
 export default function Profile() {
   const user = database.users;
-  console.log(JSON.stringify(user[0].name));
 
   {
     /*Function for trigger profile section*/

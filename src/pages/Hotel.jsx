@@ -19,6 +19,7 @@ import {
   FaGlassMartiniAlt,
   FaPizzaSlice,
 } from "react-icons/fa";
+
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
 import hotelImage2 from "../assets/hotel-images/hotel-placeholder-2-min.webp";
 import hotelImage3 from "../assets/hotel-images/hotel-placeholder-3-min.webp";
