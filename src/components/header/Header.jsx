@@ -7,6 +7,7 @@ import Register from "./Register";
 import { FaHeart } from "react-icons/fa";
 import AuthenticatedContext from "../../context/AuthenticatedContext";
 import Toast from "../Toast/Toast";
+import logo from "../../assets/logo/logoHotelfinder.webp"
 
 export default function Header() {
   const [display, setDisplay] = useState({ login: false, register: false });
@@ -16,10 +17,9 @@ export default function Header() {
     <>
       <header>
         <div className="logo">
-          <Link to="/">
-            <span>Hotelfinder</span>
-            <strong>Book Hotels with ease</strong>
-          </Link>
+        <Link to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
         </div>
         <Search />
 
