@@ -85,7 +85,7 @@ export default function Login({ display, setDisplay }) {
 
           <div className="new-account">
             <p>
-              Don't have an account yet?
+              Do not have an account yet?
               <Link to="#"> Register now</Link>
             </p>
             <p>

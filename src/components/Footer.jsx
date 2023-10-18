@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Login from "./header/Login";
-import Register from "./header/Register";
 
 import logo from "../assets/logo/logoHotelfinder.webp";
 
@@ -14,12 +12,15 @@ export default function Footer() {
       </div>
 
       <div>
-        <ul className="SingInRegister">
+        <ul className="footerlist">
           <li>
-            <Login />
+          <Link to="#"> Log in</Link>
           </li>
           <li>
-            <Register />
+          <Link to="#"> Register</Link>
+          </li>
+          <li>
+          <Link to="#"> Contact</Link>
           </li>
         </ul>
       </div>
