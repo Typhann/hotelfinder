@@ -617,7 +617,6 @@ input[type=password] {
 
 .profile {
   background-color: #ffffff;
-  animation: slide 0.45s ease-in-out;
   padding: 2rem;
 }
 
