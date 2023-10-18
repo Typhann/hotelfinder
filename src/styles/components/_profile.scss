@@ -1,72 +1,77 @@
 .profile {
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    z-index: 1000;
-    box-shadow: $boxShadow;
-    padding: $paddingContainerLarge;
+  background-color: $colorWhite;
+  padding: $paddingContainerLarge;
 }
 
 h3 {
-    margin-top: $marginMedium;
+  margin-top: $marginMedium;
 }
 
 .profile-links,
 .my-profile-header {
-    @include flex(row, space-between, center);
-    margin: $marginMedium 0 $marginSmall 0;
+  @include flex(row, space-between, center);
+  margin: $marginMedium 0 $marginSmall 0;
 }
 
 .profile-adress,
 .profile-name,
 .profile-contact {
-    @include flex(row, space-between, center);
-    margin: $marginMedium 0 $marginSmall 0;
+  @include flex(row, space-between, center);
+  margin: $marginMedium 0 $marginSmall 0;
 }
 
 .inline {
-    @include flex(row, space-between, center);
+  @include flex(row, space-between, center);
 }
 
 .user-icon {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .profile-link-list > li {
-    margin: $marginMedium 0 $marginSmall 0;
-    font-size: $fontSizeP;
+  margin: $marginMedium 0 $marginSmall 0;
+  font-size: $fontSizeP;
 }
 
 .hotel_title {
-    margin-top: $marginMedium;
-    font-family: $fontText;
-    font-size: $fontSizeP;
+  margin-top: $marginMedium;
+  font-family: $fontText;
+  font-size: $fontSizeP;
 }
 
-
 .purple-button {
-    width: 100%;
-    background-color: $colorPrimary;
-    margin: $marginLarge 0 $marginSmall 0;
+  width: 100%;
+  background-color: $colorPrimary;
+  margin: $marginLarge 0 $marginSmall 0;
 }
 
 .edit-profile-button {
-    margin: $marginMedium 0 $marginSmall 0;
-    background-color: white;
-    border: none;
-    color: blue;
+  margin: $marginMedium 0 $marginSmall 0;
+  background-color: $colorWhite;
+  border: none;
+  color: $colorLink;
 }
 
 .bold span {
-    font-weight: bold;
-    color: black;
+  font-weight: bold;
+  color: black;
 }
 
 .rates svg {
-    fill: $colorStar;
-    font-size: 1rem;
-  }
+  fill: $colorStar;
+  font-size: 1rem;
+}
 
-  .font-small {
-    font-size: $fontSizeSmall;
-    margin: $marginSmall 0;
+.font-small {
+  font-size: $fontSizeSmall;
+  margin: $marginSmall 0;
+}
+
+@keyframes slide {
+  from {
+    right: -350px;
   }
+  to {
+    right: 0px;
+  }
+}

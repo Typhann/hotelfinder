@@ -35,3 +35,16 @@ main {
     }
   }
 }
+
+.slide {
+  animation: slide 0.45s ease-in-out;
+}
+
+@keyframes slide {
+  from {
+    right: -350px;
+  }
+  to {
+    right: 0px;
+  }
+}
