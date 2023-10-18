@@ -1,6 +1,9 @@
 import { useState } from "react";
 import database from "../../../database.json";
 import { Link } from "react-router-dom";
+import AuthenticatedContext from "../../context/AuthenticatedContext";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   FaEdit,
@@ -13,8 +16,10 @@ import {
 } from "react-icons/fa";
 
 export default function Profile() {
+  const { setAuthenticated } = useContext(AuthenticatedContext);
+  const navigate =  useNavigate()
   const user = database.users;
-
+  
   {
     /*Function for trigger profile section*/
   }
@@ -194,7 +199,7 @@ export default function Profile() {
           
         </div>
 
-        <button className="button purple-button">Log out</button>
+        <button  onClick={ () => (setAuthenticated(false), navigate("/"))} className="button purple-button">Log out</button>
       </div>
     </>
   );
