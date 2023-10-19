@@ -25,11 +25,17 @@ export default function Checkout() {
         <div className="breadcrumb-line finished-line" />
         <FaSearch className="finished" />
         <p className="finished">Confirm details</p>
-        <div className="breadcrumb-line" />
-        <FaSearch
-          className={displayPayment || (displayConfirmation && "finished")}
+        <div
+          className={
+            displayPayment || displayConfirmation
+              ? "breadcrumb-line finished-line"
+              : "breadcrumb-line"
+          }
         />
-        <p className={displayPayment || (displayConfirmation && "finished")}>
+        <FaSearch
+          className={displayPayment || displayConfirmation ? "finished" : ""}
+        />
+        <p className={displayPayment || displayConfirmation ? "finished" : ""}>
           Payment
         </p>
       </div>
@@ -47,6 +53,7 @@ export default function Checkout() {
           <Payment
             setDisplayPayment={setDisplayPayment}
             setDisplayConfirmation={setDisplayConfirmation}
+            setDisplayDetails={setDisplayDetails}
           />
         )}
         {displayConfirmation && <Confirmation />}

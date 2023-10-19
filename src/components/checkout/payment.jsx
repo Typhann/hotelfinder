@@ -6,7 +6,11 @@ import klarna from "../../assets/payment-logos/klarna.png";
 import applePay from "../../assets/payment-logos/apple-pay.png";
 import googlePay from "../../assets/payment-logos/google-pay.png";
 
-export default function Payment({ setDisplayPayment, setDisplayConfirmation }) {
+export default function Payment({
+  setDisplayPayment,
+  setDisplayConfirmation,
+  setDisplayDetails,
+}) {
   const [disableButton, setDisableButton] = useState(false);
 
   // scrolls user to top on pageload
@@ -137,7 +141,13 @@ export default function Payment({ setDisplayPayment, setDisplayConfirmation }) {
           </div>
         </div>
         <div className="checkout-buttons">
-          <button onClick={() => console.log("clicked")} className="button">
+          <button
+            onClick={() => {
+              setDisplayPayment(false);
+              setDisplayDetails(true);
+            }}
+            className="button"
+          >
             Go back to details
           </button>
           <button
