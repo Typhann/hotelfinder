@@ -34,6 +34,12 @@
     > .disabled {
       background-color: $colorGray;
     }
+    > div {
+      > input {
+        margin-bottom: $marginMedium;
+        // border: 2px solid red;
+      }
+    }
   }
 }
 
@@ -41,6 +47,7 @@
   background-color: rgb(233, 233, 233);
   border-radius: $borderRadius;
   padding: $paddingContainerSmall $paddingContainerLarge;
+  @include flex(row, center, center);
   margin: $marginMedium 0 $marginMedium 0;
   width: 275px;
 }
@@ -53,6 +60,7 @@
 input[type="email"],
 input[type="password"] {
   border: none;
+  margin-top: $marginSmall;
 }
 
 .new-account p {

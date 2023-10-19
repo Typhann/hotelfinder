@@ -14,28 +14,20 @@ export default function Register({ display, setDisplay }) {
         <form className="log-in-section-inner">
           <h1>Register</h1>
 
-          <div className="email">
-            <label>Email</label>
+          <div>
+            <label htmlFor="email">Email</label>
             <br />
-            <input
-              type="email"
-              id="email"
-              size="30"
-              name="email"
-              placeholder="maria.svensson@email.uk"
-              required
-            />
+            <input type="email" id="email" size="30" name="email" required />
           </div>
 
-          <div className="password">
-            <label>Password</label>
+          <div>
+            <label htmlFor="password">Password</label>
             <br />
             <input
               type="password"
               id="pass"
               size="35"
               name="password"
-              placeholder="*********"
               required
             />
           </div>

@@ -589,11 +589,18 @@ section > .hotels-container > .card-container .card-bottom > .share-heart > .fil
 .log-in-section > .log-in-section-inner > .disabled {
   background-color: #c5c5c5;
 }
+.log-in-section > .log-in-section-inner > div > input {
+  margin-bottom: 1rem;
+}
 
 .divBTN {
   background-color: rgb(233, 233, 233);
   border-radius: 6px;
   padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 1rem 0 1rem 0;
   width: 275px;
 }
@@ -606,6 +613,7 @@ section > .hotels-container > .card-container .card-bottom > .share-heart > .fil
 input[type=email],
 input[type=password] {
   border: none;
+  margin-top: 0.5rem;
 }
 
 .new-account p {
