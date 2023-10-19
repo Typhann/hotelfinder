@@ -52,7 +52,23 @@ main {
     width: 50%;
     @include flex(column, space-between, center);
     padding: $paddingContainerMedium;
-    max-height: 475px;
+    max-height: 525px;
+    // gap: $marginLarge;
+    > div {
+      @include flex(row, flex-end, center);
+      gap: $marginLarge;
+      width: 100%;
+      margin-bottom: $marginMedium;
+      > button:nth-child(1),
+      button:nth-child(3) {
+        padding: $paddingContainerMedium;
+        background-color: $colorWhite;
+        color: $colorBlack;
+        > strong {
+          margin-left: $marginMedium;
+        }
+      }
+    }
     > table {
       border-collapse: collapse;
       width: 100%;

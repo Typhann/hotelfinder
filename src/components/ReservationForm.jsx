@@ -1,6 +1,8 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import SearchContext from "../context/SearchContext";
+import { FaCalendarAlt, FaUser } from "react-icons/fa";
+import SearchContextBtn from "./header/search/SearchContextBtn";
 
 export const Counter = ({ room, roomPrice, setError }) => {
   const { search, setSearch } = useContext(SearchContext);
@@ -83,6 +85,10 @@ export default function ReservationForm() {
   return (
     <>
       <div className="reservation-form-container">
+        <div>
+          <SearchContextBtn type="when" />
+          <SearchContextBtn type="who" />
+        </div>
         <table>
           <thead>
             <tr className="divider">

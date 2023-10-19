@@ -788,7 +788,26 @@ main .reservation-form-container {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  max-height: 475px;
+  max-height: 525px;
+}
+main .reservation-form-container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+main .reservation-form-container > div > button:nth-child(1),
+main .reservation-form-container > div button:nth-child(3) {
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+main .reservation-form-container > div > button:nth-child(1) > strong,
+main .reservation-form-container > div button:nth-child(3) > strong {
+  margin-left: 1rem;
 }
 main .reservation-form-container > table {
   border-collapse: collapse;
