@@ -1,7 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import SearchContext from "../context/SearchContext";
-import When from "../components/search/When";
 
 export const Counter = ({ room, roomPrice, setError }) => {
   const { search, setSearch } = useContext(SearchContext);

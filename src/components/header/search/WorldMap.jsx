@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import SearchContext from "../../context/SearchContext";
+import SearchContext from "../../../context/SearchContext";
 
 export default function WorldMap({
   setInput,

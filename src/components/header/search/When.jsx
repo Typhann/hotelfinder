@@ -1,6 +1,6 @@
 import { DateCalendar } from "@mui/x-date-pickers";
 import { useState, useContext, useEffect } from "react";
-import SearchContext from "../../context/SearchContext";
+import SearchContext from "../../../context/SearchContext";
 
 export default function When({ handleClick }) {
   const [checkIn, setCheckIn] = useState(null);

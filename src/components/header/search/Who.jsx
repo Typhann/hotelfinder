@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import SearchContext from "../../context/SearchContext";
+import SearchContext from "../../../context/SearchContext";
 
 // Creates a room
 const Room = ({ number }) => {

@@ -3,9 +3,9 @@ import { FaLocationArrow, FaCalendarAlt, FaUser } from "react-icons/fa";
 import When from "./When";
 import Where from "./Where";
 import Who from "./Who";
-import SearchContext from "../../context/SearchContext";
+import SearchContext from "../../../context/SearchContext";
 import { Link } from "react-router-dom";
-import Toast from "../Toast/Toast";
+import Toast from "../../Toast/Toast";
 
 export default function Search() {
   const [modal, setModal] = useState(null);

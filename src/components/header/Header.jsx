@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Search from "../search/Search";
+import Search from "../header/search/Search";
 import { useState, useContext } from "react";
 import Profile from "./Profile";
 import Login from "./Login";
@@ -7,7 +7,7 @@ import Register from "./Register";
 import { FaHeart } from "react-icons/fa";
 import AuthenticatedContext from "../../context/AuthenticatedContext";
 import Toast from "../Toast/Toast";
-import logo from "../../assets/logo/logoHotelfinder.webp"
+import logo from "../../assets/logo/logoHotelfinder.webp";
 
 export default function Header() {
   const [display, setDisplay] = useState({ login: false, register: false });
@@ -17,9 +17,9 @@ export default function Header() {
     <>
       <header>
         <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="Logo" />
-        </Link>
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
         <Search />
 
