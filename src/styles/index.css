@@ -518,8 +518,12 @@ section > .hotels-container > .card-container .card-bottom {
 section > .hotels-container > .card-container .card-bottom > .share-heart {
   font-size: 1.4rem;
 }
-section > .hotels-container > .card-container .card-bottom > .share-heart svg:first-child {
+section > .hotels-container > .card-container .card-bottom > .share-heart > svg:first-child {
   margin-right: 0.5rem;
+}
+section > .hotels-container > .card-container .card-bottom > .share-heart > .filled {
+  z-index: 9999;
+  fill: #a41752;
 }
 
 .review_ratings {

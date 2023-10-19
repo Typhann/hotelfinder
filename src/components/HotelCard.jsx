@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FaStar,
@@ -22,6 +23,7 @@ import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 
 export default function HotelCard(props) {
   const navigate = useNavigate();
+  const [favorite, setFavorite] = useState(false);
   const hotelImages = [
     hotelImage1,
     hotelImage2,
@@ -38,6 +40,13 @@ export default function HotelCard(props) {
   // When card is clicked the user is navigated to the hotel page with the id of the clicked card
   function handleClick() {
     navigate(`/hotel/${props.id}`);
+  }
+
+  // toggles hearts favorite state
+  function toggle(event) {
+    event.stopPropagation(); // this is used to stop the cards handleClick function to run
+    setFavorite((prev) => !prev);
+    console.log(favorite);
   }
 
   const hotelImage = hotelImages[props.id - 1];
@@ -76,7 +85,11 @@ export default function HotelCard(props) {
         <a href="#">Map</a>
         <div className="share-heart">
           <FaShareAlt />
-          <FaRegHeart />
+          {favorite ? (
+            <FaHeart className="filled" onClick={toggle} />
+          ) : (
+            <FaRegHeart onClick={toggle} />
+          )}
         </div>
       </div>
     </div>

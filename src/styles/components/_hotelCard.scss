@@ -65,8 +65,12 @@ section {
         margin-top: $marginMedium;
         > .share-heart {
           font-size: $fontSizeH3;
-          svg:first-child {
+          > svg:first-child {
             margin-right: $marginSmall;
+          }
+          > .filled {
+            z-index: 9999;
+            fill: $colorAction;
           }
         }
       }
