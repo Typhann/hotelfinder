@@ -1,19 +1,21 @@
-.favorit-section > .hotels-container {
-  overflow-x: auto;
+.favorite-section {
+  width: 100%;
+  > .filter-buttons {
+    margin-top: $marginLarge;
+    margin-bottom: $marginMedium;
+  }
 }
 
-.share-list,
 .share-favorites {
+  width: 100% !important;
+  > .share-list {
+    @include flex(row, space-between, center);
+    gap: $marginMedium;
+    > p {
+      color: $colorLink;
+    }
+  }
   @include flex(row, space-between, center);
-}
-
-.share-list p {
-  margin-left: $marginSmall;
-  color: blue;
-}
-
-.share-favorites {
-  width: 30%;
 }
 
 .share-favorites svg {
