@@ -4,20 +4,7 @@ import {
   FaStar,
   FaRegStar,
   FaShareAlt,
-  FaHeart,
   FaRegHeart,
-  FaWifi,
-  FaSwimmingPool,
-  FaBabyCarriage,
-  FaSkiing,
-  FaHotTub,
-  FaWater,
-  FaHorse,
-  FaCity,
-  FaHiking,
-  FaUmbrellaBeach,
-  FaGlassMartiniAlt,
-  FaPizzaSlice,
 } from "react-icons/fa";
 
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
