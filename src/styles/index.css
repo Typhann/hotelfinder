@@ -148,11 +148,11 @@ input[type=checkbox] {
   border-radius: 10px;
 }
 
-header {
+header,
+footer {
   z-index: 1;
   position: sticky;
   top: 0;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -160,19 +160,22 @@ header {
   padding: 2rem;
   background-color: #ffffff;
 }
-header > .logo > a {
+header > .logo > a,
+footer > .logo > a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-header > .search-container {
+header > .search-container,
+footer > .search-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-header > .profile-favorite {
+header > .profile-favorite,
+footer > .profile-favorite {
   font-size: 30px;
   width: 7%;
   display: flex;
@@ -184,6 +187,19 @@ header > .profile-favorite {
 
 .favorite-icon-header {
   color: #a41752;
+}
+
+header:before,
+footer:before {
+  content: "";
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  height: 100%;
+  width: 99vw;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0px);
+  z-index: -1;
 }
 
 .search-container .search-options {
@@ -499,15 +515,6 @@ section > .hotels-container > .card-container .card-bottom > .share-heart {
 }
 section > .hotels-container > .card-container .card-bottom > .share-heart svg:first-child {
   margin-right: 0.5rem;
-}
-
-footer {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .footerlist li {

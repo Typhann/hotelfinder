@@ -1,0 +1,21 @@
+.favorit-section > .hotels-container {
+  overflow-x: auto;
+}
+
+.share-list,
+.share-favorites {
+  @include flex(row, space-between, center);
+}
+
+.share-list p {
+  margin-left: $marginSmall;
+  color: blue;
+}
+
+.share-favorites {
+  width: 30%;
+}
+
+.share-favorites svg {
+  font-size: 30px;
+}

@@ -1,8 +1,9 @@
-header {
+header,
+footer {
   z-index: 1;
   position: sticky;
   top: 0;
-  box-shadow: $boxShadow;
+  // box-shadow: $boxShadow;
   @include flex(row, space-between, center);
   padding: $paddingContainerLarge;
   background-color: $colorWhite;
@@ -12,7 +13,7 @@ header {
   > .search-container {
     @include flex(row, center, center);
   }
-  
+
   > .profile-favorite {
     font-size: 30px;
     width: 7%;
@@ -25,19 +26,26 @@ header {
   color: $colorAction;
 }
 
-// makes header box shadow extend beyond max with of website
-// Commented out as it gives a horizontal scroll on the entire website, overflow hidden does not work as a solution
-// Needs a new solution
+.footerlist li {
+  display: inline-block;
+  padding: 1rem;
+}
 
-// header:before {
-//   content: "";
-//   box-shadow: $boxShadow;
-//   position: absolute;
-//   height: 100%;
-//   width: 500vw;
-//   left: -250vw;
-//   z-index: -1;
-// }
+// makes header box shadow extend beyond max with of website
+
+header:before,
+footer:before {
+  content: "";
+  box-shadow: $boxShadow;
+  position: absolute;
+  height: 100%;
+  width: 99vw;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0px);
+  z-index: -1;
+  // overflow: hidden;
+}
 
 .search-container {
   .search-options {
