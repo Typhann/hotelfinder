@@ -22,7 +22,9 @@ main {
     max-width: 100vw;
     overflow-x: scroll;
     margin: $marginLarge 0 $marginLarge 0;
+    padding-bottom: $paddingContainerMedium;
     @include flex(row, flex-start, flex-start);
+    gap: $marginSmall;
     > img {
       width: 25%;
       height: 250px;

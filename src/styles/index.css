@@ -741,10 +741,12 @@ main > .image-container {
   max-width: 100vw;
   overflow-x: scroll;
   margin: 2rem 0 2rem 0;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 0.5rem;
 }
 main > .image-container > img {
   width: 25%;
