@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import mastercard from "../../assets/payment-logos/mastercard.png";
-import visa from "../../assets/payment-logos/visa.png";
-import americanExpress from "../../assets/payment-logos/american-express.png";
-import klarna from "../../assets/payment-logos/klarna.png";
-import applePay from "../../assets/payment-logos/apple-pay.png";
-import googlePay from "../../assets/payment-logos/google-pay.png";
+import mastercard from "../../assets/payment-logos/mastercard.webp";
+import visa from "../../assets/payment-logos/visa.webp";
+import americanExpress from "../../assets/payment-logos/american-express.webp";
+import klarna from "../../assets/payment-logos/klarna.webp";
+import applePay from "../../assets/payment-logos/apple-pay.webp";
+import googlePay from "../../assets/payment-logos/google-pay.webp";
 
 export default function Payment({
   setDisplayPayment,
