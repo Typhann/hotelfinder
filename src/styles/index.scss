@@ -20,10 +20,10 @@
 }
 
 main {
-  > h2 {
+  > div > h2 {
     margin-bottom: $marginMedium;
   }
-  > ul {
+  > div > ul {
     @include flex(row, flex-start, center);
     flex-wrap: wrap;
     margin-bottom: $marginLarge;

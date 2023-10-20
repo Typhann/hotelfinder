@@ -5,6 +5,7 @@ import Payment from "../components/checkout/payment";
 import Confirmation from "../components/checkout/confirmation";
 import ConfirmedDetails from "../components/checkout/confirmedDetails";
 import { FaSearch } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Checkout() {
   const [displayPayment, setDisplayPayment] = useState(false);
@@ -19,45 +20,54 @@ export default function Checkout() {
 
   return (
     <>
-      <div className="breadcrumbs">
-        <FaSearch className="finished" />
-        <p className="finished">Selection</p>
-        <div className="breadcrumb-line finished-line" />
-        <FaSearch className="finished" />
-        <p className="finished">Confirm details</p>
-        <div
-          className={
-            displayPayment || displayConfirmation
-              ? "breadcrumb-line finished-line"
-              : "breadcrumb-line"
-          }
-        />
-        <FaSearch
-          className={displayPayment || displayConfirmation ? "finished" : ""}
-        />
-        <p className={displayPayment || displayConfirmation ? "finished" : ""}>
-          Payment
-        </p>
-      </div>
-      <div className="section-container">
-        <Selection />
-        {displayDetails && (
-          <Details
-            setDisplayDetails={setDisplayDetails}
-            setDisplayPayment={setDisplayPayment}
-            setDisplayConfirmedDetails={setDisplayConfirmedDetails}
+      <motion.div
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <div className="breadcrumbs">
+          <FaSearch className="finished" />
+          <p className="finished">Selection</p>
+          <div className="breadcrumb-line finished-line" />
+          <FaSearch className="finished" />
+          <p className="finished">Confirm details</p>
+          <div
+            className={
+              displayPayment || displayConfirmation
+                ? "breadcrumb-line finished-line"
+                : "breadcrumb-line"
+            }
           />
-        )}
-        {displayConfirmedDetails && <ConfirmedDetails />}
-        {displayPayment && (
-          <Payment
-            setDisplayPayment={setDisplayPayment}
-            setDisplayConfirmation={setDisplayConfirmation}
-            setDisplayDetails={setDisplayDetails}
+          <FaSearch
+            className={displayPayment || displayConfirmation ? "finished" : ""}
           />
-        )}
-        {displayConfirmation && <Confirmation />}
-      </div>
+          <p
+            className={displayPayment || displayConfirmation ? "finished" : ""}
+          >
+            Payment
+          </p>
+        </div>
+        <div className="section-container">
+          <Selection />
+          {displayDetails && (
+            <Details
+              setDisplayDetails={setDisplayDetails}
+              setDisplayPayment={setDisplayPayment}
+              setDisplayConfirmedDetails={setDisplayConfirmedDetails}
+            />
+          )}
+          {displayConfirmedDetails && <ConfirmedDetails />}
+          {displayPayment && (
+            <Payment
+              setDisplayPayment={setDisplayPayment}
+              setDisplayConfirmation={setDisplayConfirmation}
+              setDisplayDetails={setDisplayDetails}
+            />
+          )}
+          {displayConfirmation && <Confirmation />}
+        </div>
+      </motion.div>
     </>
   );
 }

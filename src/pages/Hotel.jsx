@@ -1,12 +1,7 @@
 import { useParams } from "react-router-dom";
 import database from "../../database.json";
-import {
-  FaStar,
-  FaRegStar,
-  FaShareAlt,
-  FaRegHeart,
-} from "react-icons/fa";
-
+import { FaStar, FaRegStar, FaShareAlt, FaRegHeart } from "react-icons/fa";
+import { motion } from "framer-motion";
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
 import hotelImage2 from "../assets/hotel-images/hotel-placeholder-2-min.webp";
 import hotelImage3 from "../assets/hotel-images/hotel-placeholder-3-min.webp";
@@ -42,64 +37,71 @@ export default function Hotel() {
 
   return (
     <>
-      <a href="javascript:history.back()">&lt;&lt; Go back</a>
-      <div className="hotel-header">
-        <div className="name-rating">
-          <h1>{hotel.name}</h1>
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-          <FaStar />
-        </div>
-        <div className="share-heart">
-          <FaShareAlt />
-          <FaRegHeart />
-        </div>
-      </div>
-      <p>{hotel.address}</p>
-      <div className="image-container carousel">
-        <img src={hotelImage1} alt="Image of hotel" />
-        <img src={hotelImage2} alt="Image of hotel" />
-        <img src={hotelImage3} alt="Image of hotel" />
-        <img src={hotelImage4} alt="Image of hotel" />
-        <img src={hotelImage5} alt="Image of hotel" />
-        <img src={hotelImage6} alt="Image of hotel" />
-        <img src={hotelImage7} alt="Image of hotel" />
-        <img src={hotelImage8} alt="Image of hotel" />
-        <img src={hotelImage9} alt="Image of hotel" />
-        <img src={hotelImage10} alt="Image of hotel" />
-      </div>
-      <section className="hotel-section-container">
-        <div className="hotel-section">
-          <h2>{hotel.title}</h2>
-          <p>{hotel.description}</p>
-
-          <div className="our-offer">
-            <h3>We offer</h3>
-            <p>{hotel.amenities}</p>
+      <motion.div
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <a href="javascript:history.back()">&lt;&lt; Go back</a>
+        <div className="hotel-header">
+          <div className="name-rating">
+            <h1>{hotel.name}</h1>
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
+            <FaStar />
           </div>
-
-          <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13826.255625836358!2d-87.0482837115719!3d20.657553864612346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5d1373869c1f%3A0x73c6152510886982!2sSandos%20Caracol%20Eco%20Resort!5e0!3m2!1ssv!2ses!4v1696259424496!5m2!1ssv!2ses"
-              style={{ border: "none" }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-
-          <div className="review_ratings">
-            <h3>Our reviews</h3>
-            <p style={{ fontWeight: "bold" }}>
-              {hotel.review_ratings}/10 (based on {hotel.review_amounts}{" "}
-              reviews)
-            </p>
-            <div className="review-list">{reviewsList}</div>
+          <div className="share-heart">
+            <FaShareAlt />
+            <FaRegHeart />
           </div>
         </div>
-        <ReservationForm className="hotel-section" />
-      </section>
+        <p>{hotel.address}</p>
+        <div className="image-container carousel">
+          <img src={hotelImage1} alt="Image of hotel" />
+          <img src={hotelImage2} alt="Image of hotel" />
+          <img src={hotelImage3} alt="Image of hotel" />
+          <img src={hotelImage4} alt="Image of hotel" />
+          <img src={hotelImage5} alt="Image of hotel" />
+          <img src={hotelImage6} alt="Image of hotel" />
+          <img src={hotelImage7} alt="Image of hotel" />
+          <img src={hotelImage8} alt="Image of hotel" />
+          <img src={hotelImage9} alt="Image of hotel" />
+          <img src={hotelImage10} alt="Image of hotel" />
+        </div>
+        <section className="hotel-section-container">
+          <div className="hotel-section">
+            <h2>{hotel.title}</h2>
+            <p>{hotel.description}</p>
+
+            <div className="our-offer">
+              <h3>We offer</h3>
+              <p>{hotel.amenities}</p>
+            </div>
+
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13826.255625836358!2d-87.0482837115719!3d20.657553864612346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5d1373869c1f%3A0x73c6152510886982!2sSandos%20Caracol%20Eco%20Resort!5e0!3m2!1ssv!2ses!4v1696259424496!5m2!1ssv!2ses"
+                style={{ border: "none" }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <div className="review_ratings">
+              <h3>Our reviews</h3>
+              <p style={{ fontWeight: "bold" }}>
+                {hotel.review_ratings}/10 (based on {hotel.review_amounts}{" "}
+                reviews)
+              </p>
+              <div className="review-list">{reviewsList}</div>
+            </div>
+          </div>
+          <ReservationForm className="hotel-section" />
+        </section>
+      </motion.div>
     </>
   );
 }

@@ -1,12 +1,22 @@
 import { useLocation } from "react-router-dom";
 import { renderHotels } from "../../utils";
-import Filter from "../components/Filter";
-
+import { motion } from "framer-motion";
 export default function SearchResult() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const search = queryParams.get("q");
 
   window.scrollTo(0, 0);
-  return <>{renderHotels(search, "grid")}</>;
+  return (
+    <>
+      <motion.div
+        className="fade-in"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        {renderHotels(search, "grid")}
+      </motion.div>
+    </>
+  );
 }
