@@ -29,8 +29,7 @@ main {
     margin-bottom: $marginLarge;
     > li {
       margin: 0 $marginLarge $marginMedium 0;
-      color: $colorLink;
-      cursor: pointer;
+      // font-weight: 500;
     }
   }
 }

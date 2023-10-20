@@ -76,7 +76,7 @@ label {
 }
 
 a {
-  color: #0177e7;
+  color: #0175e3;
   cursor: pointer;
 }
 
@@ -280,7 +280,7 @@ footer:before {
 }
 .modal-container > .search-options-popup > ul > li {
   margin: 0 2rem 1rem 0;
-  color: #0177e7;
+  color: #0175e3;
   cursor: pointer;
 }
 .modal-container > .search-options-popup .active {
@@ -694,7 +694,7 @@ h3 {
   margin: 1rem 0 0.5rem 0;
   background-color: #ffffff;
   border: none;
-  color: #0177e7;
+  color: #0175e3;
 }
 
 .bold span {
@@ -1237,7 +1237,7 @@ main > div > .section-container > .confirmation-section > .row > .email-confirma
   gap: 1rem;
 }
 .share-favorites > .share-list > p {
-  color: #0177e7;
+  color: #0175e3;
 }
 
 .share-favorites svg {
@@ -1265,8 +1265,6 @@ main > div > ul {
 }
 main > div > ul > li {
   margin: 0 2rem 1rem 0;
-  color: #0177e7;
-  cursor: pointer;
 }
 
 .slide {
@@ -1283,7 +1281,7 @@ main > div > ul > li {
 }
 .back-button {
   background-color: white;
-  color: #0177e7;
+  color: #0175e3;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }/*# sourceMappingURL=index.css.map */
