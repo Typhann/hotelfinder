@@ -4,7 +4,7 @@ main {
     > .name-rating {
       @include flex(row, flex-start, center);
       > h1 {
-        margin: $marginLarge $marginMedium $marginSmall 0;
+        margin: 0 $marginMedium $marginSmall 0;
       }
       > svg {
         fill: $colorStar;
@@ -52,15 +52,11 @@ main {
     width: 50%;
     @include flex(column, space-between, center);
     padding: $paddingContainerMedium;
-    // max-height: 550px;
-    // height: auto;
     align-self: flex-start;
     gap: $marginLarge;
     > div {
       @include flex(row, flex-end, center);
-      // gap: $marginLarge;
       width: 100%;
-      // margin-bottom: $marginLarge;
     }
     > .buttons > button {
       padding: $paddingContainerMedium;

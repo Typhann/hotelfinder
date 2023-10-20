@@ -13,6 +13,7 @@ import hotelImage8 from "../assets/hotel-images/hotel-placeholder-8-min.webp";
 import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 import ReservationForm from "../components/ReservationForm";
+import BackButton from "../components/BackButton";
 
 export default function Hotel() {
   const { id } = useParams();
@@ -43,7 +44,7 @@ export default function Hotel() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <a href="javascript:history.back()">&lt;&lt; Go back</a>
+        <BackButton />
         <div className="hotel-header">
           <div className="name-rating">
             <h1>{hotel.name}</h1>
