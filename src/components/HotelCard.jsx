@@ -54,11 +54,12 @@ export default function HotelCard(props) {
     <div onClick={handleClick} className="card-container">
       <img src={hotelImage} width="275px" height="175px" />
       <div className="star-container">
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaRegStar />
+        {/* creates an array for the stars and generates a filled star for each rating and unfilled stars for the remainder to five */}
+        {Array.from({ length: 5 }, (_, index) => (
+          <span key={index}>
+            {index < props.rating ? <FaStar /> : <FaRegStar />}
+          </span>
+        ))}
       </div>
       <h3>{props.name}</h3>
       <div className="card-info">

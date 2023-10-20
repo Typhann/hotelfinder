@@ -26,6 +26,7 @@ export function renderHotels(category, display) {
             address={hotel.address}
             price={hotel.price_per_night}
             id={hotel.id}
+            rating={hotel.rating}
           />
         ))}
       </div>

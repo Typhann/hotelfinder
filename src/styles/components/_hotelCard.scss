@@ -43,7 +43,7 @@ section {
         padding: 0 $paddingContainerSmall 0px $paddingContainerSmall;
       }
       > .star-container {
-        > svg {
+        > span > svg {
           fill: $colorStar;
         }
       }

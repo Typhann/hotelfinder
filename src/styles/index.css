@@ -489,7 +489,7 @@ section > .hotels-container > .card-container .tags-container,
 section > .hotels-container > .card-container .card-bottom {
   padding: 0 0.5rem 0px 0.5rem;
 }
-section > .hotels-container > .card-container > .star-container > svg {
+section > .hotels-container > .card-container > .star-container > span > svg {
   fill: #feb600;
 }
 section > .hotels-container > .card-container > .card-info,
