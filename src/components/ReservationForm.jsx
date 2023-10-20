@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import SearchContext from "../context/SearchContext";
-import { FaCalendarAlt, FaUser } from "react-icons/fa";
 import SearchContextBtn from "./header/search/SearchContextBtn";
+import Toast from "../components/Toast/Toast";
 
 export const Counter = ({ room, roomPrice, setError }) => {
   const { search, setSearch } = useContext(SearchContext);
@@ -65,6 +65,7 @@ export default function ReservationForm() {
   const { search, setSearch } = useContext(SearchContext);
   const navigate = useNavigate();
   const { id } = useParams();
+  const [error, setError] = useState({ when: false, who: false });
 
   // clears the context on mount
   useEffect(() => {
@@ -75,19 +76,28 @@ export default function ReservationForm() {
     });
   }, []);
 
-  console.log(id);
-  const [error, setError] = useState(false);
   const priceKingRoom = 429;
   const priceQueenRoom = 299;
   const priceSingleRoom = 149;
   const priceFamilyRoom = 499;
 
+  // checks that user has filled in all necessary information to continue process, if not then display correct error and feedback
+  function handleClick() {
+    if (search.when.length < 1) {
+      setError({ ...error, when: true, who: false, room: false });
+      setSearch({ ...search, displayModal: ["when"] });
+    } else if (search.reservedRooms.length < 1) {
+      setError({ ...error, when: false, who: false, room: true });
+    } else {
+      navigate(`/checkout/hotel/${id}`);
+    }
+  }
+
   return (
     <>
       <div className="reservation-form-container">
-        <div>
+        <div className="buttons">
           <SearchContextBtn type="when" />
-          <SearchContextBtn type="who" />
         </div>
         <table>
           <thead>
@@ -166,7 +176,7 @@ export default function ReservationForm() {
           <strong>Total: ${search.totalPrice}</strong>
         </div>
         <div className="make-reservation">
-          {error ? (
+          {error.room ? (
             <h3>You must choose a room first!</h3>
           ) : (
             <small>
@@ -175,16 +185,18 @@ export default function ReservationForm() {
           )}
           <button
             // navigates user to checkout only if user has selected a room
-            onClick={() => {
-              search.reservedRooms.length
-                ? navigate(`/checkout/hotel/${id}`)
-                : setError(true);
-            }}
+            onClick={handleClick}
             className="button"
           >
             Reserve
           </button>
         </div>
+        {error.when && (
+          <Toast message="You must enter when first!" type="warning" />
+        )}
+        {error.room && (
+          <Toast message="You must choose a room first!" type="warning" />
+        )}
       </div>
     </>
   );

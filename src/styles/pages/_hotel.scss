@@ -52,21 +52,25 @@ main {
     width: 50%;
     @include flex(column, space-between, center);
     padding: $paddingContainerMedium;
-    max-height: 525px;
-    // gap: $marginLarge;
+    // max-height: 550px;
+    // height: auto;
+    align-self: flex-start;
+    gap: $marginLarge;
     > div {
       @include flex(row, flex-end, center);
-      gap: $marginLarge;
+      // gap: $marginLarge;
       width: 100%;
-      margin-bottom: $marginMedium;
-      > button:nth-child(1),
-      button:nth-child(3) {
-        padding: $paddingContainerMedium;
-        background-color: $colorWhite;
-        color: $colorBlack;
-        > strong {
-          margin-left: $marginMedium;
-        }
+      // margin-bottom: $marginLarge;
+    }
+    > .buttons > button {
+      padding: $paddingContainerMedium;
+      margin: $marginMedium;
+      background-color: $colorWhite;
+      color: $colorBlack;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      > strong {
+        margin-left: $marginMedium;
       }
     }
     > table {
@@ -134,5 +138,12 @@ main {
       color: $colorError;
       margin-top: $marginSmall;
     }
+  }
+}
+
+.checkbox-price > label {
+  margin-bottom: 0;
+  > input {
+    margin-bottom: 0;
   }
 }

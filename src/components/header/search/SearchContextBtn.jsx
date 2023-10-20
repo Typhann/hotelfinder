@@ -1,43 +1,15 @@
-import { useState, useContext, useEffect, useRef } from "react";
+import { useState, useContext, useEffect } from "react";
 import { FaLocationArrow, FaCalendarAlt, FaUser } from "react-icons/fa";
 import SearchContext from "../../../context/SearchContext";
-import Where from "./Where";
-import When from "./When";
-import Who from "./Who";
 
-export default function SearchContextBtn({ type, error, setError }) {
-  const { search } = useContext(SearchContext);
+export default function SearchContextBtn({ type }) {
+  const { search, setSearch } = useContext(SearchContext);
   const [icon, setIcon] = useState(null);
   const [btn, setBtn] = useState("");
-  const modalRef = useRef(null);
-  const [modal, setModal] = useState(null);
   const { totalAdults, totalChildren, totalPets } = getTotalGuests();
 
+  // Set the button based on the type prop
   useEffect(() => {
-    error && setModal(<Where handleClick={() => setModal(null)} />);
-
-    return () => {
-      setModal(null);
-    };
-  }, [error]);
-
-  function handleModal(button) {
-    switch (button) {
-      case "where":
-        setModal(<Where handleClick={() => setModal(null)} />);
-        break;
-      case "when":
-        setModal(<When handleClick={() => setModal(null)} />);
-        break;
-      case "who":
-        setModal(<Who handleClick={() => setModal(null)} />);
-        break;
-      default:
-        setModal(null);
-    }
-  }
-  useEffect(() => {
-    // Set the button based on the type prop
     switch (type) {
       case "where":
         setIcon(<FaLocationArrow />);
@@ -59,21 +31,6 @@ export default function SearchContextBtn({ type, error, setError }) {
         setIcon(null);
     }
   }, [type, search]);
-
-  // Closes modal on click outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setModal(null);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   // calculates total guests from all added rooms in search context
   function getTotalGuests() {
@@ -99,16 +56,13 @@ export default function SearchContextBtn({ type, error, setError }) {
       <button
         className="button"
         onClick={() => {
-          handleModal(type);
-          window.scrollTo(0, 0);
+          // set modal to the buttons type in context
+          setSearch({ ...search, displayModal: [type] });
         }}
       >
         {icon}
         <strong>{btn}</strong>
       </button>
-      <div className="modal-container" ref={modalRef}>
-        {modal}
-      </div>
     </>
   );
 }

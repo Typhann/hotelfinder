@@ -788,25 +788,25 @@ main .reservation-form-container {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  max-height: 525px;
+  align-self: flex-start;
+  gap: 2rem;
 }
 main .reservation-form-container > div {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  gap: 2rem;
   width: 100%;
-  margin-bottom: 1rem;
 }
-main .reservation-form-container > div > button:nth-child(1),
-main .reservation-form-container > div button:nth-child(3) {
+main .reservation-form-container > .buttons > button {
   padding: 1rem;
+  margin: 1rem;
   background-color: #ffffff;
   color: #000000;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
 }
-main .reservation-form-container > div > button:nth-child(1) > strong,
-main .reservation-form-container > div button:nth-child(3) > strong {
+main .reservation-form-container > .buttons > button > strong {
   margin-left: 1rem;
 }
 main .reservation-form-container > table {
@@ -874,6 +874,13 @@ main .reservation-form-container .make-reservation > h3 {
 main .reservation-form-container > strong {
   color: #ff4c4c;
   margin-top: 0.5rem;
+}
+
+.checkbox-price > label {
+  margin-bottom: 0;
+}
+.checkbox-price > label > input {
+  margin-bottom: 0;
 }
 
 input[type=text],

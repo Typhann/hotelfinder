@@ -8,6 +8,7 @@ const SearchContext = createContext({
     roomsNextToEachOther: false,
     totalPrice: 0,
     reservedRooms: [],
+    displayModal: [],
   },
   setSearch: () => undefined,
 });
@@ -20,6 +21,7 @@ export const SearchContextProvider = ({ children }) => {
     roomsNextToEachOther: false,
     totalPrice: 0,
     reservedRooms: [],
+    displayModal: "",
   });
 
   return (

@@ -7,5 +7,6 @@ export default function SearchResult() {
   const queryParams = new URLSearchParams(location.search);
   const search = queryParams.get("q");
 
+  window.scrollTo(0, 0);
   return <>{renderHotels(search, "grid")}</>;
 }
