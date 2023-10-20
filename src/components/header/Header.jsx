@@ -52,9 +52,11 @@ export default function Header() {
       </header>
 
       {/* Displays modals */}
-      {display.login && <Login display={display} setDisplay={setDisplay} />}
+      {display.login && (
+        <Login display={display.login} setDisplay={setDisplay} />
+      )}
       {display.register && (
-        <Register display={display} setDisplay={setDisplay} />
+        <Register display={display.register} setDisplay={setDisplay} />
       )}
 
       {authenticated && <Toast type="success" message="Welcome back Maria!" />}
