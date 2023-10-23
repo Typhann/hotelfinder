@@ -36,6 +36,7 @@ export default function Favorite() {
                 id={hotel.id}
                 rating={hotel.rating}
                 setFavorite={true}
+                amenities={hotel.amenities}
               />
             ))}
           </div>
