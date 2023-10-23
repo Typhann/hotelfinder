@@ -19,11 +19,11 @@ export default function Favorite() {
         <section className="favorite-section">
           <h1>My Favorites</h1>
           <div className="filter-buttons">
-            <Filter />
-            <div className="share-list">
+          <div className="share-list">
               <FaShareAlt />
               <p>Share list</p>
             </div>
+            <Filter />
           </div>
 
           <div className={`hotels-container grid`}>

@@ -7,7 +7,10 @@ import {
   FaRegHeart,
 } from "react-icons/fa";
 
+// create fades during load
 import { motion } from "framer-motion";
+
+// imigaes for hotel
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
 import hotelImage2 from "../assets/hotel-images/hotel-placeholder-2-min.webp";
 import hotelImage3 from "../assets/hotel-images/hotel-placeholder-3-min.webp";
@@ -20,7 +23,7 @@ import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 import ReservationForm from "../components/ReservationForm";
 import BackButton from "../components/BackButton";
-import { renderAmenityIcon, renderAmenities } from "../../utils";
+import { renderAmenities } from "../../utils";
 
 export default function Hotel() {
   const { id } = useParams();
@@ -61,11 +64,13 @@ export default function Hotel() {
               </span>
             ))}
           </div>
+          
           <div className="share-heart">
             <FaShareAlt />
             <FaRegHeart />
           </div>
         </div>
+
         <p>{hotel.address}</p>
         <div className="image-container carousel">
           <img src={hotelImage1} alt="Image of hotel" />
@@ -82,12 +87,13 @@ export default function Hotel() {
         <section className="hotel-section-container">
           <div className="hotel-section">
             <h2>{hotel.title}</h2>
+
             <div>
               <h3>Hotel</h3>
               <p>{hotel.description}</p>
-
               {renderAmenities(hotel.amenities)}
             </div>
+
             <div className="restaurant">
               <h3>Restaurant</h3>
               <p>{hotel.restaurant_description}</p>
