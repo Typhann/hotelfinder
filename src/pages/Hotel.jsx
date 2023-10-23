@@ -5,7 +5,7 @@ import { FaStar, FaRegStar, FaShareAlt, FaRegHeart } from "react-icons/fa";
 // create fades during load
 import { motion } from "framer-motion";
 
-// imigaes for hotel
+// images for hotels
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
 import hotelImage2 from "../assets/hotel-images/hotel-placeholder-2-min.webp";
 import hotelImage3 from "../assets/hotel-images/hotel-placeholder-3-min.webp";
@@ -32,11 +32,11 @@ export default function Hotel() {
     <div key={index}>
       <p className="review-text">&quot;{review}&quot;</p>
       <p className="review-rates">
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaStar />
-        <FaRegStar />
+      {Array.from({ length: 5 }, (_, index) => (
+          <span key={index}>
+              {index < hotel.review_ratings ? <FaStar /> : <FaRegStar />}
+          </span>
+        ))}
       </p>
     </div>
   ));
@@ -56,7 +56,7 @@ export default function Hotel() {
             {/* Creates and maps over an array of five and returns filled stars for the hotels rating and empty stars for the remainder to five */}
             {Array.from({ length: 5 }, (_, index) => (
               <span key={index}>
-                {index < hotel.rating ? <FaStar /> : <FaRegStar />}
+                {index < hotel.review_ratings ? <FaStar /> : <FaRegStar />}
               </span>
             ))}
           </div>
@@ -111,10 +111,11 @@ export default function Hotel() {
             <div className="review_ratings">
               <h3>Reviews</h3>
               <p style={{ fontWeight: "bold" }}>
-                {hotel.review_ratings}/10 (based on {hotel.review_amounts}{" "}
+                {hotel.review_ratings}/5 (based on {hotel.review_amounts}{" "}
                 reviews)
               </p>
-              <div className="review-list">{reviewsList}</div>
+              <div className="review-list">{reviewsList}
+              </div>
             </div>
           </div>
           <ReservationForm className="hotel-section" />
