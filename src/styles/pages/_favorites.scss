@@ -18,6 +18,17 @@
   @include flex(row, space-between, center);
 }
 
+.share-list {
+  @include flex("row", "center", "center");
+  gap: $marginSmall;
+  > svg {
+    font-size: 25px;
+    margin-top: -2px;
+  }
+  > p {
+    color: $colorLink;
+  }
+}
+
 .share-favorites svg {
-  font-size: 30px;
 }

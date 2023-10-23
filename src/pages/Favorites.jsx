@@ -17,16 +17,13 @@ export default function Favorite() {
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
         <section className="favorite-section">
-          <div className="share-favorites">
-            <h1>My Favorites</h1>
-            <div className="share-list">
-              <FaShareAlt />
-              <p>share list</p>
-            </div>
-          </div>
-
+          <h1>My Favorites</h1>
           <div className="filter-buttons">
             <Filter />
+            <div className="share-list">
+              <FaShareAlt />
+              <p>Share list</p>
+            </div>
           </div>
 
           <div className={`hotels-container grid`}>
@@ -38,6 +35,7 @@ export default function Favorite() {
                 price={hotel.price_per_night}
                 id={hotel.id}
                 rating={hotel.rating}
+                setFavorite={true}
               />
             ))}
           </div>

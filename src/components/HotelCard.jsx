@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FaStar,
@@ -48,6 +48,11 @@ export default function HotelCard(props) {
     setFavorite((prev) => !prev);
     console.log(favorite);
   }
+
+  // prefills all heart icons for favorite page with setFavorite prop
+  useEffect(() => {
+    props.setFavorite && setFavorite(props.setFavorite);
+  }, []);
 
   const hotelImage = hotelImages[props.id - 1];
   return (

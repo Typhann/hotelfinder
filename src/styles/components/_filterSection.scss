@@ -1,5 +1,6 @@
 .filter-buttons {
   @include flex(row, end, center);
+  gap: $marginMedium;
   > button {
     background-color: $colorWhite;
     color: $colorBlack;
