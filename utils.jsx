@@ -44,7 +44,7 @@ export function renderHotels(category, display) {
   );
 }
 
-// switch for the Hotel and resturant amenities icons
+// Matches amenity with icon
 export function renderAmenityIcon(amenity) {
   switch (amenity) {
     case "Family friendly":

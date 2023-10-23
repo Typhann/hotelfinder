@@ -85,8 +85,9 @@ main {
       }
       > .row {
         @include flex(row, flex-start, center);
+        // width: 100%;
         gap: $marginMedium;
-        > .star-container > svg {
+        > div > span > svg {
           fill: $colorStar;
         }
       }
@@ -104,11 +105,11 @@ main {
         padding: $paddingContainerMedium;
         box-shadow: $boxShadow;
         border-radius: $borderRadius;
+        width: 47.5%;
       }
     }
     > .confirm-details-section {
       grid-area: 1 / 2 / 3 / 4;
-      // height: auto;
       span {
         font-weight: 700;
         font-size: $fontSizeP;

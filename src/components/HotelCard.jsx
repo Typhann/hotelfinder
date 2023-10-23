@@ -6,9 +6,6 @@ import {
   FaShareAlt,
   FaHeart,
   FaRegHeart,
-  FaUmbrellaBeach,
-  FaSwimmer,
-  FaWifi,
 } from "react-icons/fa";
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
 import hotelImage2 from "../assets/hotel-images/hotel-placeholder-2-min.webp";

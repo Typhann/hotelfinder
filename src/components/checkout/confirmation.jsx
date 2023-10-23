@@ -4,6 +4,7 @@ import Confetti from "react-confetti";
 export default function Confirmed() {
   const [displayConfetti, setDisplayConfetti] = useState(250);
 
+  // scrolls user to top on pageload
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

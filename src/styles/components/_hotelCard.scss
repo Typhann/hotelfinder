@@ -12,7 +12,6 @@ section {
     flex-wrap: wrap;
     gap: $marginLarge;
     > .card-container {
-      // margin-bottom: $marginLarge;
     }
   }
   > .carousel {
@@ -26,10 +25,8 @@ section {
     padding-left: 2px;
     > .card-container {
       width: 275px;
-      // min-height: 375px;
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
-      // @include flex(column, space-between, flex-start);
       cursor: pointer;
       > img {
         border-radius: $borderRadius $borderRadius 0 0;

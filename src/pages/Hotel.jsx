@@ -1,11 +1,6 @@
 import { useParams } from "react-router-dom";
 import database from "../../database.json";
-import {
-  FaStar,
-  FaRegStar,
-  FaShareAlt,
-  FaRegHeart,
-} from "react-icons/fa";
+import { FaStar, FaRegStar, FaShareAlt, FaRegHeart } from "react-icons/fa";
 
 // create fades during load
 import { motion } from "framer-motion";
@@ -58,13 +53,14 @@ export default function Hotel() {
         <div className="hotel-header">
           <div className="name-rating">
             <h1>{hotel.name}</h1>
+            {/* Creates and maps over an array of five and returns filled stars for the hotels rating and empty stars for the remainder to five */}
             {Array.from({ length: 5 }, (_, index) => (
               <span key={index}>
                 {index < hotel.rating ? <FaStar /> : <FaRegStar />}
               </span>
             ))}
           </div>
-          
+
           <div className="share-heart">
             <FaShareAlt />
             <FaRegHeart />

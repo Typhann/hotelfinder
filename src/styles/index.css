@@ -985,7 +985,7 @@ main > div > .section-container > .selection-section > .row {
   align-items: center;
   gap: 1rem;
 }
-main > div > .section-container > .selection-section > .row > .star-container > svg {
+main > div > .section-container > .selection-section > .row > div > span > svg {
   fill: #feb600;
 }
 main > div > .section-container > .selection-section > .tags-container,
@@ -1008,6 +1008,7 @@ main > div > .section-container > .selection-section > .dates-container > .dates
   padding: 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
+  width: 47.5%;
 }
 main > div > .section-container > .confirm-details-section {
   grid-area: 1/2/3/4;
