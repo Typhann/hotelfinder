@@ -506,7 +506,7 @@ section > .hotels-container > .card-container > .amenities {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem 1rem;
   flex-wrap: wrap;
   padding: 0.5rem;
 }
@@ -516,6 +516,9 @@ section > .hotels-container > .card-container > .amenities > div {
   justify-content: center;
   align-items: flex-start;
   gap: 0.5rem;
+}
+section > .hotels-container > .card-container > .amenities > div > p {
+  font-size: 0.8rem;
 }
 section > .hotels-container > .card-container .card-bottom {
   margin-top: 1rem;
