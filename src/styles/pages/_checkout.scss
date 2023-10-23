@@ -78,7 +78,6 @@ main {
       // border: 2px solid red;
       > h3,
       p,
-      .tags-container,
       .dates-container,
       .row {
         margin-bottom: $marginMedium;
@@ -91,14 +90,22 @@ main {
           fill: $colorStar;
         }
       }
-      > .tags-container,
-      .dates-container {
+      > .dates-container {
         @include flex(row, flex-start, center);
         gap: $marginMedium;
         flex-wrap: wrap;
       }
-      > .tags-container {
+      > .amenities {
         border-bottom: 1px solid $colorGray;
+        margin-bottom: $marginMedium;
+        flex-wrap: wrap;
+        gap: $marginMedium;
+        padding-bottom: $paddingContainerMedium;
+        > div {
+          > p {
+            margin-bottom: 0;
+          }
+        }
       }
       > .dates-container > .dates {
         @include flex(column, center, center);

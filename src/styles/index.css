@@ -973,7 +973,6 @@ main > div > .section-container > .selection-section {
 }
 main > div > .section-container > .selection-section > h3,
 main > div > .section-container > .selection-section p,
-main > div > .section-container > .selection-section .tags-container,
 main > div > .section-container > .selection-section .dates-container,
 main > div > .section-container > .selection-section .row {
   margin-bottom: 1rem;
@@ -988,8 +987,7 @@ main > div > .section-container > .selection-section > .row {
 main > div > .section-container > .selection-section > .row > div > span > svg {
   fill: #feb600;
 }
-main > div > .section-container > .selection-section > .tags-container,
-main > div > .section-container > .selection-section .dates-container {
+main > div > .section-container > .selection-section > .dates-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -997,8 +995,15 @@ main > div > .section-container > .selection-section .dates-container {
   gap: 1rem;
   flex-wrap: wrap;
 }
-main > div > .section-container > .selection-section > .tags-container {
+main > div > .section-container > .selection-section > .amenities {
   border-bottom: 1px solid #c5c5c5;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+main > div > .section-container > .selection-section > .amenities > div > p {
+  margin-bottom: 0;
 }
 main > div > .section-container > .selection-section > .dates-container > .dates {
   display: flex;
