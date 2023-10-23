@@ -52,13 +52,23 @@ section {
         @include flex(row, space-between, center);
         padding-bottom: $paddingContainerSmall;
       }
-      .tags-container {
+      // .tags-container {
+      //   @include flex(row, flex-start, center);
+      //   > div > svg {
+      //     margin-right: $marginSmall;
+      //   }
+      //   > div > small {
+      //     margin-right: $marginMedium;
+      //   }
+      // }
+      > .amenities {
         @include flex(row, flex-start, center);
-        > div > svg {
-          margin-right: $marginSmall;
-        }
-        > div > small {
-          margin-right: $marginMedium;
+        gap: $marginSmall;
+        flex-wrap: wrap;
+        padding: $paddingContainerSmall;
+        > div {
+          @include flex(row, center, flex-start);
+          gap: $marginSmall;
         }
       }
       .card-bottom {

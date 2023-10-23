@@ -9,6 +9,7 @@ import {
   FaWifi,
   FaUmbrellaBeach,
 } from "react-icons/fa";
+
 // Function to shuffle an array from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -35,6 +36,7 @@ export function renderHotels(category, display) {
             price={hotel.price_per_night}
             id={hotel.id}
             rating={hotel.rating}
+            amenities={hotel.amenities}
           />
         ))}
       </div>

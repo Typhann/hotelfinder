@@ -20,6 +20,7 @@ import hotelImage7 from "../assets/hotel-images/hotel-placeholder-7-min.webp";
 import hotelImage8 from "../assets/hotel-images/hotel-placeholder-8-min.webp";
 import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
+import { renderAmenities } from "../../utils";
 
 export default function HotelCard(props) {
   const navigate = useNavigate();
@@ -79,20 +80,7 @@ export default function HotelCard(props) {
           <strong>${props.price}</strong>
         </h3>
       </div>
-      <div className="tags-container">
-        <div className="tag">
-          <FaUmbrellaBeach />
-          <small>Nearby beach</small>
-        </div>
-        <div className="tag">
-          <FaSwimmer />
-          <small>Pool</small>
-        </div>
-        <div className="tag">
-          <FaWifi />
-          <small>Wifi</small>
-        </div>
-      </div>
+      {renderAmenities(props.amenities)}
       <div className="card-bottom">
         <a href="#">Map</a>
         <div className="share-heart">
