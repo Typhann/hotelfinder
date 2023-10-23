@@ -10,12 +10,14 @@ section {
   > .grid {
     @include flex(row, flex-start, flex-start);
     flex-wrap: wrap;
+    gap: $marginLarge;
     > .card-container {
-      margin-bottom: $marginLarge;
+      // margin-bottom: $marginLarge;
     }
   }
   > .carousel {
     @include flex(row, flex-start, flex-start);
+    gap: $marginLarge;
   }
   > .hotels-container {
     max-width: 100vw;
@@ -27,8 +29,6 @@ section {
       // min-height: 375px;
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
-      margin-right: $marginLarge;
-      margin-bottom: $marginMedium;
       // @include flex(column, space-between, flex-start);
       cursor: pointer;
       > img {
