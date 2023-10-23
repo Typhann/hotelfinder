@@ -194,9 +194,6 @@ export default function ReservationForm() {
         {error.when && (
           <Toast message="You must enter when first!" type="warning" />
         )}
-        {error.room && (
-          <Toast message="You must choose a room first!" type="warning" />
-        )}
       </div>
     </>
   );

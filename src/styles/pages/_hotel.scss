@@ -6,7 +6,7 @@ main {
       > h1 {
         margin: 0 $marginMedium $marginSmall 0;
       }
-      > svg {
+      > span > svg {
         fill: $colorStar;
         font-size: 1.5rem;
       }
@@ -33,16 +33,12 @@ main {
   > div > .hotel-section-container {
     @include flex(row, space-between, space-between);
     > .hotel-section {
+      @include flex(column, space-between, space-between);
+      gap: $marginLarge;
       width: 45%;
-      > h2 {
-        margin-bottom: $marginMedium;
-      }
-      p {
-        margin-bottom: $marginLarge;
-      }
-      > iframe {
-        width: 100%;
-        height: 100%;
+      > div {
+        @include flex(column, space-between, space-between);
+        gap: $marginMedium;
       }
     }
   }

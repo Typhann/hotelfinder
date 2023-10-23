@@ -1,6 +1,14 @@
 import database from "./database.json";
 import HotelCard from "./src/components/HotelCard";
-
+import {
+  FaLeaf,
+  FaBookOpen,
+  FaThumbsUp,
+  FaBabyCarriage,
+  FaHamburger,
+  FaWifi,
+  FaUmbrellaBeach,
+} from "react-icons/fa";
 // Function to shuffle an array from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -31,5 +39,41 @@ export function renderHotels(category, display) {
         ))}
       </div>
     </section>
+  );
+}
+
+export function renderAmenityIcon(amenity) {
+  switch (amenity) {
+    case "Family friendly":
+      return <FaBabyCarriage />;
+    case "Food Included":
+      return <FaHamburger />;
+    case "WiFi":
+      return <FaWifi />;
+    case "Beach":
+      return <FaUmbrellaBeach />;
+    case "Vegan options":
+      return <FaLeaf />;
+    case "A la carte":
+      return <FaBookOpen />;
+    case "Allergy-friendly":
+      return <FaThumbsUp />;
+
+    default:
+      console.log("no icon found");
+  }
+}
+
+export function renderAmenities(amenities) {
+  return (
+    <div className="amenities">
+      {amenities.map((amenity) => (
+        <div key={amenity}>
+          {renderAmenityIcon(amenity)}
+          {console.log(amenity)}
+          <p>{amenity}</p>
+        </div>
+      ))}
+    </div>
   );
 }

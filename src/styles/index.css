@@ -736,7 +736,7 @@ main > div > .hotel-header > .name-rating {
 main > div > .hotel-header > .name-rating > h1 {
   margin: 0 1rem 0.5rem 0;
 }
-main > div > .hotel-header > .name-rating > svg {
+main > div > .hotel-header > .name-rating > span > svg {
   fill: #feb600;
   font-size: 1.5rem;
 }
@@ -768,17 +768,19 @@ main > div > .hotel-section-container {
   align-items: space-between;
 }
 main > div > .hotel-section-container > .hotel-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 2rem;
   width: 45%;
 }
-main > div > .hotel-section-container > .hotel-section > h2 {
-  margin-bottom: 1rem;
-}
-main > div > .hotel-section-container > .hotel-section p {
-  margin-bottom: 2rem;
-}
-main > div > .hotel-section-container > .hotel-section > iframe {
-  width: 100%;
-  height: 100%;
+main > div > .hotel-section-container > .hotel-section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 1rem;
 }
 main .reservation-form-container {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -1296,4 +1298,19 @@ main > div > ul > li {
   color: #0175e3;
   font-weight: 400;
   margin-bottom: 0.5rem;
+}
+
+.amenities {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.amenities > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
 }/*# sourceMappingURL=index.css.map */

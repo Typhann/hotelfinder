@@ -53,3 +53,12 @@ main {
   font-weight: 400;
   margin-bottom: $marginSmall;
 }
+
+.amenities {
+  @include flex(row, flex-start, center);
+  gap: $marginLarge;
+  > div {
+    @include flex(row, center, flex-start);
+    gap: $marginSmall;
+  }
+}

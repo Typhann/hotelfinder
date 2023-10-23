@@ -1,17 +1,15 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import database from "../../database.json";
-import { 
-  FaStar, 
-  FaRegStar, 
-  FaShareAlt, 
+import {
+  FaStar,
+  FaRegStar,
+  FaShareAlt,
   FaRegHeart,
   FaBabyCarriage,
   FaHamburger,
   FaWifi,
-  FaUmbrellaBeach
+  FaUmbrellaBeach,
 } from "react-icons/fa";
-
 
 import { motion } from "framer-motion";
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
@@ -26,6 +24,7 @@ import hotelImage9 from "../assets/hotel-images/hotel-placeholder-9-min.webp";
 import hotelImage10 from "../assets/hotel-images/hotel-placeholder-10-min.webp";
 import ReservationForm from "../components/ReservationForm";
 import BackButton from "../components/BackButton";
+import { renderAmenityIcon, renderAmenities } from "../../utils";
 
 export default function Hotel() {
   const { id } = useParams();
@@ -48,20 +47,20 @@ export default function Hotel() {
     </div>
   ));
 
-  // switch for the Hotel amenities icons  
-  const HotelAmenities = hotel.amenities;
-  switch (HotelAmenities) {
-    case "Family friendly":
-    return <FaBabyCarriage/>
-  case "Food Included":
-    return <FaHamburger/>
-  case "Wifi":
-    return <FaWifi/>
-  case "Beach":
-    return <FaUmbrellaBeach/>
-  default:
-    console.log("no icon found")
-  }
+  // switch for the Hotel amenities icons
+  // const HotelAmenities = hotel.amenities;
+  // switch (HotelAmenities) {
+  //   case "Family friendly":
+  //     return <FaBabyCarriage />;
+  //   case "Food Included":
+  //     return <FaHamburger />;
+  //   case "Wifi":
+  //     return <FaWifi />;
+  //   case "Beach":
+  //     return <FaUmbrellaBeach />;
+  //   default:
+  //     console.log("no icon found");
+  // }
 
   return (
     <>
@@ -75,11 +74,11 @@ export default function Hotel() {
         <div className="hotel-header">
           <div className="name-rating">
             <h1>{hotel.name}</h1>
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
+            {Array.from({ length: 5 }, (_, index) => (
+              <span key={index}>
+                {index < hotel.rating ? <FaStar /> : <FaRegStar />}
+              </span>
+            ))}
           </div>
           <div className="share-heart">
             <FaShareAlt />
@@ -102,30 +101,32 @@ export default function Hotel() {
         <section className="hotel-section-container">
           <div className="hotel-section">
             <h2>{hotel.title}</h2>
-            <p>{hotel.description}</p>
+            <div>
+              <h3>Hotel</h3>
+              <p>{hotel.description}</p>
 
-            <div className="our-offer">
-              <h3>We offer</h3>
-              <p>{HotelAmenities}</p>
+              {renderAmenities(hotel.amenities)}
             </div>
-
             <div className="restaurant">
               <h3>Restaurant</h3>
               <p>{hotel.restaurant_description}</p>
-              <p>{hotel.restaurant_amenities}</p>
+              <div>{renderAmenities(hotel.restaurant_amenities)}</div>
             </div>
 
             <div>
+              <h3>Location</h3>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13826.255625836358!2d-87.0482837115719!3d20.657553864612346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e5d1373869c1f%3A0x73c6152510886982!2sSandos%20Caracol%20Eco%20Resort!5e0!3m2!1ssv!2ses!4v1696259424496!5m2!1ssv!2ses"
-                style={{ border: "none" }}
+                style={{ border: "none", height: "250px" }}
                 allowFullScreen=""
                 loading="lazy"
+                width="100%"
+                height="200%"
               ></iframe>
             </div>
 
             <div className="review_ratings">
-              <h3>Our reviews</h3>
+              <h3>Reviews</h3>
               <p style={{ fontWeight: "bold" }}>
                 {hotel.review_ratings}/10 (based on {hotel.review_amounts}{" "}
                 reviews)
