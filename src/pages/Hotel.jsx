@@ -5,10 +5,6 @@ import {
   FaRegStar,
   FaShareAlt,
   FaRegHeart,
-  FaBabyCarriage,
-  FaHamburger,
-  FaWifi,
-  FaUmbrellaBeach,
 } from "react-icons/fa";
 
 import { motion } from "framer-motion";
@@ -46,21 +42,6 @@ export default function Hotel() {
       </p>
     </div>
   ));
-
-  // switch for the Hotel amenities icons
-  // const HotelAmenities = hotel.amenities;
-  // switch (HotelAmenities) {
-  //   case "Family friendly":
-  //     return <FaBabyCarriage />;
-  //   case "Food Included":
-  //     return <FaHamburger />;
-  //   case "Wifi":
-  //     return <FaWifi />;
-  //   case "Beach":
-  //     return <FaUmbrellaBeach />;
-  //   default:
-  //     console.log("no icon found");
-  // }
 
   return (
     <>
