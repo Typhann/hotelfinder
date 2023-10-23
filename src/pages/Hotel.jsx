@@ -1,6 +1,18 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 import database from "../../database.json";
-import { FaStar, FaRegStar, FaShareAlt, FaRegHeart } from "react-icons/fa";
+import { 
+  FaStar, 
+  FaRegStar, 
+  FaShareAlt, 
+  FaRegHeart,
+  FaBabyCarriage,
+  FaHamburger,
+  FaWifi,
+  FaUmbrellaBeach
+} from "react-icons/fa";
+
+
 import { motion } from "framer-motion";
 import hotelImage1 from "../assets/hotel-images/hotel-placeholder-1-min.webp";
 import hotelImage2 from "../assets/hotel-images/hotel-placeholder-2-min.webp";
@@ -35,6 +47,21 @@ export default function Hotel() {
       </p>
     </div>
   ));
+
+  // switch for the Hotel amenities icons  
+  const HotelAmenities = hotel.amenities;
+  switch (HotelAmenities) {
+    case "Family friendly":
+    return <FaBabyCarriage/>
+  case "Food Included":
+    return <FaHamburger/>
+  case "Wifi":
+    return <FaWifi/>
+  case "Beach":
+    return <FaUmbrellaBeach/>
+  default:
+    console.log("no icon found")
+  }
 
   return (
     <>
@@ -79,7 +106,13 @@ export default function Hotel() {
 
             <div className="our-offer">
               <h3>We offer</h3>
-              <p>{hotel.amenities}</p>
+              <p>{HotelAmenities}</p>
+            </div>
+
+            <div className="restaurant">
+              <h3>Restaurant</h3>
+              <p>{hotel.restaurant_description}</p>
+              <p>{hotel.restaurant_amenities}</p>
             </div>
 
             <div>
