@@ -77,12 +77,14 @@ export default function HotelCard(props) {
           <strong>${props.price}</strong>
         </h3>
       </div>
-      {/* Renders tags */}
+      {/* Gets amenities and sets icons from utils.jsx */}
       {renderAmenities(props.amenities)}
       <div className="card-bottom">
         <a href="#">Map</a>
         <div className="share-heart">
           <FaShareAlt />
+
+          {/* fills all hearts for cards on the view Favorite */}
           {favorite ? (
             <FaHeart className="filled" onClick={toggle} />
           ) : (
