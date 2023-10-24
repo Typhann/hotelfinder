@@ -77,6 +77,7 @@ export default function HotelCard(props) {
           <strong>${props.price}</strong>
         </h3>
       </div>
+      {/* Renders tags */}
       {renderAmenities(props.amenities)}
       <div className="card-bottom">
         <a href="#">Map</a>

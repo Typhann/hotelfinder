@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Modal from "@mui/material/Modal";
 import { FaApple, FaGoogle, FaFacebook, FaWindowClose } from "react-icons/fa";
+
+// Component for Register modal
 export default function Register({ display, setDisplay }) {
   return (
     <Modal open={display} onClose={() => setDisplay(false)}>

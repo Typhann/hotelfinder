@@ -26,6 +26,7 @@ export default function Details({
     message: "",
   });
 
+  // scrolls user to top on pageload
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

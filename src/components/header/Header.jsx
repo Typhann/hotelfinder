@@ -23,6 +23,7 @@ export default function Header() {
         </div>
         <Search />
 
+        {/* Logged in */}
         {authenticated ? (
           <div className="profile-favorite">
             <Link to="/Favorites">
@@ -33,6 +34,7 @@ export default function Header() {
             <Profile />
           </div>
         ) : (
+          // Logged out
           <div className="login-register">
             <button
               onClick={() => setDisplay({ ...display, login: true })}
@@ -48,7 +50,6 @@ export default function Header() {
             </button>
           </div>
         )}
-        {/*Logged in*/}
       </header>
 
       {/* Displays modals */}

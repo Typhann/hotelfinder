@@ -48,6 +48,7 @@ export default function Checkout() {
             Payment
           </p>
         </div>
+        {/* Dynamically updates the section depending on user input */}
         <div className="section-container">
           <Selection />
           {displayDetails && (

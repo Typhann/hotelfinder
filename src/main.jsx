@@ -6,6 +6,7 @@ import { AuthenticatedContextProvider } from "./context/AuthenticatedContext.jsx
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
+// LocalizationProvider context is needed for DateCalendar in When component
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <LocalizationProvider dateAdapter={AdapterDayjs}>

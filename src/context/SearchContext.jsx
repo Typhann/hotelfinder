@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+// creates and sets up context for the search functionality that is used for the checkout process.
+// Context is being set by the Search component and the ReservationForm component.
 const SearchContext = createContext({
   search: {
     where: "",
@@ -14,6 +16,7 @@ const SearchContext = createContext({
 });
 
 export const SearchContextProvider = ({ children }) => {
+  // initialized context values
   const [search, setSearch] = useState({
     where: "",
     when: "",

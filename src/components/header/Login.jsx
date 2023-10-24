@@ -4,6 +4,7 @@ import Modal from "@mui/material/Modal";
 import { FaApple, FaGoogle, FaFacebook, FaWindowClose } from "react-icons/fa";
 import AuthenticatedContext from "../../context/AuthenticatedContext";
 
+// Component for Login modal
 export default function Login({ display, setDisplay }) {
   const [checkUser, setCheckUser] = useState(false);
   const { setAuthenticated } = useContext(AuthenticatedContext);

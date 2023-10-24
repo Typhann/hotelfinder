@@ -3,6 +3,7 @@ import { renderHotels } from "../../utils";
 import { motion } from "framer-motion";
 import BackButton from "../components/BackButton";
 
+// Gets search query from URL and renders hotels with search query
 export default function SearchResult() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);

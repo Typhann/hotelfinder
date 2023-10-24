@@ -13,6 +13,7 @@ export default function Search() {
   const [modal, setModal] = useState(null);
   const modalRef = useRef(null);
 
+  // opens Modal for where and displays toast message if user clicks search without entering where
   function handleSearchClick() {
     if (search.where < 1) {
       setError(true);
