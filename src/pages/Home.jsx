@@ -5,9 +5,11 @@ import Filter from "../components/Filter";
 import { motion } from "framer-motion";
 
 export default function Home() {
+  // scrolls user to top 
   window.scrollTo(0, 0);
   return (
     <>
+    {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}

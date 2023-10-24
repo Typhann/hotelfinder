@@ -24,6 +24,7 @@ export default function Hotel() {
   const { id } = useParams();
   const hotel = database.hotels[id - 1];
 
+  // scrolls user to top 
   window.scrollTo(0, 0);
 
   // Loop for the hotels reviews
@@ -43,6 +44,7 @@ export default function Hotel() {
 
   return (
     <>
+    {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}
@@ -87,12 +89,14 @@ export default function Hotel() {
             <div>
               <h3>Hotel</h3>
               <p>{hotel.description}</p>
+              {/* Hotel amantites and icons from utils.jsx */}
               {renderAmenities(hotel.amenities)}
             </div>
 
             <div className="restaurant">
               <h3>Restaurant</h3>
               <p>{hotel.restaurant_description}</p>
+              {/* Restaurant amantites and icons from utils.jsx */}
               <div>{renderAmenities(hotel.restaurant_amenities)}</div>
             </div>
 
@@ -111,6 +115,7 @@ export default function Hotel() {
             <div className="review_ratings">
               <h3>Reviews</h3>
               <p style={{ fontWeight: "bold" }}>
+                {/* simulates statistic for reviews from database.json */}
                 {hotel.review_ratings}/5 (based on {hotel.review_amounts}{" "}
                 reviews)
               </p>
@@ -118,6 +123,7 @@ export default function Hotel() {
               </div>
             </div>
           </div>
+          {/* booking */}
           <ReservationForm className="hotel-section" />
         </section>
       </motion.div>

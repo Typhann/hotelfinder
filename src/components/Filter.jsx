@@ -20,7 +20,8 @@ export default function FilterButtons() {
         </button>
       </div>
 
-      {/*Filter section, hidden on defeault*/}
+      {/*Filter section, hidden on defeault
+       Drawer - create sliding effect from the side for profile section */}
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <div className="overlay filter-section slide">
           <button
@@ -61,7 +62,7 @@ export default function FilterButtons() {
           </div>
 
           <h3>Price per night</h3>
-          {/*slider from @mui/material/Slider*/}
+          {/*slider from @mui/material/Slider to simulate price range*/}
           <Slider max={1000} min={50} />
           <h3>Guest rating</h3>
           <div className="quest-rating-filter">
@@ -88,6 +89,8 @@ export default function FilterButtons() {
             <FaRegStar />
             <FaRegStar />
           </div>
+
+          {/*Closes filter section*/}
           <button
             onClick={() => setOpenDrawer(false)}
             className="button purple-button"

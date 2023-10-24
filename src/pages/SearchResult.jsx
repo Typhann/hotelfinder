@@ -8,9 +8,11 @@ export default function SearchResult() {
   const queryParams = new URLSearchParams(location.search);
   const search = queryParams.get("q");
 
+  // scrolls user to top 
   window.scrollTo(0, 0);
   return (
     <>
+    {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}

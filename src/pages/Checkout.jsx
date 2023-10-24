@@ -20,12 +20,15 @@ export default function Checkout() {
 
   return (
     <>
+    {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
+
+        {/* progress bar */}
         <div className="breadcrumbs">
           <FaSearch className="finished" />
           <p className="finished">Selection</p>

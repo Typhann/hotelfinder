@@ -20,6 +20,7 @@ export default function Login({ display, setDisplay }) {
   }
 
   return (
+    /* Modal - present the content above an enclosing view to create overlay */
     <Modal open={display} onClose={() => setDisplay(false)}>
       <div className="log-in-section">
         <button

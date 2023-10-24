@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import Modal from "@mui/material/Modal";
 import { FaApple, FaGoogle, FaFacebook, FaWindowClose } from "react-icons/fa";
+
 export default function Register({ display, setDisplay }) {
+ 
   return (
+    /* Modal - present the content above an enclosing view to create overlay */
     <Modal open={display} onClose={() => setDisplay(false)}>
       <div className="log-in-section">
         <button

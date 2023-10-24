@@ -26,8 +26,11 @@ export default function Profile() {
       <div className="profile-icon-header" onClick={() => setOpenDrawer(true)}>
         <FaUserCircle />
       </div>
+      {/* Drawer - create sliding effect from the side for profile section */}
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <div className="overlay profile slide">
+
+          {/* trigger closing fuction for profil section */}
           <button
             onClick={() => setOpenDrawer(false)}
             className="close-filter-overlay"
@@ -43,6 +46,7 @@ export default function Profile() {
             </div>
           </div>
 
+          {/* Links for user releated views */}
           <div className="profile-links">
             <ul className="profile-link-list">
               <li>
@@ -71,6 +75,7 @@ export default function Profile() {
             </ul>
           </div>
 
+          {/* Gets user info from database.json to simulate a logged in user */}
           <div>
             <h3>Profile information</h3>
             <div className="bold profile-information">
@@ -204,6 +209,7 @@ export default function Profile() {
             </div>
           </div>
 
+          {/* set authenticated to false for simulating log out and sends user back to first view */}
           <button
             onClick={() => (setAuthenticated(false), navigate("/"))}
             className="button purple-button"

@@ -10,6 +10,7 @@ export default function Favorite() {
 
   return (
     <>
+    {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}
@@ -26,6 +27,7 @@ export default function Favorite() {
             <Filter />
           </div>
 
+          {/* render first 8 hotels in database.json */}
           <div className={`hotels-container grid`}>
             {showHotels.map((hotel) => (
               <HotelCard
