@@ -24,7 +24,7 @@ export default function Hotel() {
   const { id } = useParams();
   const hotel = database.hotels[id - 1];
 
-  // scrolls user to top 
+  // scrolls user to top
   window.scrollTo(0, 0);
 
   // Loop for the hotels reviews
@@ -33,9 +33,9 @@ export default function Hotel() {
     <div key={index}>
       <p className="review-text">&quot;{review}&quot;</p>
       <p className="review-rates">
-      {Array.from({ length: 5 }, (_, index) => (
+        {Array.from({ length: 5 }, (_, index) => (
           <span key={index}>
-              {index < hotel.review_ratings ? <FaStar /> : <FaRegStar />}
+            {index < hotel.review_ratings ? <FaStar /> : <FaRegStar />}
           </span>
         ))}
       </p>
@@ -44,7 +44,7 @@ export default function Hotel() {
 
   return (
     <>
-    {/* motion.div create animation for nicer loading */}
+      {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}
@@ -119,8 +119,7 @@ export default function Hotel() {
                 {hotel.review_ratings}/5 (based on {hotel.review_amounts}{" "}
                 reviews)
               </p>
-              <div className="review-list">{reviewsList}
-              </div>
+              <div className="review-list">{reviewsList}</div>
             </div>
           </div>
           {/* booking */}

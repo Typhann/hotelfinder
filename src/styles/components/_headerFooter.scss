@@ -4,7 +4,6 @@ footer {
   position: sticky;
   top: 0;
   height: 125px;
-  // box-shadow: $boxShadow;
   @include flex(row, space-between, center);
   padding: $paddingContainerLarge;
   background-color: $colorWhite;
@@ -33,19 +32,16 @@ footer {
 }
 
 // makes header box shadow extend beyond max with of website
-
 header:before,
 footer:before {
   content: "";
   box-shadow: $boxShadow;
   position: absolute;
   height: 100%;
-  // width: 98.8vw;
-  width: 100dvw;
-  // overflow: hidden;
+  background-color: white;
+  width: 100vw;
   left: 50%;
   top: 0;
-  background-color: white;
   transform: translate(-50%, 0px);
   z-index: -1;
   // overflow: hidden;
@@ -201,5 +197,35 @@ footer:before {
 @media (min-width: 1750px) {
   .modal-container {
     overflow: hidden;
+  }
+}
+
+@media (max-width: 968px) {
+  .modal-container {
+    top: 0;
+    .search-options-popup {
+      width: 100vw !important;
+      min-height: calc(100vh - 125px);
+      justify-content: flex-start !important;
+    }
+  }
+  .search-options {
+    min-width: 0 !important;
+  }
+  .calendar-container {
+    flex-wrap: wrap;
+  }
+  .room-options-container {
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    width: 100%;
+    > .counter-container {
+      > p {
+        margin: 5px !important;
+      }
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+    }
   }
 }

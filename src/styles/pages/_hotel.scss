@@ -25,20 +25,43 @@ main {
     padding-bottom: $paddingContainerMedium;
     @include flex(row, flex-start, flex-start);
     gap: $marginSmall;
-    > img {
-      width: 25%;
-      height: 250px;
-    }
   }
   > div > .hotel-section-container {
     @include flex(row, space-between, space-between);
+    flex-wrap: wrap;
+    gap: $marginLarge;
     > .hotel-section {
       @include flex(column, space-between, space-between);
-      gap: $marginLarge;
+      gap: $marginSmall;
       width: 45%;
+      min-width: 350px;
+      flex-grow: 1;
       > div {
         @include flex(column, space-between, space-between);
         gap: $marginMedium;
+      }
+      > .review_ratings {
+        margin: $marginLarge 0 $marginLarge 0;
+        // flex-grow: 1;
+        > .review-list {
+          font-style: italic;
+          @include flex(row, flex-start, flex-start);
+          flex-wrap: wrap;
+          gap: $marginMedium;
+          > div {
+            width: 30%;
+            @include flex(column, space-between, space-between);
+            min-width: 150px;
+            gap: $marginMedium;
+            flex-grow: 1;
+            align-self: stretch;
+
+            > .review-rates svg {
+              fill: $colorStar;
+              font-size: 1.2rem;
+            }
+          }
+        }
       }
     }
   }
@@ -47,16 +70,16 @@ main {
     border-radius: $borderRadius;
     width: 50%;
     @include flex(column, space-between, center);
-    padding: $paddingContainerMedium;
+    flex-grow: 1;
     align-self: flex-start;
-    gap: $marginLarge;
+    gap: $marginMedium;
+    padding: $marginMedium;
     > div {
       @include flex(row, flex-end, center);
       width: 100%;
     }
     > .buttons > button {
       padding: $paddingContainerMedium;
-      margin: $marginMedium;
       background-color: $colorWhite;
       color: $colorBlack;
       box-shadow: $boxShadow;
@@ -66,25 +89,18 @@ main {
       }
     }
     > table {
-      border-collapse: collapse;
       width: 100%;
-      > thead {
-        > tr {
-          > th {
-            padding-bottom: $paddingContainerMedium;
-          }
-        }
-      }
+
       > tbody {
         > tr > th,
         td {
-          padding: $paddingContainerSmall $paddingContainerLarge
-            $paddingContainerSmall $paddingContainerLarge;
+          text-align: center;
         }
         > tr > td {
           height: 65px;
         }
         > tr > td > .counter-container {
+          @include flex(row, center, center);
           > .counter {
             @include flex(row, center, center);
             box-shadow: $boxShadow;
@@ -118,7 +134,6 @@ main {
     > .checkbox-price,
     .make-reservation {
       @include flex(row, space-between, flex-end);
-      width: 95%;
       > label {
         font-weight: 400;
       }

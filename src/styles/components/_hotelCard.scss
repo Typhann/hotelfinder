@@ -24,13 +24,18 @@ section {
     margin-bottom: $marginLarge;
     padding-left: 2px;
     > .card-container {
-      width: 275px;
+      min-width: 275px;
+      max-width: 500px;
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
       cursor: pointer;
+      margin-bottom: $marginSmall;
+      flex-grow: 1;
       > img {
         border-radius: $borderRadius $borderRadius 0 0;
         margin-bottom: $marginSmall;
+        width: 100%;
+        min-height: 200px;
       }
       > .star-container,
       h3,

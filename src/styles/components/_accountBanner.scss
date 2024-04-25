@@ -2,6 +2,7 @@
   background-image: url("../assets/Backgrounds/worms.webp");
   background-size: cover;
   border-radius: 25px;
+  margin-bottom: $marginMedium;
   > div {
     @include flex(column, center, center);
     padding: $paddingContainerMedium;

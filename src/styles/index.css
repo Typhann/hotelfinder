@@ -33,7 +33,6 @@ body {
 body > #root > .site-wrapper > main {
   padding: 2rem;
 }
-
 h1,
 h2,
 h3,
@@ -203,10 +202,10 @@ footer:before {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: absolute;
   height: 100%;
-  width: 100dvw;
+  background-color: white;
+  width: 100vw;
   left: 50%;
   top: 0;
-  background-color: white;
   transform: translate(-50%, 0px);
   z-index: -1;
 }
@@ -377,6 +376,35 @@ footer:before {
     overflow: hidden;
   }
 }
+@media (max-width: 968px) {
+  .modal-container {
+    top: 0;
+  }
+  .modal-container .search-options-popup {
+    width: 100vw !important;
+    min-height: calc(100vh - 125px);
+    justify-content: flex-start !important;
+  }
+  .search-options {
+    min-width: 0 !important;
+  }
+  .calendar-container {
+    flex-wrap: wrap;
+  }
+  .room-options-container {
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  .room-options-container > .counter-container {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .room-options-container > .counter-container > p {
+    margin: 5px !important;
+  }
+}
 .filter-buttons {
   display: flex;
   flex-direction: row;
@@ -475,14 +503,19 @@ section > .hotels-container {
   padding-left: 2px;
 }
 section > .hotels-container > .card-container {
-  width: 275px;
+  min-width: 275px;
+  max-width: 500px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
   cursor: pointer;
+  margin-bottom: 0.5rem;
+  flex-grow: 1;
 }
 section > .hotels-container > .card-container > img {
   border-radius: 6px 6px 0 0;
   margin-bottom: 0.5rem;
+  width: 100%;
+  min-height: 200px;
 }
 section > .hotels-container > .card-container > .star-container,
 section > .hotels-container > .card-container h3,
@@ -533,28 +566,6 @@ section > .hotels-container > .card-container .card-bottom > .share-heart > svg:
 section > .hotels-container > .card-container .card-bottom > .share-heart > .filled {
   z-index: 9999;
   fill: #a41752;
-}
-
-.review_ratings {
-  margin: 2rem 0 2rem 0;
-}
-
-.review-list {
-  font-style: italic;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: top;
-}
-
-.review-text {
-  margin-bottom: 0.5rem !important;
-  padding-right: 0.5rem;
-}
-
-.review-rates svg {
-  fill: #feb600;
-  font-size: 1.2rem;
 }
 
 .log-in-section {
@@ -636,9 +647,9 @@ input[type=password] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 .login-register button:first-child {
-  margin-right: 1rem;
   color: #000000;
   background-color: #ffffff;
 }
@@ -737,30 +748,42 @@ h3 {
   top: 125px;
   background-image: url("../assets/Backgrounds/hero.webp");
   background-size: cover;
-  transform: rotate(180deg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15% 0;
   gap: 2rem;
 }
-.hero > * {
-  transform: rotate(180deg);
-}
 .hero > h2 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-align: center;
 }
 .hero > a {
-  width: 150px;
-  height: 40px;
+  width: 250px;
+  padding: 1rem;
   background-color: #4a376d;
 }
+.hero > div > .search-container > .search-options {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 1rem;
+}
 
+@media (max-width: 968px) {
+  .hero {
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  .hero > h2 {
+    font-size: 3rem;
+  }
+}
 .account-banner {
   background-image: url("../assets/Backgrounds/worms.webp");
   background-size: cover;
   border-radius: 25px;
+  margin-bottom: 1rem;
 }
 .account-banner > div {
   display: flex;
@@ -834,23 +857,23 @@ main > div > .image-container {
   align-items: flex-start;
   gap: 0.5rem;
 }
-main > div > .image-container > img {
-  width: 25%;
-  height: 250px;
-}
 main > div > .hotel-section-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 main > div > .hotel-section-container > .hotel-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
-  gap: 2rem;
+  gap: 0.5rem;
   width: 45%;
+  min-width: 350px;
+  flex-grow: 1;
 }
 main > div > .hotel-section-container > .hotel-section > div {
   display: flex;
@@ -858,6 +881,33 @@ main > div > .hotel-section-container > .hotel-section > div {
   justify-content: space-between;
   align-items: space-between;
   gap: 1rem;
+}
+main > div > .hotel-section-container > .hotel-section > .review_ratings {
+  margin: 2rem 0 2rem 0;
+}
+main > div > .hotel-section-container > .hotel-section > .review_ratings > .review-list {
+  font-style: italic;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main > div > .hotel-section-container > .hotel-section > .review_ratings > .review-list > div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  min-width: 150px;
+  gap: 1rem;
+  flex-grow: 1;
+  align-self: stretch;
+}
+main > div > .hotel-section-container > .hotel-section > .review_ratings > .review-list > div > .review-rates svg {
+  fill: #feb600;
+  font-size: 1.2rem;
 }
 main .reservation-form-container {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -867,9 +917,10 @@ main .reservation-form-container {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  flex-grow: 1;
   align-self: flex-start;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 main .reservation-form-container > div {
   display: flex;
@@ -880,7 +931,6 @@ main .reservation-form-container > div {
 }
 main .reservation-form-container > .buttons > button {
   padding: 1rem;
-  margin: 1rem;
   background-color: #ffffff;
   color: #000000;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -890,18 +940,20 @@ main .reservation-form-container > .buttons > button > strong {
   margin-left: 1rem;
 }
 main .reservation-form-container > table {
-  border-collapse: collapse;
   width: 100%;
-}
-main .reservation-form-container > table > thead > tr > th {
-  padding-bottom: 1rem;
 }
 main .reservation-form-container > table > tbody > tr > th,
 main .reservation-form-container > table > tbody td {
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  text-align: center;
 }
 main .reservation-form-container > table > tbody > tr > td {
   height: 65px;
+}
+main .reservation-form-container > table > tbody > tr > td > .counter-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 main .reservation-form-container > table > tbody > tr > td > .counter-container > .counter {
   display: flex;
@@ -941,7 +993,6 @@ main .reservation-form-container .make-reservation {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  width: 95%;
 }
 main .reservation-form-container > .checkbox-price > label,
 main .reservation-form-container .make-reservation > label {
@@ -1349,9 +1400,10 @@ main > div > .section-container > .confirmation-section > .row > .email-confirma
   width: 100%;
 }
 
-main {
+.hero-margin {
   margin-top: 85vh;
 }
+
 main > div > h2 {
   margin-bottom: 1rem;
 }
@@ -1365,6 +1417,9 @@ main > div > ul {
 }
 main > div > ul > li {
   margin: 0 2rem 1rem 0;
+}
+main > section {
+  border: 2px solid red;
 }
 
 .slide {

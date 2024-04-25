@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Search from "../header/search/Search";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Profile from "./Profile";
 import Login from "./Login";
 import Register from "./Register";
@@ -12,6 +12,20 @@ import logo from "../../assets/logo/logoHotelfinder.webp";
 export default function Header() {
   const [display, setDisplay] = useState({ login: false, register: false });
   const { authenticated } = useContext(AuthenticatedContext);
+  const [mobile, setMobile] = useState(window.innerWidth < 968);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth < 968);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove the event listener when component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
     <>
@@ -21,7 +35,7 @@ export default function Header() {
             <img src={logo} alt="Logo" />
           </Link>
         </div>
-        <Search />
+        {!mobile && <Search />}
 
         {/* Logged in */}
         {authenticated ? (

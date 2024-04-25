@@ -71,8 +71,8 @@ input[type="password"] {
 
 .login-register {
   @include flex(row, center, center);
+  gap: $marginSmall;
   button:first-child {
-    margin-right: $marginMedium;
     color: $colorBlack;
     background-color: $colorWhite;
   }

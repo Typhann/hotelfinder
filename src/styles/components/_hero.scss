@@ -6,19 +6,32 @@
   top: 125px;
   background-image: url("../assets/Backgrounds/hero.webp");
   background-size: cover;
-  transform: rotate(180deg);
   @include flex(column, center, center);
+  padding: 15% 0;
   gap: $marginLarge;
-  > * {
-    transform: rotate(180deg);
-  }
   > h2 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     text-align: center;
   }
   > a {
-    width: 150px;
-    height: 40px;
+    width: 250px;
+    padding: 1rem;
     background-color: $colorPrimary;
+  }
+  > div {
+    > .search-container > .search-options {
+      width: 100%;
+      background-color: white;
+      margin-bottom: $marginMedium;
+    }
+  }
+}
+@media (max-width: 968px) {
+  .hero {
+    justify-content: flex-start;
+    gap: 5rem;
+    > h2 {
+      font-size: 3rem;
+    }
   }
 }
