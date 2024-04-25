@@ -1,21 +1,23 @@
 main {
   > div > .hotel-header {
-    @include flex(row, space-between, center);
+    @include flex(row, space-between, flex-start);
+    gap: $marginMedium;
     > .name-rating {
-      @include flex(row, flex-start, center);
+      flex-wrap: wrap;
+      @include flex(row, flex-start, flex-start);
       > h1 {
         margin: 0 $marginMedium $marginSmall 0;
       }
-      > span > svg {
+      > div > span > svg {
         fill: $colorStar;
         font-size: 1.5rem;
       }
     }
     > .share-heart {
+      @include flex(row, space-between, flex-start);
+      flex-wrap: wrap;
+      gap: $marginMedium;
       font-size: 1.5rem;
-      svg:first-child {
-        margin-right: $marginMedium;
-      }
     }
   }
   > div > .image-container {
@@ -39,6 +41,10 @@ main {
       > div {
         @include flex(column, space-between, space-between);
         gap: $marginMedium;
+        > div > .amenities {
+          @include flex(row, flex-start, space-between);
+          flex-wrap: wrap;
+        }
       }
       > .review_ratings {
         margin: $marginLarge 0 $marginLarge 0;
@@ -153,4 +159,8 @@ main {
   > input {
     margin-bottom: 0;
   }
+}
+
+.hotel-adress {
+  margin-top: $marginMedium;
 }

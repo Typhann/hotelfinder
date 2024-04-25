@@ -825,26 +825,31 @@ main > div > .hotel-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
 }
 main > div > .hotel-header > .name-rating {
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 main > div > .hotel-header > .name-rating > h1 {
   margin: 0 1rem 0.5rem 0;
 }
-main > div > .hotel-header > .name-rating > span > svg {
+main > div > .hotel-header > .name-rating > div > span > svg {
   fill: #feb600;
   font-size: 1.5rem;
 }
 main > div > .hotel-header > .share-heart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
   font-size: 1.5rem;
-}
-main > div > .hotel-header > .share-heart svg:first-child {
-  margin-right: 1rem;
 }
 main > div > .image-container {
   max-width: 100vw;
@@ -881,6 +886,13 @@ main > div > .hotel-section-container > .hotel-section > div {
   justify-content: space-between;
   align-items: space-between;
   gap: 1rem;
+}
+main > div > .hotel-section-container > .hotel-section > div > div > .amenities {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: space-between;
+  flex-wrap: wrap;
 }
 main > div > .hotel-section-container > .hotel-section > .review_ratings {
   margin: 2rem 0 2rem 0;
@@ -1012,6 +1024,10 @@ main .reservation-form-container > strong {
 }
 .checkbox-price > label > input {
   margin-bottom: 0;
+}
+
+.hotel-adress {
+  margin-top: 1rem;
 }
 
 input[type=text],

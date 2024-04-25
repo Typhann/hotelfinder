@@ -56,11 +56,13 @@ export default function Hotel() {
           <div className="name-rating">
             <h1>{hotel.name}</h1>
             {/* Creates and maps over an array of five and returns filled stars for the hotels rating and empty stars for the remainder to five */}
-            {Array.from({ length: 5 }, (_, index) => (
-              <span key={index}>
-                {index < hotel.review_ratings ? <FaStar /> : <FaRegStar />}
-              </span>
-            ))}
+            <div>
+              {Array.from({ length: 5 }, (_, index) => (
+                <span key={index}>
+                  {index < hotel.review_ratings ? <FaStar /> : <FaRegStar />}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="share-heart">
@@ -68,8 +70,7 @@ export default function Hotel() {
             <FaRegHeart />
           </div>
         </div>
-
-        <p>{hotel.address}</p>
+        <p className="hotel-adress">{hotel.address}</p>
         <div className="image-container carousel">
           <img src={hotelImage1} alt="Image of hotel" />
           <img src={hotelImage2} alt="Image of hotel" />
