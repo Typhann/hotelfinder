@@ -181,7 +181,7 @@
       "rating": 4,
       "address": "30 Riverfront Road, Riverside",
       "price_per_night": 150,
-      "amenities": ["Family friendly", "Food Included", "WiFi"],
+      "amenities": ["Family friendly", "Food Included"],
       "restaurant_description": "On Mamita's Beach, Grand Hyatt Playa del Carmen Resort offers a unique dining experience. Our restaurant blends natural elements and artwork while overlooking three ocean-front pools and a Cenote-inspired spa. We provide a diverse menu with vegan and allergy-friendly options for a memorable culinary journey in a stunning setting.",
       "restaurant_amenities": [
         "Vegan options",

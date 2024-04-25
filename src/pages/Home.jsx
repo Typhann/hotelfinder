@@ -3,6 +3,7 @@ import { renderHotels } from "../../utils";
 import database from "../../database.json";
 import Filter from "../components/Filter";
 import { motion } from "framer-motion";
+import AccountBanner from "../components/AccountBanner";
 
 export default function Home() {
   // scrolls user to top
@@ -28,6 +29,7 @@ export default function Home() {
 
         {renderHotels("Europe", "carousel")}
         {renderHotels("Africa", "carousel")}
+        <AccountBanner />
         {renderHotels("USA", "carousel")}
         {renderHotels("South America", "carousel")}
         {renderHotels("Asia", "carousel")}

@@ -1,0 +1,34 @@
+.account-banner {
+  background-image: url("../assets/Backgrounds/worms.webp");
+  background-size: cover;
+  border-radius: 25px;
+  > div {
+    @include flex(column, center, center);
+    padding: $paddingContainerMedium;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    > div {
+      @include flex(column, center, center);
+      padding: $paddingContainerMedium;
+      gap: $marginMedium;
+      max-width: 450px;
+      > h3 {
+        font-size: 3rem;
+        text-align: center;
+      }
+      > p {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+        > a {
+          font-weight: 700;
+        }
+      }
+      > button {
+        width: 100%;
+        background-color: $colorPrimary;
+      }
+    }
+  }
+}
