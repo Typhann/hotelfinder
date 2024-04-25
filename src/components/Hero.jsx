@@ -1,7 +1,9 @@
 export default function Hero() {
   return (
     <div className="hero">
-      <button className="button">Explore</button>
+      <a href="#popular-destinations" className="button">
+        Explore
+      </a>
       <h2>Book Hotels With Ease</h2>
     </div>
   );

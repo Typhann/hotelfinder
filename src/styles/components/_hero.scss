@@ -1,6 +1,9 @@
 .hero {
   height: 85vh;
-  width: 100%;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 125px;
   background-image: url("../assets/Backgrounds/hero.webp");
   background-size: cover;
   transform: rotate(180deg);
@@ -13,7 +16,7 @@
     font-size: 3.5rem;
     text-align: center;
   }
-  > button {
+  > a {
     width: 150px;
     height: 40px;
     background-color: $colorPrimary;

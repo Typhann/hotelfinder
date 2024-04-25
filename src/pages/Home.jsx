@@ -16,7 +16,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-        <h2>Popular destinations</h2>
+        <h2 id="popular-destinations">Popular destinations</h2>
         <ul>
           {database.popularDestinations.map((destination) => (
             <li key={destination}>

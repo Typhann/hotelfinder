@@ -22,6 +22,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  scroll-padding: 150px;
 }
 
 body {
@@ -153,6 +155,7 @@ footer {
   z-index: 1;
   position: sticky;
   top: 0;
+  height: 125px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -200,9 +203,10 @@ footer:before {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: absolute;
   height: 100%;
-  width: 98.8vw;
+  width: 100dvw;
   left: 50%;
   top: 0;
+  background-color: white;
   transform: translate(-50%, 0px);
   z-index: -1;
 }
@@ -727,7 +731,10 @@ h3 {
 }
 .hero {
   height: 85vh;
-  width: 100%;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 125px;
   background-image: url("../assets/Backgrounds/hero.webp");
   background-size: cover;
   transform: rotate(180deg);
@@ -744,7 +751,7 @@ h3 {
   font-size: 3.5rem;
   text-align: center;
 }
-.hero > button {
+.hero > a {
   width: 150px;
   height: 40px;
   background-color: #4a376d;
@@ -1301,6 +1308,9 @@ main > div > .section-container > .confirmation-section > .row > .email-confirma
   width: 100%;
 }
 
+main {
+  margin-top: 85vh;
+}
 main > div > h2 {
   margin-bottom: 1rem;
 }

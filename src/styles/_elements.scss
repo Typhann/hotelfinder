@@ -5,6 +5,11 @@
 }
 html {
   @include flex(column, center, center);
+  overflow-x: hidden;
+  scroll-padding: 150px;
+}
+
+.site-wrapper {
 }
 
 body {
