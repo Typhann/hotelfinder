@@ -725,6 +725,31 @@ h3 {
     right: 0px;
   }
 }
+.hero {
+  height: 85vh;
+  width: 100%;
+  background-image: url("../assets/Backgrounds/hero.webp");
+  background-size: cover;
+  transform: rotate(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.hero > * {
+  transform: rotate(180deg);
+}
+.hero > h2 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+.hero > button {
+  width: 150px;
+  height: 40px;
+  background-color: #4a376d;
+}
+
 main > div > .hotel-header {
   display: flex;
   flex-direction: row;

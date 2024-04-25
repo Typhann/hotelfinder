@@ -1,0 +1,21 @@
+.hero {
+  height: 85vh;
+  width: 100%;
+  background-image: url("../assets/Backgrounds/hero.webp");
+  background-size: cover;
+  transform: rotate(180deg);
+  @include flex(column, center, center);
+  gap: $marginLarge;
+  > * {
+    transform: rotate(180deg);
+  }
+  > h2 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  > button {
+    width: 150px;
+    height: 40px;
+    background-color: $colorPrimary;
+  }
+}
