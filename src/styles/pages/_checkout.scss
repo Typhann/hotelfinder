@@ -26,6 +26,7 @@ main {
     }
     > p {
       color: $colorGray;
+      text-align: center;
     }
     > .breadcrumb-line {
       background-color: $colorGray;
@@ -40,11 +41,8 @@ main {
     }
   }
   > div > .section-container {
-    // width: 60%;
-    // margin-left: 40%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
     gap: calc(#{$marginLarge} * 2);
     margin-bottom: $marginLarge;
     section {
@@ -54,7 +52,6 @@ main {
       > small,
       form > h3 {
         margin-bottom: $marginSmall;
-        // border: 2px solid red;
       }
       small {
         margin-bottom: 2rem;
@@ -75,7 +72,9 @@ main {
     > .selection-section {
       grid-area: 1 / 1 / 2 / 2;
       align-self: start;
-      // border: 2px solid red;
+      min-width: 300px;
+      width: 20%;
+      flex-grow: 1;
       > h3,
       p,
       .dates-container,
@@ -84,7 +83,6 @@ main {
       }
       > .row {
         @include flex(row, flex-start, center);
-        // width: 100%;
         gap: $marginMedium;
         > div > span > svg {
           fill: $colorStar;
@@ -117,21 +115,29 @@ main {
     }
     > .confirm-details-section {
       grid-area: 1 / 2 / 3 / 4;
+      width: 50%;
+      flex-grow: 1;
       span {
         font-weight: 700;
         font-size: $fontSizeP;
       }
       > form {
+        @include flex(column, flex-start, flex-start);
         > .fullName-container {
-          @include flex(row, center, center);
+          @include flex(row, flex-start, center);
+          flex-wrap: wrap;
+          width: 100%;
+          gap: 0 1rem;
           > div {
             @include flex(column, center, flex-start);
-            margin-right: $marginLarge;
+            flex-grow: 1;
+            > input {
+              align-self: stretch;
+            }
           }
         }
-        > input[type="email"] {
-          width: 50%;
-          min-width: 250px;
+        > input {
+          align-self: stretch;
         }
         > input[type="text"] {
           &:focus {
@@ -161,9 +167,11 @@ main {
           align-self: flex-end;
           @include flex(row, center, center);
           gap: $marginMedium;
+          text-align: center;
           > button:first-child {
             color: $colorBlack;
             background-color: $colorWhite;
+            box-shadow: $boxShadow;
           }
         }
       }

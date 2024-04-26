@@ -1087,6 +1087,7 @@ main > div > .breadcrumbs > svg {
 }
 main > div > .breadcrumbs > p {
   color: #c5c5c5;
+  text-align: center;
 }
 main > div > .breadcrumbs > .breadcrumb-line {
   background-color: #c5c5c5;
@@ -1100,9 +1101,11 @@ main > div > .breadcrumbs .finished-line {
   background-color: #000000;
 }
 main > div > .section-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: calc(2rem * 2);
   margin-bottom: 2rem;
 }
@@ -1134,6 +1137,9 @@ main > div > .section-container section > form input[type=tel]:focus {
 main > div > .section-container > .selection-section {
   grid-area: 1/1/2/2;
   align-self: start;
+  min-width: 300px;
+  width: 20%;
+  flex-grow: 1;
 }
 main > div > .section-container > .selection-section > h3,
 main > div > .section-container > .selection-section p,
@@ -1181,27 +1187,40 @@ main > div > .section-container > .selection-section > .dates-container > .dates
 }
 main > div > .section-container > .confirm-details-section {
   grid-area: 1/2/3/4;
+  width: 50%;
+  flex-grow: 1;
 }
 main > div > .section-container > .confirm-details-section span {
   font-weight: 700;
   font-size: 1rem;
 }
+main > div > .section-container > .confirm-details-section > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 main > div > .section-container > .confirm-details-section > form > .fullName-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0 1rem;
 }
 main > div > .section-container > .confirm-details-section > form > .fullName-container > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-right: 2rem;
+  flex-grow: 1;
 }
-main > div > .section-container > .confirm-details-section > form > input[type=email] {
-  width: 50%;
-  min-width: 250px;
+main > div > .section-container > .confirm-details-section > form > .fullName-container > div > input {
+  align-self: stretch;
+}
+main > div > .section-container > .confirm-details-section > form > input {
+  align-self: stretch;
 }
 main > div > .section-container > .confirm-details-section > form > input[type=text]:focus {
   border: 2px solid black;
@@ -1230,10 +1249,12 @@ main > div > .section-container > .confirm-details-section > form > .checkout-bu
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  text-align: center;
 }
 main > div > .section-container > .confirm-details-section > form > .checkout-buttons > button:first-child {
   color: #000000;
   background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 main > div > .section-container > .confirmed-details-section-small {
   display: flex;
