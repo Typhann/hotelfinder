@@ -30,11 +30,9 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className="logo">
-          <Link to="/">
-            <img src={logo} alt="Logo" />
-          </Link>
-        </div>
+        <Link className="logo" to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
         {!mobile && <Search />}
 
         {/* Logged in */}

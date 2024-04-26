@@ -18,13 +18,15 @@ export default function Hero() {
   }, []); // Empty dependency array ensures this effect runs only once on mount
   return (
     <div className="hero">
-      <h2>Book Hotels With Ease</h2>
-      <div>{mobile && <Search />}</div>
-      {!mobile && (
-        <a href="#popular-destinations" className="button">
-          Explore Destinations
-        </a>
-      )}
+      <div>
+        <h2>Find Hotels With Ease</h2>
+        <div>{mobile && <Search />}</div>
+        {!mobile && (
+          <a href="#popular-destinations" className="button">
+            Explore Destinations
+          </a>
+        )}
+      </div>
     </div>
   );
 }

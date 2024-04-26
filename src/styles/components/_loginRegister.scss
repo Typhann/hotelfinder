@@ -70,10 +70,12 @@ input[type="password"] {
 }
 
 .login-register {
-  @include flex(row, center, center);
+  @include flex(row, flex-end, center);
+  flex-wrap: wrap;
   gap: $marginSmall;
   button:first-child {
     color: $colorBlack;
     background-color: $colorWhite;
+    box-shadow: $boxShadow;
   }
 }

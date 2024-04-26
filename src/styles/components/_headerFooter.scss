@@ -1,14 +1,18 @@
-header,
-footer {
+header {
   z-index: 1;
   position: sticky;
   top: 0;
-  height: 125px;
+  min-height: 80px;
   @include flex(row, space-between, center);
-  padding: $paddingContainerLarge;
+  gap: 1rem;
+  padding: 0.5rem $paddingContainerMedium;
   background-color: $colorWhite;
-  > .logo > a {
-    @include flex(column, center, flex-start);
+  > .logo {
+    min-width: 150px;
+    > img {
+      margin-top: 15px;
+      width: 100%;
+    }
   }
   > .search-container {
     @include flex(row, center, center);
@@ -26,33 +30,27 @@ footer {
   color: $colorAction;
 }
 
-.footerlist li {
-  display: inline-block;
-  padding: 1rem;
-}
-
 // makes header box shadow extend beyond max with of website
 header:before,
 footer:before {
   content: "";
   box-shadow: $boxShadow;
   position: absolute;
-  height: 100%;
+  height: 80px;
   background-color: white;
   width: 100vw;
   left: 50%;
   top: 0;
   transform: translate(-50%, 0px);
   z-index: -1;
-  // overflow: hidden;
 }
 
 .search-container {
   .search-options {
     @include flex(row, center, center);
+    flex-wrap: wrap;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
-    min-width: 400px;
     margin-right: $marginMedium;
     svg {
       margin-right: $marginMedium;
@@ -194,6 +192,27 @@ footer:before {
   background-color: $colorAction !important;
 }
 
+footer {
+  @include flex(row, space-between, center);
+  background-color: $colorWhite;
+  box-shadow: $boxShadow;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: $paddingContainerMedium;
+  > .logo {
+    min-width: 150px;
+    > img {
+      margin-top: 15px;
+    }
+  }
+  > .footerlist {
+    @include flex(row, flex-start, flex-start);
+    gap: 1rem;
+  }
+  > address {
+  }
+}
+
 @media (min-width: 1750px) {
   .modal-container {
     overflow: hidden;
@@ -219,6 +238,7 @@ footer:before {
     justify-content: space-between !important;
     align-items: flex-start !important;
     width: 100%;
+    flex-wrap: wrap;
     > .counter-container {
       > p {
         margin: 5px !important;

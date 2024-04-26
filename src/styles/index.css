@@ -149,35 +149,33 @@ input[type=checkbox] {
   border-radius: 10px;
 }
 
-header,
-footer {
+header {
   z-index: 1;
   position: sticky;
   top: 0;
-  height: 125px;
+  min-height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
   background-color: #ffffff;
 }
-header > .logo > a,
-footer > .logo > a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+header > .logo {
+  min-width: 150px;
 }
-header > .search-container,
-footer > .search-container {
+header > .logo > img {
+  margin-top: 15px;
+  width: 100%;
+}
+header > .search-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-header > .profile-favorite,
-footer > .profile-favorite {
+header > .profile-favorite {
   font-size: 30px;
   width: 7%;
   display: flex;
@@ -191,17 +189,12 @@ footer > .profile-favorite {
   color: #a41752;
 }
 
-.footerlist li {
-  display: inline-block;
-  padding: 1rem;
-}
-
 header:before,
 footer:before {
   content: "";
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: absolute;
-  height: 100%;
+  height: 80px;
   background-color: white;
   width: 100vw;
   left: 50%;
@@ -215,9 +208,9 @@ footer:before {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
-  min-width: 400px;
   margin-right: 1rem;
 }
 .search-container .search-options svg {
@@ -371,6 +364,30 @@ footer:before {
   background-color: #a41752 !important;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+footer > .logo {
+  min-width: 150px;
+}
+footer > .logo > img {
+  margin-top: 15px;
+}
+footer > .footerlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
 @media (min-width: 1750px) {
   .modal-container {
     overflow: hidden;
@@ -395,6 +412,7 @@ footer:before {
     justify-content: space-between !important;
     align-items: flex-start !important;
     width: 100%;
+    flex-wrap: wrap;
   }
   .room-options-container > .counter-container {
     flex-direction: column !important;
@@ -645,13 +663,15 @@ input[type=password] {
 .login-register {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .login-register button:first-child {
   color: #000000;
   background-color: #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .profile {
@@ -745,37 +765,41 @@ h3 {
   width: 100vw;
   position: absolute;
   left: 0;
-  top: 125px;
+  top: 80px;
   background-image: url("../assets/Backgrounds/hero.webp");
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.hero > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15% 0;
   gap: 2rem;
 }
-.hero > h2 {
+.hero > div > h2 {
   font-size: 4.5rem;
   text-align: center;
 }
-.hero > a {
+.hero > div > a {
   width: 250px;
   padding: 1rem;
   background-color: #4a376d;
 }
-.hero > div > .search-container > .search-options {
+.hero > div > div {
+  max-width: 80vw;
+}
+.hero > div > div > .search-container > .search-options {
   width: 100%;
   background-color: white;
   margin-bottom: 1rem;
 }
 
 @media (max-width: 968px) {
-  .hero {
-    justify-content: flex-start;
-    gap: 5rem;
-  }
-  .hero > h2 {
+  .hero > div > h2 {
     font-size: 3rem;
   }
 }
@@ -1417,7 +1441,7 @@ main > div > .section-container > .confirmation-section > .row > .email-confirma
 }
 
 .hero-margin {
-  margin-top: 85vh;
+  margin-top: 90vh;
 }
 
 main > div > h2 {

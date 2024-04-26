@@ -5,25 +5,20 @@ import logo from "../assets/logo/logoHotelfinder.webp";
 export default function Footer() {
   return (
     <footer>
-      <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="Logo" />
-        </Link>
-      </div>
-
-      <div>
-        <ul className="footerlist">
-          <li>
+      <Link className="logo" to="/">
+        <img src={logo} alt="Logo" />
+      </Link>
+      <ul className="footerlist">
+        <li>
           <Link to="#"> Log in</Link>
-          </li>
-          <li>
+        </li>
+        <li>
           <Link to="#"> Register</Link>
-          </li>
-          <li>
+        </li>
+        <li>
           <Link to="#"> Contact</Link>
-          </li>
-        </ul>
-      </div>
+        </li>
+      </ul>
 
       <address>
         <p>My street 123</p>

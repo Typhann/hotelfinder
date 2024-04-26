@@ -3,34 +3,35 @@
   width: 100vw;
   position: absolute;
   left: 0;
-  top: 125px;
+  top: 80px;
   background-image: url("../assets/Backgrounds/hero.webp");
   background-size: cover;
-  @include flex(column, center, center);
-  padding: 15% 0;
-  gap: $marginLarge;
-  > h2 {
-    font-size: 4.5rem;
-    text-align: center;
-  }
-  > a {
-    width: 250px;
-    padding: 1rem;
-    background-color: $colorPrimary;
-  }
+  @include flex(row, center, center);
   > div {
-    > .search-container > .search-options {
-      width: 100%;
-      background-color: white;
-      margin-bottom: $marginMedium;
+    @include flex(column, center, center);
+    gap: $marginLarge;
+    > h2 {
+      font-size: 4.5rem;
+      text-align: center;
+    }
+    > a {
+      width: 250px;
+      padding: 1rem;
+      background-color: $colorPrimary;
+    }
+    > div {
+      max-width: 80vw;
+      > .search-container > .search-options {
+        width: 100%;
+        background-color: white;
+        margin-bottom: $marginMedium;
+      }
     }
   }
 }
 @media (max-width: 968px) {
   .hero {
-    justify-content: flex-start;
-    gap: 5rem;
-    > h2 {
+    > div > h2 {
       font-size: 3rem;
     }
   }
