@@ -24,15 +24,16 @@ export default function Login({ display, setDisplay }) {
     /* Modal - present the content above an enclosing view to create overlay */
     <Modal open={display} onClose={() => setDisplay(false)}>
       <div className="log-in-section">
-        <button
-          onClick={() => setDisplay({ ...display, login: false })}
-          className="close-overlay"
-        >
-          <FaWindowClose />
-        </button>
-        <form onSubmit={handlesubmit} className="log-in-section-inner">
+        <div>
           <h1>Log in</h1>
-
+          <button
+            // onClick={() => setDisplay({ ...display, login: false })}
+            className="close-overlay"
+          >
+            <FaWindowClose />
+          </button>
+        </div>
+        <form onSubmit={handlesubmit}>
           <div className="email">
             <label htmlFor="login-email">Email</label>
             <br />

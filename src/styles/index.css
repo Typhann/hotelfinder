@@ -153,13 +153,13 @@ header {
   z-index: 1;
   position: sticky;
   top: 0;
-  min-height: 80px;
+  min-height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   background-color: #ffffff;
 }
 header > .logo {
@@ -194,7 +194,7 @@ footer:before {
   content: "";
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   position: absolute;
-  height: 80px;
+  height: 100px;
   background-color: white;
   width: 100vw;
   left: 50%;
@@ -589,45 +589,64 @@ section > .hotels-container > .card-container .card-bottom > .share-heart > .fil
 .log-in-section {
   z-index: 10000;
   width: 60%;
+  max-width: 800px;
+  min-width: 350px;
   transform: translate(-50%, -50%);
+  overflow-x: scroll;
   position: absolute;
   top: 50%;
   left: 50%;
   background-color: #ffffff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 .log-in-section:focus {
   border: none !important;
 }
-.log-in-section > .close-overlay {
-  float: right;
-  border: none;
-  margin: 1rem;
+.log-in-section > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.log-in-section > div > h1 {
+  margin: 0 auto;
+}
+.log-in-section > div > .close-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
   color: #a41752;
   border: none;
-  font-size: 18px;
+  font-size: 28px;
   background: none;
   cursor: pointer;
 }
-.log-in-section > .log-in-section-inner {
+.log-in-section > form {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.log-in-section > .log-in-section-inner > h1 {
+.log-in-section > form > h1 {
   margin-bottom: 2rem;
 }
-.log-in-section > .log-in-section-inner > .log-in-BTN {
+.log-in-section > form > .log-in-BTN {
   width: 260px;
   margin: 1rem 0 1rem 0;
 }
-.log-in-section > .log-in-section-inner > .disabled {
+.log-in-section > form > .disabled {
   background-color: #c5c5c5;
 }
-.log-in-section > .log-in-section-inner > div > input {
+.log-in-section > form > div > input {
   margin-bottom: 1rem;
 }
 
@@ -1054,14 +1073,6 @@ main .reservation-form-container > strong {
   margin-top: 1rem;
 }
 
-input[type=text],
-input[type=checkbox],
-input[type=time],
-input[type=email],
-input[type=tel] {
-  margin-bottom: 2rem;
-}
-
 label {
   margin-bottom: 0.5rem;
 }
@@ -1080,6 +1091,7 @@ main > div > .breadcrumbs {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  gap: 0.25rem;
 }
 main > div > .breadcrumbs > svg {
   font-size: 1.5rem;
@@ -1088,6 +1100,7 @@ main > div > .breadcrumbs > svg {
 main > div > .breadcrumbs > p {
   color: #c5c5c5;
   text-align: center;
+  font-size: 12px;
 }
 main > div > .breadcrumbs > .breadcrumb-line {
   background-color: #c5c5c5;
@@ -1183,7 +1196,8 @@ main > div > .section-container > .selection-section > .dates-container > .dates
   padding: 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
-  width: 47.5%;
+  align-self: stretch;
+  width: calc(50% - 0.5rem);
 }
 main > div > .section-container > .confirm-details-section {
   grid-area: 1/2/3/4;
@@ -1207,7 +1221,8 @@ main > div > .section-container > .confirm-details-section > form > .fullName-co
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  gap: 0 1rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 main > div > .section-container > .confirm-details-section > form > .fullName-container > div {
   display: flex;
@@ -1221,6 +1236,7 @@ main > div > .section-container > .confirm-details-section > form > .fullName-co
 }
 main > div > .section-container > .confirm-details-section > form > input {
   align-self: stretch;
+  margin-bottom: 1rem;
 }
 main > div > .section-container > .confirm-details-section > form > input[type=text]:focus {
   border: 2px solid black;
@@ -1232,6 +1248,7 @@ main > div > .section-container > .confirm-details-section > form > p {
 main > div > .section-container > .confirm-details-section > form > textarea {
   margin-bottom: 2rem;
   margin-top: 0.5rem;
+  align-self: stretch;
 }
 main > div > .section-container > .confirm-details-section > form > .checkbox > label {
   font-weight: 400;
@@ -1243,6 +1260,7 @@ main > div > .section-container > .confirm-details-section > form > #checkIn {
   margin-top: 0.5rem;
 }
 main > div > .section-container > .confirm-details-section > form > .checkout-buttons {
+  margin-top: 2rem;
   align-self: flex-end;
   display: flex;
   flex-direction: row;
@@ -1262,8 +1280,10 @@ main > div > .section-container > .confirmed-details-section-small {
   justify-content: flex-start;
   align-items: flex-start;
   align-self: start;
+  min-width: 300px;
+  width: 20%;
+  flex-grow: 1;
   grid-area: 2/1/2/2;
-  margin-top: -0.5rem;
 }
 main > div > .section-container > .confirmed-details-section-small h3 {
   margin-bottom: 1rem;
@@ -1278,10 +1298,10 @@ main > div > .section-container > .confirmed-details-section-small > p:nth-of-ty
 main > div > .section-container > .payment-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  grid-area: 1/2/3/4;
-  align-self: flex-start;
+  width: 60%;
+  flex-grow: 1;
 }
 main > div > .section-container > .payment-section > h3 {
   margin-bottom: 1rem;
@@ -1319,7 +1339,8 @@ main > div > .section-container > .payment-section > form > .row {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
+  align-self: stretch;
   flex-wrap: wrap;
 }
 main > div > .section-container > .payment-section > form > .row > .column {
@@ -1327,26 +1348,17 @@ main > div > .section-container > .payment-section > form > .row > .column {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  flex-grow: 1;
+  margin-bottom: 1rem;
 }
 main > div > .section-container > .payment-section > form > .row > .column > input {
-  margin-bottom: 2rem;
+  align-self: stretch;
+  min-width: 200px;
 }
-main > div > .section-container > .payment-section > form > .row > .column > #name,
-main > div > .section-container > .payment-section > form > .row > .column #cardNumber,
-main > div > .section-container > .payment-section > form > .row > .column #address {
-  width: 250px;
-}
-main > div > .section-container > .payment-section > form > .row > .column > #expiration {
-  width: 125px;
-}
-main > div > .section-container > .payment-section > form > .row > .column > #cvc {
+main > div > .section-container > .payment-section > form > .row > .column > #expiration,
+main > div > .section-container > .payment-section > form > .row > .column #cvc,
+main > div > .section-container > .payment-section > form > .row > .column #zip {
   width: 50px;
-}
-main > div > .section-container > .payment-section > form > .row > .column > #zip {
-  width: 75px;
-}
-main > div > .section-container > .payment-section > form > .end-of-card-details {
-  margin-bottom: 2rem;
 }
 main > div > .section-container > .payment-section > form > .checkout-buttons {
   display: flex;
@@ -1371,14 +1383,9 @@ main > div > .section-container > .confirmation-section {
   grid-area: 1/2/3/4;
   align-self: flex-start;
   text-align: center;
-}
-main > div > .section-container > .confirmation-section > h1,
-main > div > .section-container > .confirmation-section h3,
-main > div > .section-container > .confirmation-section .row,
-main > div > .section-container > .confirmation-section svg,
-main > div > .section-container > .confirmation-section button,
-main > div > .section-container > .confirmation-section p {
-  margin-bottom: 2rem;
+  align-self: stretch;
+  width: 100%;
+  gap: 2rem;
 }
 main > div > .section-container > .confirmation-section > strong {
   margin-bottom: 0.5rem;
@@ -1412,6 +1419,14 @@ main > div > .section-container > .confirmation-section > .row > .email-confirma
   padding-left: 1rem;
 }
 
+@media (max-width: 768px) {
+  .section-container {
+    gap: 2rem !important;
+  }
+  .payment-section > form > .row {
+    gap: 0 !important;
+  }
+}
 .favorite-section {
   width: 100%;
 }

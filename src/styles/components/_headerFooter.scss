@@ -2,10 +2,12 @@ header {
   z-index: 1;
   position: sticky;
   top: 0;
-  min-height: 80px;
+  min-height: 100px;
   @include flex(row, space-between, center);
   gap: 1rem;
-  padding: 0.5rem $paddingContainerMedium;
+  // width: 100%;
+  // padding: 1rem $paddingContainerMedium;
+  padding: $paddingContainerMedium;
   background-color: $colorWhite;
   > .logo {
     min-width: 150px;
@@ -36,7 +38,7 @@ footer:before {
   content: "";
   box-shadow: $boxShadow;
   position: absolute;
-  height: 80px;
+  height: 100px;
   background-color: white;
   width: 100vw;
   left: 50%;

@@ -31,7 +31,7 @@ export default function Header() {
     <>
       <header>
         <Link className="logo" to="/">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" draggable={false} />
         </Link>
         {!mobile && <Search />}
 
@@ -49,13 +49,13 @@ export default function Header() {
           // Logged out
           <div className="login-register">
             <button
-              onClick={() => setDisplay({ ...display, login: true })}
+              // onClick={() => setDisplay({ ...display, login: true })}
               className="button"
             >
               Log in
             </button>
             <button
-              onClick={() => setDisplay({ ...display, register: true })}
+              // onClick={() => setDisplay({ ...display, register: true })}
               className="button"
             >
               Register

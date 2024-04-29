@@ -8,7 +8,7 @@ export default function Register({ display, setDisplay }) {
     <Modal open={display} onClose={() => setDisplay(false)}>
       <div className="log-in-section">
         <button
-          onClick={() => setDisplay({ ...display, register: false })}
+          // onClick={() => setDisplay({ ...display, register: false })}
           className="close-overlay"
         >
           <FaWindowClose />

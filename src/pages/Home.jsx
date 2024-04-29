@@ -25,7 +25,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <Filter />
+        {/* <Filter /> */}
 
         {renderHotels("Europe", "carousel")}
         {renderHotels("Africa", "carousel")}

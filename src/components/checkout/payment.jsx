@@ -10,6 +10,7 @@ export default function Payment({
   setDisplayPayment,
   setDisplayConfirmation,
   setDisplayDetails,
+  setDisplayConfirmedDetails,
 }) {
   const [disableButton, setDisableButton] = useState(false);
 
@@ -30,6 +31,7 @@ export default function Payment({
         setDisableButton(false);
         setDisplayPayment(false);
         setDisplayConfirmation(true);
+        setDisplayConfirmedDetails(false);
       }, 3000);
     }
   }

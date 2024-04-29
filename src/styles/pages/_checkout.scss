@@ -1,10 +1,10 @@
-input[type="text"],
-input[type="checkbox"],
-input[type="time"],
-input[type="email"],
-input[type="tel"] {
-  margin-bottom: $marginLarge;
-}
+// input[type="text"],
+// input[type="checkbox"],
+// input[type="time"],
+// input[type="email"],
+// input[type="tel"] {
+//   margin-bottom: $marginLarge;
+// }
 label {
   margin-bottom: $marginSmall;
 }
@@ -20,6 +20,7 @@ main {
   > div > .breadcrumbs {
     @include flex(row, space-between, center);
     margin-bottom: $marginLarge;
+    gap: 0.25rem;
     > svg {
       font-size: 1.5rem;
       color: $colorGray;
@@ -27,6 +28,7 @@ main {
     > p {
       color: $colorGray;
       text-align: center;
+      font-size: 12px;
     }
     > .breadcrumb-line {
       background-color: $colorGray;
@@ -110,7 +112,8 @@ main {
         padding: $paddingContainerMedium;
         box-shadow: $boxShadow;
         border-radius: $borderRadius;
-        width: 47.5%;
+        align-self: stretch;
+        width: calc(50% - 0.5rem);
       }
     }
     > .confirm-details-section {
@@ -127,7 +130,8 @@ main {
           @include flex(row, flex-start, center);
           flex-wrap: wrap;
           width: 100%;
-          gap: 0 1rem;
+          gap: 1rem;
+          margin-bottom: 1rem;
           > div {
             @include flex(column, center, flex-start);
             flex-grow: 1;
@@ -138,6 +142,7 @@ main {
         }
         > input {
           align-self: stretch;
+          margin-bottom: 1rem;
         }
         > input[type="text"] {
           &:focus {
@@ -151,6 +156,7 @@ main {
         > textarea {
           margin-bottom: $marginLarge;
           margin-top: $marginSmall;
+          align-self: stretch;
         }
         > .checkbox {
           > label {
@@ -164,6 +170,7 @@ main {
           margin-top: $marginSmall;
         }
         > .checkout-buttons {
+          margin-top: 2rem;
           align-self: flex-end;
           @include flex(row, center, center);
           gap: $marginMedium;
@@ -179,8 +186,10 @@ main {
     > .confirmed-details-section-small {
       @include flex(column, flex-start, flex-start);
       align-self: start;
+      min-width: 300px;
+      width: 20%;
+      flex-grow: 1;
       grid-area: 2 / 1 / 2 / 2;
-      margin-top: -$marginSmall;
       h3 {
         margin-bottom: $marginMedium;
       }
@@ -193,9 +202,9 @@ main {
       }
     }
     > .payment-section {
-      @include flex(column, center, flex-start);
-      grid-area: 1 / 2 / 3 / 4;
-      align-self: flex-start;
+      @include flex(column, flex-start, flex-start);
+      width: 60%;
+      flex-grow: 1;
       > h3 {
         margin-bottom: $marginMedium;
       }
@@ -222,32 +231,25 @@ main {
         width: 100%;
         > .row {
           @include flex(row, flex-start, flex-start);
-          gap: $marginLarge;
+          gap: $marginMedium;
+          align-self: stretch;
           flex-wrap: wrap;
           > .column {
             @include flex(column, center, flex-start);
+            flex-grow: 1;
+            margin-bottom: 1rem;
             > input {
-              margin-bottom: $marginLarge;
+              align-self: stretch;
+              min-width: 200px;
             }
-            > #name,
-            #cardNumber,
-            #address {
-              width: 250px;
-            }
-            > #expiration {
-              width: 125px;
-            }
-            > #cvc {
+            > #expiration,
+            #cvc,
+            #zip {
               width: 50px;
-            }
-            > #zip {
-              width: 75px;
             }
           }
         }
-        > .end-of-card-details {
-          margin-bottom: $marginLarge;
-        }
+
         > .checkout-buttons {
           @include flex(row, flex-end, flex-end);
           width: 100%;
@@ -267,13 +269,17 @@ main {
       grid-area: 1 / 2 / 3 / 4;
       align-self: flex-start;
       text-align: center;
+      align-self: stretch;
+      width: 100%;
+      // min-width: 400;
+      gap: 2rem;
       > h1,
       h3,
       .row,
       svg,
       button,
       p {
-        margin-bottom: $marginLarge;
+        // margin-bottom: $marginLarge;
       }
       > strong {
         margin-bottom: $marginSmall;
@@ -299,6 +305,19 @@ main {
             padding-left: $paddingContainerMedium;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    gap: 2rem !important;
+  }
+  .payment-section {
+    > form {
+      > .row {
+        gap: 0 !important;
       }
     }
   }

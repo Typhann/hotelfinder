@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Checkout() {
   const [displayPayment, setDisplayPayment] = useState(false);
+  const [displaySelection, setDisplaySelection] = useState(true);
   const [displayConfirmation, setDisplayConfirmation] = useState(false);
   const [displayDetails, setDisplayDetails] = useState(true);
   const [displayConfirmedDetails, setDisplayConfirmedDetails] = useState(false);
@@ -20,14 +21,13 @@ export default function Checkout() {
 
   return (
     <>
-    {/* motion.div create animation for nicer loading */}
+      {/* motion.div create animation for nicer loading */}
       <motion.div
         className="fade-in"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeOut" }}
       >
-
         {/* progress bar */}
         <div className="breadcrumbs">
           <FaSearch className="finished" />
@@ -53,12 +53,13 @@ export default function Checkout() {
         </div>
         {/* Dynamically updates the section depending on user input */}
         <div className="section-container">
-          <Selection />
+          {displaySelection && <Selection />}
           {displayDetails && (
             <Details
               setDisplayDetails={setDisplayDetails}
               setDisplayPayment={setDisplayPayment}
               setDisplayConfirmedDetails={setDisplayConfirmedDetails}
+              setDisplaySelection={setDisplaySelection}
             />
           )}
           {displayConfirmedDetails && <ConfirmedDetails />}
@@ -67,6 +68,7 @@ export default function Checkout() {
               setDisplayPayment={setDisplayPayment}
               setDisplayConfirmation={setDisplayConfirmation}
               setDisplayDetails={setDisplayDetails}
+              setDisplayConfirmedDetails={setDisplayConfirmedDetails}
             />
           )}
           {displayConfirmation && <Confirmation />}

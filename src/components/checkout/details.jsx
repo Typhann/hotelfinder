@@ -5,6 +5,7 @@ export default function Details({
   setDisplayDetails,
   setDisplayPayment,
   setDisplayConfirmedDetails,
+  setDisplaySelection,
 }) {
   const navigate = useNavigate();
   const [focusedInput, setFocusedInput] = useState({
@@ -41,6 +42,7 @@ export default function Details({
       setDisplayDetails(false);
       setDisplayConfirmedDetails(true);
       setDisplayPayment(true);
+      setDisplaySelection(false);
     }
   }
 
